@@ -4,101 +4,125 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>逍遥搜AI — 一站式AI工具大全</title>
-<link rel="stylesheet" href="style.css?v4">
+<link rel="stylesheet" href="style.css?v5">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
 </head>
 <body>
-<!-- 顶部导航 -->
-<header>
-  <div class="header-inner">
-    <a href="/" class="header-logo">
-      <span class="logo-icon">🏮</span>
-      <span class="logo-text">逍遥搜AI</span>
-    </a>
-    <nav class="header-nav">
-      <a href="/">🏠 首页</a>
-      <a href="news.html">📰 AI资讯</a>
-      <a href="about.html">📖 关于</a>
+
+<!-- Top Bar -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="/" class="topbar-logo">🏮 逍遥搜AI</a>
+    <nav class="topbar-nav" id="topNav">
+      <a href="https://ai-bot.cn/favorites/ai-writing-tools/" target="_blank">AI写作工具</a>
+      <a href="https://ai-bot.cn/favorites/ai-image-tools/" target="_blank">AI图像工具</a>
+      <a href="https://ai-bot.cn/favorites/ai-video-tools/" target="_blank">AI视频工具</a>
+      <a href="https://ai-bot.cn/favorites/ai-office-tools/" target="_blank">AI办公工具</a>
+      <a href="https://ai-bot.cn/favorites/ai-agent/" target="_blank">AI智能体</a>
+      <a href="https://ai-bot.cn/favorites/ai-chatbots/" target="_blank">AI聊天助手</a>
+      <a href="https://ai-bot.cn/favorites/ai-programming-tools/" target="_blank">AI编程工具</a>
+      <a href="https://ai-bot.cn/favorites/ai-design-tools/" target="_blank">AI设计工具</a>
+      <a href="https://ai-bot.cn/favorites/ai-audio-tools/" target="_blank">AI音频工具</a>
+      <a href="https://ai-bot.cn/favorites/ai-search-engines/" target="_blank">AI搜索引擎</a>
+      <a href="https://ai-bot.cn/favorites/ai-frameworks/" target="_blank">AI开发平台</a>
+      <a href="https://ai-bot.cn/favorites/websites-to-learn-ai/" target="_blank">AI学习网站</a>
+      <a href="https://ai-bot.cn/favorites/ai-models/" target="_blank">AI训练模型</a>
+      <a href="https://ai-bot.cn/favorites/ai-content-detection-and-optimization-tools/" target="_blank">AI内容检测</a>
+      <a href="https://ai-bot.cn/favorites/ai-prompt-tools/" target="_blank">AI提示指令</a>
     </nav>
+    <div class="topbar-right">
+      <a href="https://ai-bot.cn/ai-app-store/" target="_blank">AI应用集</a>
+      <a href="https://ai-bot.cn/daily-ai-news/" target="_blank">📰 资讯</a>
+    </div>
   </div>
 </header>
 
 <div class="layout">
-  <!-- 左侧边栏 -->
+  <!-- Sidebar -->
   <aside class="sidebar">
-    <div class="sidebar-section">
-      <h3>🔍 常用搜索</h3>
-      <div class="sidebar-links">
+    <div class="sidebar-block">
+      <div class="sidebar-tabs">
+        <span class="sidebar-tab active">常用搜索</span>
+        <span class="sidebar-tab">社区</span>
+        <span class="sidebar-tab">图片</span>
+        <span class="sidebar-tab">生活</span>
+      </div>
+      <div class="sidebar-content active" id="sb-search">
         <a href="https://www.baidu.com" target="_blank">百度</a>
         <a href="https://www.google.com" target="_blank">Google</a>
         <a href="https://www.bing.com" target="_blank">Bing</a>
         <a href="https://perplexity.ai" target="_blank">Perplexity</a>
+        <a href="https://metaso.cn" target="_blank">秘塔AI</a>
+        <a href="https://so.com" target="_blank">360</a>
+        <a href="https://www.sogou.com" target="_blank">搜狗</a>
+        <a href="https://www.shenma.com" target="_blank">神马</a>
       </div>
-    </div>
-    <div class="sidebar-section">
-      <h3>🤝 社区</h3>
-      <div class="sidebar-links">
-        <a href="https://huggingface.co" target="_blank">HuggingFace</a>
-        <a href="https://github.com" target="_blank">GitHub AI</a>
-        <a href="https://www.modelscope.cn" target="_blank">魔搭社区</a>
-        <a href="https://aistudio.baidu.com" target="_blank">飞桨AI Studio</a>
+      <div class="sidebar-content" id="sb-community">
+        <a href="https://huggingface.co" target="_blank">Hugging Face</a>
+        <a href="https://github.com" target="_blank">GitHub</a>
+        <a href="https://aistudio.baidu.com" target="_blank">飞桨</a>
+        <a href="https://www.modelscope.cn" target="_blank">魔搭</a>
+        <a href="https://www.heywhale.com" target="_blank">和鲸</a>
+        <a href="https://juejin.cn" target="_blank">掘金</a>
+        <a href="https://zhihu.com" target="_blank">知乎</a>
       </div>
-    </div>
-    <div class="sidebar-section">
-      <h3>📸 图片</h3>
-      <div class="sidebar-links">
+      <div class="sidebar-content" id="sb-image">
         <a href="https://yige.baidu.com" target="_blank">文心一格</a>
         <a href="https://civitai.com" target="_blank">Civitai</a>
         <a href="https://openart.ai" target="_blank">OpenArt</a>
         <a href="https://lexica.art" target="_blank">Lexica</a>
+        <a href="https://www.deviantart.com" target="_blank">DeviantArt</a>
+      </div>
+      <div class="sidebar-content" id="sb-life">
+        <a href="https://www.taobao.com" target="_blank">淘宝</a>
+        <a href="https://www.jd.com" target="_blank">京东</a>
+        <a href="https://www.xiachufang.com" target="_blank">下厨房</a>
+        <a href="https://www.12306.cn" target="_blank">12306</a>
+        <a href="https://www.kuaidi100.com" target="_blank">快递100</a>
+      </div>
+    </div>
+
+    <!-- 每日AI快讯 -->
+    <div class="sidebar-block sidebar-news">
+      <h3><a href="https://ai-bot.cn/daily-ai-news/" target="_blank">🔥 每日AI快讯</a></h3>
+      <div class="news-list">
+        <div class="news-item" onclick="window.open('https://ai-bot.cn/ai-tutorials-a-practical-guide-to-building-agents/')">OpenAI《构建 Agents 实用指南》</div>
+        <div class="news-item" onclick="window.open('https://ai-bot.cn/building-effective-agents-claude/')">Claude 官方《Agent 构建指南》</div>
+        <div class="news-item" onclick="window.open('https://ai-bot.cn/google-agent-white-paper/')">谷歌《智能体Agent》白皮书</div>
+        <div class="news-item" onclick="window.open('https://ai-bot.cn/anthropic-ai-economic-index-report/')">Anthropic《AI 经济指数报告》</div>
+        <div class="news-item" onclick="window.open('https://ai-bot.cn/ai-tutorials-prompt-engineering/')">谷歌《Prompt Engineering》白皮书</div>
       </div>
     </div>
   </aside>
 
-  <!-- 主内容区 -->
   <main class="main-content">
-    <!-- 顶部英雄区+搜索 -->
-    <div class="hero-mini">
-      <h1>发现最好的 <span class="gradient-text">AI 工具</span></h1>
-      <p>收录 <strong id="toolCount"></strong> 款AI工具，每日更新</p>
-      <div class="hero-search">
-        <input id="searchInput" type="text" placeholder="搜索AI工具名称或用途..." oninput="app.filterTools()">
-      </div>
+    <!-- 搜索 -->
+    <div class="search-area">
+      <input id="searchInput" type="text" placeholder="搜索AI工具..." oninput="app.filterTools()">
     </div>
 
-    <!-- 分类筛选标签 -->
+    <!-- 分类导航标签 -->
     <div id="filterBar" class="filter-bar"></div>
 
-    <!-- 工具网格 -->
-    <div id="toolsContainer" class="tools-grid"></div>
+    <!-- 工具网格（分类显示） -->
+    <div id="categorySections"></div>
   </main>
 </div>
 
-<!-- 页脚 -->
 <footer>
-  <div class="footer-inner">
-    <div>
-      <div class="footer-logo">🏮 逍遥搜AI</div>
-      <div class="footer-desc">一站式AI工具导航站，收录国内外数百款AI工具。每日更新，帮你发现最好的AI工具。</div>
-    </div>
-    <div class="footer-col">
-      <h4>快速链接</h4>
-      <a href="/">首页</a>
-      <a href="news.html">AI资讯</a>
-      <a href="about.html">关于我们</a>
-    </div>
-    <div class="footer-col">
-      <h4>推荐工具</h4>
-      <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
-      <a href="https://claude.ai" target="_blank">Claude</a>
-      <a href="https://www.doubao.com" target="_blank">豆包</a>
-      <a href="https://tongyi.aliyun.com" target="_blank">通义千问</a>
-    </div>
+  <div class="footer-links">
+    <a href="/">首页</a>
+    <a href="https://ai-bot.cn/ai-tools/" target="_blank">AI工具</a>
+    <a href="https://ai-bot.cn/the-latest-ai-projects/" target="_blank">最新AI项目</a>
+    <a href="https://ai-bot.cn/ai-app-store/" target="_blank">AI应用商店</a>
   </div>
-  <div class="footer-copy" style="text-align:center;padding:6px 20px;">&copy; 2026 逍遥搜AI · 数据参考自 ai-bot.cn</div>
+  <div class="footer-copy">
+    <span class="footer-brand">🏮 逍遥搜AI</span>
+    <span> 数据参考自 ai-bot.cn</span>
+  </div>
 </footer>
 
 <script src="data.js"></script>
-<script src="app.js"></script>
+<script src="app.js?v2"></script>
 </body>
 </html>
