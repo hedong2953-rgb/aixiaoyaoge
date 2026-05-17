@@ -146,7 +146,7 @@ const toolsData = [
     }
   },
   {
-    id: "doubao", name: "豆包", icon: "🫘",
+    id: "doubao", name: "豆包", icon: "👧",
     category: "conversation", categoryLabel: "对话大模型",
     desc: "字节跳动推出的AI对话助手，功能丰富",
     url: "https://www.doubao.com",
