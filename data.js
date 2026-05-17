@@ -303,7 +303,42 @@ const toolsData = [
       tags: ["绘画","生成","ChatGPT","创意"]
     }
   },
-  // ===== AI视频 =====
+  {
+    id: "ideogram", name: "Ideogram", icon: "🅸",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "文字渲染能力最强的AI绘画工具",
+    url: "https://ideogram.ai",
+    detail: {
+      intro: "Ideogram 以出色的文字渲染能力著称，特别适合生成带文字的Logo、海报和设计图。",
+      features: ["文字渲染业界最强","Logo和海报设计","多种风格可选","免费有额度"],
+      pricing: "免费版有限额；付费版$20/月",
+      tags: ["绘画","文字","设计","Logo"]
+    }
+  },
+  {
+    id: "krea", name: "Krea AI", icon: "✨",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "实时AI绘画和设计增强工具",
+    url: "https://krea.ai",
+    detail: {
+      intro: "Krea AI 提供实时AI绘画生成和图像增强功能，支持实时涂鸦生成、图像放大和增强。",
+      features: ["实时AI绘画生成","图像增强和放大","AI设计工具","视频生成"],
+      pricing: "免费版有限额；Pro版$25/月",
+      tags: ["绘画","实时","增强","设计"]
+    }
+  },
+  {
+    id: "recraft", name: "Recraft", icon: "🔄",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "AI矢量图和图标生成，设计专用",
+    url: "https://recraft.ai",
+    detail: {
+      intro: "Recraft 专注于AI生成矢量图、图标和品牌素材，支持风格一致的多图生成。",
+      features: ["SVG矢量图生成","图标和Logo设计","品牌风格统一","多格式导出"],
+      pricing: "免费版有限额；Pro版$20/月",
+      tags: ["绘画","矢量","设计","图标"]
+    }
+  }// ===== AI视频 =====
   {
     id: "sora", name: "Sora", icon: "🌅",
     category: "video", categoryLabel: "AI视频",
@@ -352,7 +387,42 @@ const toolsData = [
       tags: ["视频","易用","生成","编辑"]
     }
   },
-  // ===== AI音乐/音频 =====
+  {
+    id: "haiper", name: "Haiper", icon: "🌟",
+    category: "video", categoryLabel: "AI视频",
+    desc: "免费好用的AI视频生成工具",
+    url: "https://haiper.ai",
+    detail: {
+      intro: "Haiper 是由字节跳动前员工创立的AI视频生成工具，免费额度多且效果不错。",
+      features: ["文生视频","图生视频","视频修复和增强","免费额度充足"],
+      pricing: "免费/付费",
+      tags: ["视频","生成","免费","编辑"]
+    }
+  },
+  {
+    id: "minimax-video", name: "MiniMax Video", icon: "🎞️",
+    category: "video", categoryLabel: "AI视频",
+    desc: "MiniMax AI视频生成，效果惊艳",
+    url: "https://hailuoai.com/video",
+    detail: {
+      intro: "MiniMax（海螺AI）的视频生成功能，以清晰度和运动流畅度著称。",
+      features: ["高清晰度视频生成","运动流畅自然","中文理解好","免费有额度"],
+      pricing: "免费有额度",
+      tags: ["视频","生成","国产","流畅"]
+    }
+  },
+  {
+    id: "vidnoz", name: "Vidnoz AI", icon: "🎭",
+    category: "video", categoryLabel: "AI视频",
+    desc: "AI数字人视频生成，适合营销",
+    url: "https://www.vidnoz.com",
+    detail: {
+      intro: "Vidnoz AI 提供AI数字人视频生成，上传照片即可生成会说话的数字人视频。",
+      features: ["AI数字人生成","照片转数字人","多语言口型同步","营销视频模板"],
+      pricing: "免费版有限额；付费版$19/月",
+      tags: ["视频","数字人","营销","AI"]
+    }
+  }// ===== AI音乐/音频 =====
   {
     id: "suno", name: "Suno", icon: "🎵",
     category: "audio", categoryLabel: "AI音乐",
@@ -377,7 +447,42 @@ const toolsData = [
       tags: ["音乐","生成","音频","创作"]
     }
   },
-  // ===== AI编程 =====
+  {
+    id: "elevenlabs", name: "ElevenLabs", icon: "🗣️",
+    category: "audio", categoryLabel: "AI音乐",
+    desc: "最强AI语音克隆和合成",
+    url: "https://elevenlabs.io",
+    detail: {
+      intro: "ElevenLabs 是当前最先进的AI语音合成工具，支持语音克隆、多语言朗读等。",
+      features: ["语音克隆","情感语音合成","多语言支持","有声书制作"],
+      pricing: "免费版有限额；付费版$5/月",
+      tags: ["语音","克隆","合成","有声书"]
+    }
+  },
+  {
+    id: "riffusion", name: "Riffusion", icon: "🎸",
+    category: "audio", categoryLabel: "AI音乐",
+    desc: "AI音乐生成，专注于器乐和旋律",
+    url: "https://www.riffusion.com",
+    detail: {
+      intro: "Riffusion 是一款专注于AI音乐和器乐生成的工具，擅长生成各种风格的背景音乐。",
+      features: ["器乐和旋律生成","多种音乐风格","背景音乐制作","免费使用"],
+      pricing: "免费",
+      tags: ["音乐","器乐","旋律","背景音乐"]
+    }
+  },
+  {
+    id: "voicebox", name: "Voicebox AI", icon: "🎤",
+    category: "audio", categoryLabel: "AI音乐",
+    desc: "Meta开源AI语音生成工具",
+    url: "https://voicebox.meta.com",
+    detail: {
+      intro: "Voicebox 是Meta（Facebook）开源的AI语音生成模型，支持文本转语音、语音编辑等。",
+      features: ["AA开源语音生成","语音编辑和替换","跨语言语音转换","研究用途"],
+      pricing: "开源免费",
+      tags: ["语音","开源","Meta","生成"]
+    }
+  }// ===== AI编程 =====
   {
     id: "cursor", name: "Cursor", icon: "💻",
     category: "coding", categoryLabel: "AI编程",
@@ -414,7 +519,42 @@ const toolsData = [
       tags: ["编程","IDE","AI原生","效率"]
     }
   },
-  // ===== 资源与社区 =====
+  {
+    id: "claude-code", name: "Claude Code", icon: "🟣",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "Anthropic推出的AI编程工具",
+    url: "https://claude.ai",
+    detail: {
+      intro: "Claude Code 是Anthropic基于Claude大模型推出的AI编程助手，代码理解和生成能力出色。",
+      features: ["强大的代码理解","多文件编辑","代码审查和重构","终端集成"],
+      pricing: "免费版可用；Pro版$20/月",
+      tags: ["编程","Claude","代码","开发"]
+    }
+  },
+  {
+    id: "replit-ai", name: "Replit AI", icon: "🔄",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "在线IDE集成AI编程助手",
+    url: "https://replit.com",
+    detail: {
+      intro: "Replit 是一款在线IDE，内置AI编程助手，无需本地配置即可开发应用。",
+      features: ["在线IDE无需配置","AI代码补全","一键部署","团队协作"],
+      pricing: "免费版有限额；Pro版$20/月",
+      tags: ["编程","IDE","在线","部署"]
+    }
+  },
+  {
+    id: "v0", name: "Vercel v0", icon: "▲",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "Vercel推出的AI前端生成工具",
+    url: "https://v0.dev",
+    detail: {
+      intro: "v0 是Vercel推出的AI前端UI生成工具，输入描述即可生成精美的React组件和页面。",
+      features: ["文字描述生成UI","React/Next.js组件","实时预览","Shadcn/ui风格"],
+      pricing: "免费版有限额；Pro版$20/月",
+      tags: ["编程","前端","UI","React"]
+    }
+  }// ===== 资源与社区 =====
   {
     id: "huggingface", name: "HuggingFace", icon: "🤗",
     category: "resource", categoryLabel: "资源与社区",
