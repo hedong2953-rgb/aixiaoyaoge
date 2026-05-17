@@ -144,7 +144,8 @@ var toolsData = [
       pricing: "免费/Microsoft 365订阅",
       tags: ["办公","微软","协作","AI"]
     }
-  }// ===== 对话大模型 =====
+  },
+  // ===== 对话大模型 =====
   {
     id: "chatgpt", name: "ChatGPT", icon: "💬",
     category: "conversation", categoryLabel: "对话大模型",
@@ -312,8 +313,8 @@ var toolsData = [
       pricing: "免费",
       tags: ["对话","零一","国产","大模型"]
     }
-  }
-// ===== AI绘图 =====
+  },
+  // ===== AI绘图 =====
   {
     id: "midjourney", name: "Midjourney", icon: "🎨",
     category: "image", categoryLabel: "AI绘图",
@@ -421,7 +422,8 @@ var toolsData = [
       pricing: "免费版有限额；Pro版$9/月",
       tags: ["编辑","去背景","修复","AI"]
     }
-  }// ===== AI视频 =====
+  },
+  // ===== AI视频 =====
   {
     id: "sora", name: "Sora", icon: "🌅",
     category: "video", categoryLabel: "AI视频",
@@ -529,7 +531,8 @@ var toolsData = [
       pricing: "免费版有额度；付费版$30/月",
       tags: ["视频","3D","生成","物理"]
     }
-  }// ===== AI音乐/音频 =====
+  },
+  // ===== AI音乐/音频 =====
   {
     id: "suno", name: "Suno", icon: "🎵",
     category: "audio", categoryLabel: "AI音乐",
@@ -613,7 +616,8 @@ var toolsData = [
       pricing: "开源免费",
       tags: ["语音","开源","TTS","中文"]
     }
-  }// ===== AI编程 =====
+  },
+  // ===== AI编程 =====
   {
     id: "cursor", name: "Cursor", icon: "💻",
     category: "coding", categoryLabel: "AI编程",
@@ -721,7 +725,8 @@ var toolsData = [
       pricing: "免费/Teams版$15/月",
       tags: ["编程","免费","补全","AI"]
     }
-  }// ===== 资源与社区 =====
+  },
+  // ===== 资源与社区 =====
   {
     id: "huggingface", name: "HuggingFace", icon: "🤗",
     category: "resource", categoryLabel: "资源与社区",
@@ -925,9 +930,9 @@ var toolsData = [
       pricing: "免费",
       tags: ["资讯","新闻","行业","前沿"]
     }
-  }// ===== 更多资源 =====
+  },
+  // ===== 更多资源 =====
   {
-      {
     id: "learn-python", name: "Python学习", icon: "🐍",
     category: "resource", categoryLabel: "资源与社区",
     desc: "AI编程入门首选Python教程",
@@ -1318,7 +1323,7 @@ var toolsData = [
       pricing: "免费/付费",
       tags: ["搜索","AI","信息","问答"]
     }
-  }
+  },
   {
     id: "ai-website-money", name: "AI建站赚钱", icon: "💰",
     category: "resource", categoryLabel: "资源与社区",
@@ -1405,7 +1410,7 @@ var toolsData = [
       pricing: "按服务定价",
       tags: ["ChatGPT","代充","账号","会员"]
     }
-  }
+  },
   {
     id: "wa-writer", name: "蛙蛙写作", icon: "🐸",
     category: "resource", categoryLabel: "资源与社区",
@@ -1597,8 +1602,9 @@ var toolsData = [
       pricing: "免费/付费",
       tags: ["桌面","远程","助手","AI"]
     }
-  }
-id: "more-resource", name: "更多资源", icon: "📌",
+  },
+  {
+    id: "more-resource", name: "更多资源", icon: "📌",
     category: "more", categoryLabel: "更多资源",
     desc: "更多AI相关资源和网站推荐",
     url: "#",
