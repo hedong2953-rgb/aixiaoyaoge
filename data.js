@@ -2545,6 +2545,486 @@ var toolsData = [
     category: "agent", categoryLabel: "AI智能体",
     desc: "Agentic IM平台",
     url: "https://ai-bot.cn"
+  },
+  {
+    id: "dify", name: "Dify", icon: "🧩",
+    category: "platform", categoryLabel: "AI开发",
+    desc: "开源生成式AI应用开发平台",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "coze-dev", name: "Coze (扣子)", icon: "🫧",
+    category: "platform", categoryLabel: "AI开发",
+    desc: "海量AI智能体平台",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "ali-bailian", name: "阿里云百炼", icon: "☁️",
+    category: "platform", categoryLabel: "AI开发",
+    desc: "一站式大模型开发与应用平台",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "bigmodel", name: "BigModel (智谱)", icon: "🧠",
+    category: "platform", categoryLabel: "AI开发",
+    desc: "企业级大模型开放平台MaaS",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "google-ai-studio", name: "Google AI Studio", icon: "🔬",
+    category: "platform", categoryLabel: "AI开发",
+    desc: "免费测试谷歌最新AI模型",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "fastgpt", name: "FastGPT", icon: "⚡",
+    category: "platform", categoryLabel: "AI开发",
+    desc: "免费AI工作流搭建工具",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "n8n", name: "n8n", icon: "🔗",
+    category: "platform", categoryLabel: "AI开发",
+    desc: "开源低代码AI工作流自动化",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "zion", name: "Zion", icon: "🏛️",
+    category: "platform", categoryLabel: "AI开发",
+    desc: "全栈AI Agent无代码开发",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "openrouter", name: "OpenRouter", icon: "🛣️",
+    category: "platform", categoryLabel: "AI开发",
+    desc: "一个接口调用400+AI模型",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "siliconflow", name: "SiliconFlow", icon: "💎",
+    category: "platform", categoryLabel: "AI开发",
+    desc: "生成式AI计算基础设施",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "fangzhou-agent", name: "方舟Agent Plan", icon: "🚢",
+    category: "platform", categoryLabel: "AI开发",
+    desc: "火山引擎 Agent 套餐",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "xunfei-agent", name: "讯飞星辰MaaS", icon: "🌟",
+    category: "platform", categoryLabel: "AI开发",
+    desc: "AI大模型体验调用部署精调",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "zenmux", name: "ZenMux", icon: "🛡️",
+    category: "platform", categoryLabel: "AI开发",
+    desc: "带保险的企业级大模型聚合",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "trickle-ai", name: "Trickle AI", icon: "💧",
+    category: "platform", categoryLabel: "AI开发",
+    desc: "一站式无代码AI开发平台",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "moma", name: "MoMA", icon: "🏛️",
+    category: "platform", categoryLabel: "AI开发",
+    desc: "中国移动开放普惠大模型聚合",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "inscode", name: "快马InsCode", icon: "🐴",
+    category: "platform", categoryLabel: "AI开发",
+    desc: "对话设计图生成工程项目代码",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "kaggle", name: "Kaggle", icon: "🏆",
+    category: "learning", categoryLabel: "AI学习",
+    desc: "机器学习和数据科学社区",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "coursera", name: "Coursera", icon: "🎓",
+    category: "learning", categoryLabel: "AI学习",
+    desc: "知名MOOC平台AI课程",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "deeplearning-ai", name: "DeepLearning.AI", icon: "🧠",
+    category: "learning", categoryLabel: "AI学习",
+    desc: "深度学习和AI学习平台",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "feizhi-ai", name: "飞桨AI Studio", icon: "🛶",
+    category: "learning", categoryLabel: "AI学习",
+    desc: "百度AI学习与实训社区",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "fast-ai", name: "fast.ai", icon: "⚡",
+    category: "learning", categoryLabel: "AI学习",
+    desc: "免费开源深度学习课程",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "openai-academy", name: "OpenAI Academy", icon: "🤖",
+    category: "learning", categoryLabel: "AI学习",
+    desc: "OpenAI免费AI学习平台",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "google-ai-learn", name: "Google AI", icon: "🔵",
+    category: "learning", categoryLabel: "AI学习",
+    desc: "Google AI学习平台",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "showme-ai", name: "ShowMeAI", icon: "📚",
+    category: "learning", categoryLabel: "AI学习",
+    desc: "AI知识社区和学习资料库",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "udacity-ai", name: "Udacity AI学院", icon: "🎯",
+    category: "learning", categoryLabel: "AI学习",
+    desc: "AI从入门到高级",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "elements-of-ai", name: "Elements of AI", icon: "🧪",
+    category: "learning", categoryLabel: "AI学习",
+    desc: "免费AI通识学习课程",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "ms-ai-beginners", name: "生成式AI初学者", icon: "📘",
+    category: "learning", categoryLabel: "AI学习",
+    desc: "微软免费生成式AI课程",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "ms-ml-beginners", name: "ML for Beginners", icon: "📗",
+    category: "learning", categoryLabel: "AI学习",
+    desc: "微软免费机器学习课程",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "dongshou-dl", name: "动手学深度学习", icon: "👨‍💻",
+    category: "learning", categoryLabel: "AI学习",
+    desc: "结合理论与实践的深度学习",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "ailearning-nav", name: "学吧导航", icon: "🧭",
+    category: "learning", categoryLabel: "AI学习",
+    desc: "学习爱好者AI导航",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "ai-share", name: "AI分享圈", icon: "💡",
+    category: "learning", categoryLabel: "AI学习",
+    desc: "AI免费资源分享",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "trancy", name: "Trancy", icon: "🌍",
+    category: "learning", categoryLabel: "AI学习",
+    desc: "AI驱动的语言学习工具",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "ollama", name: "Ollama", icon: "🦙",
+    category: "model", categoryLabel: "AI模型",
+    desc: "本地运行Llama和大模型",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "llama3", name: "Llama 3", icon: "🦙",
+    category: "model", categoryLabel: "AI模型",
+    desc: "Meta最新开源大模型",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "gpt4o", name: "GPT-4o", icon: "🌟",
+    category: "model", categoryLabel: "AI模型",
+    desc: "OpenAI多模态最新大模型",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "gpt", name: "GPT-4", icon: "💡",
+    category: "model", categoryLabel: "AI模型",
+    desc: "OpenAI GPT-4模型",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "modelscope", name: "魔搭社区", icon: "🏔️",
+    category: "model", categoryLabel: "AI模型",
+    desc: "阿里达摩院AI模型社区",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "autogpt", name: "AutoGPT", icon: "🤖",
+    category: "model", categoryLabel: "AI模型",
+    desc: "GPT-4完全自主实验项目",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "cherry-studio", name: "Cherry Studio", icon: "🍒",
+    category: "model", categoryLabel: "AI模型",
+    desc: "开源全能AI客户端",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "chatbox", name: "Chatbox AI", icon: "💬",
+    category: "model", categoryLabel: "AI模型",
+    desc: "开源AI客户端助手",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "anythingllm", name: "AnythingLLM", icon: "📦",
+    category: "model", categoryLabel: "AI模型",
+    desc: "开源全栈AI客户端",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "jan", name: "Jan", icon: "❄️",
+    category: "model", categoryLabel: "AI模型",
+    desc: "本地运行大模型对话工具",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "gemma", name: "Gemma", icon: "💎",
+    category: "model", categoryLabel: "AI模型",
+    desc: "谷歌轻量级开放模型",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "tencent-hunyuan-model", name: "腾讯混元大模型", icon: "🌀",
+    category: "model", categoryLabel: "AI模型",
+    desc: "腾讯研发的大语言模型",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "wenxin-model", name: "文心大模型", icon: "🐻",
+    category: "model", categoryLabel: "AI模型",
+    desc: "百度产业级知识增强大模型",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "miracle-vision", name: "奇想智能 (美图)", icon: "🎨",
+    category: "model", categoryLabel: "AI模型",
+    desc: "美图AI视觉大模型",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "cohere", name: "Cohere", icon: "🔗",
+    category: "model", categoryLabel: "AI模型",
+    desc: "大语言模型API平台",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "bloom", name: "BLOOM", icon: "🌸",
+    category: "model", categoryLabel: "AI模型",
+    desc: "HuggingFace大语言模型",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "gradio", name: "Gradio", icon: "📊",
+    category: "model", categoryLabel: "AI模型",
+    desc: "开源ML模型UI界面库",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "gptzero", name: "GPTZero", icon: "🛡️",
+    category: "detect", categoryLabel: "AI检测",
+    desc: "超百万人用的免费AI内容检测",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "zhuque", name: "朱雀AI检测", icon: "🐦",
+    category: "detect", categoryLabel: "AI检测",
+    desc: "腾讯推出AI内容检测",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "originality", name: "Originality.AI", icon: "✅",
+    category: "detect", categoryLabel: "AI检测",
+    desc: "原创度和AI内容检测",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "copyleaks", name: "CopyLeaks", icon: "🔍",
+    category: "detect", categoryLabel: "AI检测",
+    desc: "AI内容检测和分级",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "winston-ai", name: "Winston AI", icon: "💪",
+    category: "detect", categoryLabel: "AI检测",
+    desc: "AI内容检测解决方案",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "proofig", name: "Proofig", icon: "🔬",
+    category: "detect", categoryLabel: "AI检测",
+    desc: "AI检测科研图像造假",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "smodin", name: "Smodin", icon: "📝",
+    category: "detect", categoryLabel: "AI检测",
+    desc: "多语种AI内容检测",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "sapling-detect", name: "Sapling AI检测", icon: "🌿",
+    category: "detect", categoryLabel: "AI检测",
+    desc: "免费在线AI内容检测",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "writer-detect", name: "Writer AI检测", icon: "✍️",
+    category: "detect", categoryLabel: "AI检测",
+    desc: "Writer AI内容检测工具",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "study-corgi", name: "StudyCorgi检测", icon: "📚",
+    category: "detect", categoryLabel: "AI检测",
+    desc: "ChatGPT生成检测",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "prompthero", name: "PromptHero", icon: "🦸",
+    category: "prompt", categoryLabel: "AI提示词",
+    desc: "AI提示词优化与搜索",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "aiprm", name: "AIPRM", icon: "⚙️",
+    category: "prompt", categoryLabel: "AI提示词",
+    desc: "AI提示词库和管理工具",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "promptbase", name: "PromptBase", icon: "🏪",
+    category: "prompt", categoryLabel: "AI提示词",
+    desc: "AI Prompt交易平台",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "promptperfect", name: "PromptPerfect", icon: "✨",
+    category: "prompt", categoryLabel: "AI提示词",
+    desc: "专业AI提示词优化",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "clickprompt", name: "ClickPrompt", icon: "🖱️",
+    category: "prompt", categoryLabel: "AI提示词",
+    desc: "在线AI提示词设计工具",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "ai-short", name: "AI Short", icon: "🔗",
+    category: "prompt", categoryLabel: "AI提示词",
+    desc: "AI提示词管理和共享",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "langgpt", name: "LangGPT", icon: "🔤",
+    category: "prompt", categoryLabel: "AI提示词",
+    desc: "AI提示词结构化方法",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "promptfolder", name: "PromptFolder", icon: "📁",
+    category: "prompt", categoryLabel: "AI提示词",
+    desc: "AI提示词生成管理",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "google-prompt", name: "Google AI提示词库", icon: "🔵",
+    category: "prompt", categoryLabel: "AI提示词",
+    desc: "谷歌官方AI提示词库",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "learning-prompt", name: "Learning Prompt", icon: "📖",
+    category: "prompt", categoryLabel: "AI提示词",
+    desc: "免费AI提示词学习平台",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "awesome-prompts", name: "ChatGPT Prompts", icon: "⭐",
+    category: "prompt", categoryLabel: "AI提示词",
+    desc: "AI提示词收集整理",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "cakegrowth", name: "CakeGrowth", icon: "🍰",
+    category: "side-project", categoryLabel: "AI副业",
+    desc: "AI应用联盟营销平台",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "linktree", name: "Linktree", icon: "🌳",
+    category: "side-project", categoryLabel: "AI副业",
+    desc: "多链接整合至单一页面",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "xiaobaotong", name: "小报童", icon: "📰",
+    category: "side-project", categoryLabel: "AI副业",
+    desc: "付费内容服务平台",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "zhishu-xingqiu", name: "知识星球", icon: "🌍",
+    category: "side-project", categoryLabel: "AI副业",
+    desc: "知识社群运营工具",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "xiao-e-tong", name: "小鹅通", icon: "🦢",
+    category: "side-project", categoryLabel: "AI副业",
+    desc: "私域运营SaaS平台",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "wechat-platform", name: "微信公众平台", icon: "💬",
+    category: "side-project", categoryLabel: "AI副业",
+    desc: "官方内容创作与服务平台",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "zhihu-platform", name: "知乎", icon: "🔍",
+    category: "side-project", categoryLabel: "AI副业",
+    desc: "内容创作变现平台",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "baijiahao", name: "百家号", icon: "📱",
+    category: "side-project", categoryLabel: "AI副业",
+    desc: "百度内容创作发布变现",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "toutiao", name: "头条号", icon: "🔥",
+    category: "side-project", categoryLabel: "AI副业",
+    desc: "抖音内容创作平台",
+    url: "https://ai-bot.cn"
+  },
+  {
+    id: "csdn", name: "CSDN", icon: "💻",
+    category: "side-project", categoryLabel: "AI副业",
+    desc: "开发者社区和技术写作",
+    url: "https://ai-bot.cn"
   }];
 
 // ===== 每日AI资讯 =====

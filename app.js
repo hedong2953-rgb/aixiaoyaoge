@@ -40,7 +40,13 @@ var app = {
       { id: 'writing', label: 'AI写作' },
       { id: 'search', label: 'AI搜索' },
       { id: 'design', label: 'AI设计' },
-      { id: 'agent', label: 'AI智能体' }
+      { id: 'agent', label: 'AI智能体' },
+      { id: 'platform', label: 'AI开发' },
+      { id: 'learning', label: 'AI学习' },
+      { id: 'model', label: 'AI模型' },
+      { id: 'detect', label: 'AI检测' },
+      { id: 'prompt', label: 'AI提示词' },
+      { id: 'side-project', label: 'AI副业' }
     ];
     var html = '';
     for(var i = 0; i < cats.length; i++) {
