@@ -470,20 +470,50 @@ const toolsData = [
       tags: ["模型","云端","API","开源"]
     }
   },
-  // ===== 更多资源（新增）=====
+  // ===== 更多资源 =====
   {
-    id: "aitools", name: "更多AI工具", icon: "🧰",
+    id: "more-resource", name: "更多资源", icon: "📌",
     category: "more", categoryLabel: "更多资源",
-    desc: "持续发现更多实用的AI工具",
-    url: "https://aixiaoyaoge.vercel.app",
+    desc: "更多AI相关资源合集 >",
+    url: "#more",
     detail: {
-      intro: "更多AI工具持续收录中，会不断充实这个导航站。",
-      features: ["持续更新中"],
+      intro: "更多AI资源推荐，持续更新中。欢迎推荐你发现的好工具。",
+      features: [
+        "AI工具导航：https://aixiaoyaoge.vercel.app",
+        "AI模型聚合：https://openrouter.ai",
+        "云端运行模型：https://replicate.com",
+        "AI论文代码：https://paperswithcode.com",
+        "HuggingFace社区：https://huggingface.co",
+        "GitHub探索：https://github.com/explore",
+        "Product Hunt AI：https://www.producthunt.com/topics/artificial-intelligence",
+        "Futurepedia：https://www.futurepedia.io",
+        "There's An AI：https://theresanaiforthat.com",
+        "Easy With AI：https://easywithai.com"
+      ],
       pricing: "",
-      tags: ["资源","导航","发现"]
+      tags: ["资源","导航","推荐","合集"]
+    }
+  },
+  {
+    id: "more-ai", name: "更多AI工具", icon: "🧰",
+    category: "more", categoryLabel: "更多资源",
+    desc: "发现更多热门AI工具 >",
+    url: "#more2",
+    detail: {
+      intro: "更多热门AI工具推荐：",
+      features: [
+        "Grammarly AI - AI写作助手：https://grammarly.com",
+        "Jasper - AI营销写作：https://jasper.ai",
+        "Copy.ai - AI文案生成：https://copy.ai",
+        "Descript - AI视频编辑：https://www.descript.com",
+        "Otter.ai - AI语音转文字：https://otter.ai",
+        "Synthesia - AI数字人视频：https://www.synthesia.io",
+        "ElevenLabs - AI语音合成：https://elevenlabs.io",
+        "Podcastle - AI播客制作：https://podcastle.ai",
+        "Mem - AI笔记工具：https://mem.ai",
+        "Motion - AI项目管理：https://www.usemotion.com"
+      ],
+      pricing: "",
+      tags: ["工具","合集","推荐"]
     }
   }
-];
-
-const categories = {};
-toolsData.forEach(t => { if (!categories[t.category]) categories[t.category] = t.categoryLabel; });
