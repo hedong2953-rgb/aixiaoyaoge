@@ -86,18 +86,65 @@ const toolsData = [
     }
   },
   {
-    id: "jinshan-note", name: "金山文档AI", icon: "📝",
+    id: "feishu-ai", name: "飞书AI", icon: "📋",
     category: "productivity", categoryLabel: "AI办公",
-    desc: "在线文档AI助手，协作办公",
-    url: "https://www.kdocs.cn",
+    desc: "字节跳动智能办公平台AI功能",
+    url: "https://www.feishu.cn",
     detail: {
-      intro: "金山文档AI是在线文档处理工具的AI增强版，支持多人协作和AI辅助写作。",
-      features: ["AI写作","多人协作","云存储","跨平台"],
+      intro: "飞书是字节跳动旗下智能办公平台，AI功能集成在文档、会议、表格等各模块中。",
+      features: ["AI文档写作","AI会议纪要","AI表格处理","智能日程管理"],
       pricing: "免费/付费",
-      tags: ["办公","文档","协作","国产"]
+      tags: ["办公","协作","字节","AI"]
     }
-  }
-// ===== 对话大模型 =====
+  },
+  {
+    id: "baidu-docs", name: "百度网盘AI", icon: "☁️",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "百度网盘AI智能处理文件",
+    url: "https://pan.baidu.com",
+    detail: {
+      intro: "百度网盘AI集成在百度网盘中，支持AI图片处理、文档总结、视频转写等功能。",
+      features: ["AI图片处理","文档智能总结","视频转文字","智能搜索"],
+      pricing: "免费/会员",
+      tags: ["办公","云盘","百度","AI"]
+    }
+  },
+  {
+    id: "chatdoc", name: "ChatDOC", icon: "📑",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "AI文档问答工具，上传文档直接提问",
+    url: "https://chatdoc.com",
+    detail: {
+      intro: "ChatDOC 是一款AI文档分析工具，上传PDF/Word等文档即可与文档对话。",
+      features: ["多格式文档上传","文档智能问答","引用定位原文","批量文档处理"],
+      pricing: "免费版有限额；Pro版$10/月",
+      tags: ["办公","文档","问答","分析"]
+    }
+  },
+  {
+    id: "tencent-meeting", name: "腾讯会议AI", icon: "📹",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "腾讯会议AI功能，会议记录总结",
+    url: "https://meeting.tencent.com",
+    detail: {
+      intro: "腾讯会议内置AI功能，支持会议录音转文字、智能会议纪要、AI总结等。",
+      features: ["实时语音转文字","AI会议纪要","发言人识别","会议总结"],
+      pricing: "免费/付费",
+      tags: ["办公","会议","腾讯","AI"]
+    }
+  },
+  {
+    id: "loop", name: "Microsoft Loop", icon: "🔄",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "微软AI协作办公组件",
+    url: "https://loop.microsoft.com",
+    detail: {
+      intro: "Microsoft Loop 是微软推出的AI协作办公工具，类似Notion但深度整合Microsoft 365。",
+      features: ["AI辅助写作","组件化协作","跨应用同步","整合Microsoft 365"],
+      pricing: "免费/Microsoft 365订阅",
+      tags: ["办公","微软","协作","AI"]
+    }
+  }// ===== 对话大模型 =====
   {
     id: "chatgpt", name: "ChatGPT", icon: "💬",
     category: "conversation", categoryLabel: "对话大模型",
@@ -328,15 +375,51 @@ const toolsData = [
     }
   },
   {
-    id: "recraft", name: "Recraft", icon: "🔄",
+    id: "civitai", name: "CivitAI", icon: "🏛️",
     category: "image", categoryLabel: "AI绘图",
-    desc: "AI矢量图和图标生成，设计专用",
-    url: "https://recraft.ai",
+    desc: "Stable Diffusion模型社区，海量模型下载",
+    url: "https://civitai.com",
     detail: {
-      intro: "Recraft 专注于AI生成矢量图、图标和品牌素材，支持风格一致的多图生成。",
-      features: ["SVG矢量图生成","图标和Logo设计","品牌风格统一","多格式导出"],
-      pricing: "免费版有限额；Pro版$20/月",
-      tags: ["绘画","矢量","设计","图标"]
+      intro: "CivitAI 是全球最大的Stable Diffusion模型分享社区，包含数万个模型和LoRA。",
+      features: ["海量SD模型和LoRA","模型在线预览","社区评分和评论","一键下载应用"],
+      pricing: "免费",
+      tags: ["模型","社区","SD","下载"]
+    }
+  },
+  {
+    id: "sdxl", name: "SDXL", icon: "🖌️",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "Stability AI最新SDXL模型",
+    url: "https://stability.ai/sdxl",
+    detail: {
+      intro: "SDXL 是Stability AI推出的最新Stable Diffusion模型，在图像质量和提示词理解上有大幅提升。",
+      features: ["超高图像质量","提示词理解出色","丰富的风格控制","开源免费"],
+      pricing: "开源免费",
+      tags: ["SDXL","模型","开源","高清"]
+    }
+  },
+  {
+    id: "canva-ai", name: "Canva AI", icon: "🎨",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "Canva内置AI设计功能",
+    url: "https://www.canva.com",
+    detail: {
+      intro: "Canva 在线设计平台内置了大量AI功能，包括AI生图、AI编辑、AI去背景等。",
+      features: ["AI一键生成设计","AI图片编辑","AI去背景","海量模板"],
+      pricing: "免费/付费",
+      tags: ["设计","编辑","模板","在线"]
+    }
+  },
+  {
+    id: "clipdrop", name: "ClipDrop", icon: "✂️",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "AI图片编辑工具集，去背景/修复等",
+    url: "https://clipdrop.co",
+    detail: {
+      intro: "ClipDrop 是Stability AI推出的AI图片编辑工具集，提供去背景、图片修复、扩展等。",
+      features: ["AI去背景","图片修复和扩展","文字生成图片","实时图片编辑"],
+      pricing: "免费版有限额；Pro版$9/月",
+      tags: ["编辑","去背景","修复","AI"]
     }
   }// ===== AI视频 =====
   {
@@ -412,15 +495,39 @@ const toolsData = [
     }
   },
   {
-    id: "vidnoz", name: "Vidnoz AI", icon: "🎭",
+    id: "veed", name: "VEED.io", icon: "🎬",
     category: "video", categoryLabel: "AI视频",
-    desc: "AI数字人视频生成，适合营销",
-    url: "https://www.vidnoz.com",
+    desc: "在线AI视频编辑平台",
+    url: "https://www.veed.io",
     detail: {
-      intro: "Vidnoz AI 提供AI数字人视频生成，上传照片即可生成会说话的数字人视频。",
-      features: ["AI数字人生成","照片转数字人","多语言口型同步","营销视频模板"],
-      pricing: "免费版有限额；付费版$19/月",
-      tags: ["视频","数字人","营销","AI"]
+      intro: "VEED.io 是在线AI视频编辑平台，支持自动字幕、AI视频翻译、绿幕去除等。",
+      features: ["AI自动字幕","AI视频翻译","绿幕去除","在线编辑无需安装"],
+      pricing: "免费版有额度；Pro版$12/月",
+      tags: ["视频","编辑","字幕","在线"]
+    }
+  },
+  {
+    id: "pixverse", name: "PixVerse", icon: "🌈",
+    category: "video", categoryLabel: "AI视频",
+    desc: "免费AI视频生成，画质出色",
+    url: "https://pixverse.ai",
+    detail: {
+      intro: "PixVerse 是一款免费好用的AI视频生成工具，以画质和创意表现受到用户喜爱。",
+      features: ["高质量视频生成","多种风格选择","免费额度充足","图生视频"],
+      pricing: "免费/付费",
+      tags: ["视频","生成","免费","创意"]
+    }
+  },
+  {
+    id: "luma", name: "Luma Dream Machine", icon: "🌠",
+    category: "video", categoryLabel: "AI视频",
+    desc: "Luma AI视频生成，3D一致性出色",
+    url: "https://lumalabs.ai/dream-machine",
+    detail: {
+      intro: "Luma Dream Machine 是Luma AI推出的视频生成模型，以3D一致性和物理准确度著称。",
+      features: ["3D一致性出色","物理模拟准确","快速生成","高分辨率"],
+      pricing: "免费版有额度；付费版$30/月",
+      tags: ["视频","3D","生成","物理"]
     }
   }// ===== AI音乐/音频 =====
   {
@@ -472,15 +579,39 @@ const toolsData = [
     }
   },
   {
-    id: "voicebox", name: "Voicebox AI", icon: "🎤",
+    id: "soundraw", name: "Soundraw", icon: "🎼",
     category: "audio", categoryLabel: "AI音乐",
-    desc: "Meta开源AI语音生成工具",
-    url: "https://voicebox.meta.com",
+    desc: "AI生成免版税背景音乐",
+    url: "https://soundraw.io",
     detail: {
-      intro: "Voicebox 是Meta（Facebook）开源的AI语音生成模型，支持文本转语音、语音编辑等。",
-      features: ["AA开源语音生成","语音编辑和替换","跨语言语音转换","研究用途"],
+      intro: "Soundraw 是AI音乐生成平台，专注于生成免版税的背景音乐，适合视频创作者使用。",
+      features: ["免版税音乐生成","可自定义音乐风格","无限创作和下载","适合视频配乐"],
+      pricing: "免费版有限额；创作者版$17/月",
+      tags: ["音乐","背景音乐","免版税","创作"]
+    }
+  },
+  {
+    id: "boomy", name: "Boomy", icon: "🎛️",
+    category: "audio", categoryLabel: "AI音乐",
+    desc: "AI音乐创作，发布到流媒体",
+    url: "https://boomy.com",
+    detail: {
+      intro: "Boomy 让任何人都能创建AI音乐，并可发布到Spotify、Apple Music等流媒体平台。",
+      features: ["AI音乐快速创作","支持发布到流媒体","多种音乐风格","简单易用"],
+      pricing: "免费/付费",
+      tags: ["音乐","创作","流媒体","发布"]
+    }
+  },
+  {
+    id: "f5-tts", name: "F5-TTS", icon: "🔊",
+    category: "audio", categoryLabel: "AI音乐",
+    desc: "开源语音合成，中文效果极佳",
+    url: "https://github.com/SWivid/F5-TTS",
+    detail: {
+      intro: "F5-TTS 是开源的AI语音合成模型，中文语音合成效果在开源模型中表现突出。",
+      features: ["高质量中文语音","语音克隆","开源免费","支持多种情感"],
       pricing: "开源免费",
-      tags: ["语音","开源","Meta","生成"]
+      tags: ["语音","开源","TTS","中文"]
     }
   }// ===== AI编程 =====
   {
@@ -544,15 +675,51 @@ const toolsData = [
     }
   },
   {
-    id: "v0", name: "Vercel v0", icon: "▲",
+    id: "trae", name: "Trae AI", icon: "🔧",
     category: "coding", categoryLabel: "AI编程",
-    desc: "Vercel推出的AI前端生成工具",
-    url: "https://v0.dev",
+    desc: "字节跳动AI编程IDE",
+    url: "https://www.trae.ai",
     detail: {
-      intro: "v0 是Vercel推出的AI前端UI生成工具，输入描述即可生成精美的React组件和页面。",
-      features: ["文字描述生成UI","React/Next.js组件","实时预览","Shadcn/ui风格"],
-      pricing: "免费版有限额；Pro版$20/月",
-      tags: ["编程","前端","UI","React"]
+      intro: "Trae 是字节跳动推出的AI原生IDE，集成AI编程助手，体验流畅。",
+      features: ["AI代码补全","智能对话编程","内置调试工具","多语言支持"],
+      pricing: "免费",
+      tags: ["编程","IDE","字节","AI"]
+    }
+  },
+  {
+    id: "github-copilot", name: "GitHub Copilot", icon: "🐙",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "GitHub AI编程助手，业界标杆",
+    url: "https://github.com/features/copilot",
+    detail: {
+      intro: "GitHub Copilot 是GitHub和OpenAI联合推出的AI编程助手，支持多种IDE和语言。",
+      features: ["实时代码补全","多IDE支持","代码解释和重构","终端命令建议"],
+      pricing: "免费2000次/月；Pro$10/月",
+      tags: ["编程","GitHub","补全","AI"]
+    }
+  },
+  {
+    id: "tabnine", name: "Tabnine", icon: "🔮",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "AI代码补全，注重隐私安全",
+    url: "https://www.tabnine.com",
+    detail: {
+      intro: "Tabnine 是AI代码补全工具，注重隐私保护，支持本地模型运行。",
+      features: ["本地AI模型运行","隐私保护优先","多语言支持","团队模型训练"],
+      pricing: "免费版基础功能；Pro版$12/月",
+      tags: ["编程","补全","隐私","AI"]
+    }
+  },
+  {
+    id: "codeium", name: "Codeium", icon: "💠",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "免费AI编程助手，功能强大",
+    url: "https://codeium.com",
+    detail: {
+      intro: "Codeium 是免费AI编程助手，提供代码补全、搜索和对话功能，支持70+语言。",
+      features: ["完全免费","70+语言支持","代码搜索和理解","IDE插件"],
+      pricing: "免费/Teams版$15/月",
+      tags: ["编程","免费","补全","AI"]
     }
   }// ===== 资源与社区 =====
   {
