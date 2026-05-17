@@ -3,55 +3,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI工具导航</title>
+  <title>AI工具导航 - 一站式AI大全</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏮</text></svg>">
   <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap');
+  </style>
 </head>
 <body>
-  <header>
-    <div class="container header-wrap">
-      <div class="logo">
+  <!-- 顶部导航 -->
+  <header id="top">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
         <span class="logo-icon">🏮</span>
         <span class="logo-text">AI工具导航</span>
-      </div>
-      <nav>
-        <a href="index.html" class="active">首页</a>
+      </a>
+      <nav class="header-nav">
+        <a href="index.html">首页</a>
         <a href="#categories">分类</a>
+        <a href="#newest">最新</a>
         <a href="submit.html">提交收录</a>
       </nav>
     </div>
   </header>
 
+  <!-- 英雄区 -->
   <section class="hero">
-    <div class="container">
-      <h1>AI工具箱·一站直达</h1>
-      <p>精选AI工具，分类整理，帮你找到最顺手的那个</p>
-      <div class="search-box">
+    <div class="hero-inner">
+      <h1>发现最好的 <span class="gradient-text">AI工具</span></h1>
+      <p>收录 100+ 优质AI工具，覆盖办公、绘图、视频、编程等全领域</p>
+      <div class="hero-search">
         <input type="text" id="searchInput" placeholder="搜索AI工具..." oninput="filterTools()">
+        <span class="search-icon">🔍</span>
+      </div>
+      <!-- 用JS随机展示几个热门口号 -->
+      <div class="hero-stats">
+        <span>🔥 <span id="totalCount">0</span>+ AI工具</span>
+        <span>📦 <span id="categoryCount">0</span> 个分类</span>
+        <span>🆕 每日更新</span>
       </div>
     </div>
   </section>
 
-  <section class="categories">
-    <div class="container">
-      <div class="category-tabs" id="categoryTabs"></div>
+  <!-- 特色专区 -->
+  <div id="featuredApp"></div>
+
+  <!-- 分类筛选标签 -->
+  <section class="section" id="categories">
+    <div class="section-header">
+      <h2>全部分类</h2>
+      <span class="section-sub">浏览不同领域的AI工具</span>
     </div>
+    <div class="filter-bar" id="filterBar"></div>
   </section>
 
-  <section class="tools-grid">
-    <div class="container">
-      <div class="grid" id="toolsGrid"></div>
-    </div>
+  <!-- 工具列表 -->
+  <section class="section">
+    <div class="tools-grid" id="toolsContainer"></div>
   </section>
 
+  <!-- 最新收录 -->
+  <section class="section" id="newest">
+    <div class="section-header">
+      <h2>🆕 最新收录</h2>
+      <span class="section-sub">最近新增的AI工具</span>
+    </div>
+    <div class="newest-grid" id="newestContainer"></div>
+  </section>
+
+  <!-- 广告位 -->
+  <div style="text-align:center;padding:24px 16px">  
+    <div style="max-width:728px;margin:0 auto;padding:24px;background:#fafafa;border:1px dashed #e2e8f0;border-radius:12px">
+      <div style="font-size:11px;color:#999;letter-spacing:1px;margin-bottom:8px">广告</div>
+      <div style="color:#999;font-size:14px">📢 广告位招商中<br><small>欢迎联系投放</small></div>
+    </div>
+  </div>
+
+  <!-- 页脚 -->
   <footer>
-    <div class="container">
-      <p>🏮 AI工具导航 · 发现好用的AI工具</p>
-      <p class="footer-sub">© 2026 aixiaoyaoge.top</p>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-logo">🏮 AI工具导航</div>
+        <p class="footer-desc">一站式AI工具大全，发现好用的AI工具和资源。</p>
+      </div>
+      <div class="footer-col">
+        <h4>快速链接</h4>
+        <a href="index.html">首页</a>
+        <a href="#categories">全部分类</a>
+        <a href="submit.html">提交收录</a>
+      </div>
+      <div class="footer-col">
+        <h4>热门分类</h4>
+        <a href="#categories" onclick="filterByCategory('dialogue')">对话大模型</a>
+        <a href="#categories" onclick="filterByCategory('image')">AI绘图</a>
+        <a href="#categories" onclick="filterByCategory('video')">AI视频</a>
+        <a href="#categories" onclick="filterByCategory('coding')">AI编程</a>
+      </div>
+      <div class="footer-col">
+        <h4>关于我们</h4>
+        <p>一点一滴，打造最强AI导航站</p>
+        <p class="footer-copy">© 2026 aixiaoyaoge.top</p>
+      </div>
     </div>
   </footer>
 
   <script src="data.js"></script>
-  <script src="app.js"></script>
+  <script>
+    // 全局过滤函数
+    let currentFilter = 'all';
+    let currentSearch = '';
+
+    function filterByCategory(cat) {
+      currentFilter = cat;
+      currentSearch = '';
+      document.getElementById('searchInput').value = '';
+      const btns = document.querySelectorAll('.filter-btn');
+      btns.forEach(b => {
+        b.classList.toggle('active', b.dataset.cat === cat);
+      });
+      renderTools();
+    }
+
+    function filterTools() {
+      const input = document.getElementById('searchInput');
+      currentSearch = input.value.trim().toLowerCase();
+      renderTools();
+    }
+
+    function getGridTemplate(count) {
+      if (count <= 1) return '1fr';
+      return 'repeat(auto-fill, minmax(280px, 1fr))';
+    }
+
+    function renderTools() {
+      const container = document.getElementById('toolsContainer');
+      const filtered = toolsData.filter(t => {
+        const matchCat = currentFilter === 'all' || t.category === currentFilter;
+        const matchSearch = !currentSearch || 
+          t.name.toLowerCase().includes(currentSearch) ||
+          t.desc.toLowerCase().includes(currentSearch) ||
+          (t.tags && t.tags.some(tag => tag.toLowerCase().includes(currentSearch)));
+        return matchCat && matchSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<div class="empty-state">没有找到对应的工具</div>';
+        return;
+      }
+
+      container.innerHTML = filtered.map(t => {
+        const tags = (t.tags || []).slice(0, 3);
+        return `
+          <a class="tool-card" href="detail.html?id=${t.id}">
+            <div class="card-icon">${t.icon}</div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title">${t.name}</h3>
+                <span class="card-badge">${t.categoryLabel}</span>
+              </div>
+              <p class="card-desc">${t.desc}</p>
+              ${tags.length ? `<div class="card-tags">${tags.map(tag => `<span class="card-tag">${tag}</span>`).join('')}</div>` : ''}
+            </div>
+          </a>
+        `;
+      }).join('');
+    }
+
+    function renderCategories() {
+      const bar = document.getElementById('filterBar');
+      const cats = [
+        { id: 'all', label: '全部', icon: '🏠' },
+        { id: 'productivity', label: 'AI办公', icon: '📋' },
+        { id: 'dialogue', label: '对话大模型', icon: '💬' },
+        { id: 'image', label: 'AI绘图', icon: '🎨' },
+        { id: 'video', label: 'AI视频', icon: '🎬' },
+        { id: 'audio', label: 'AI音乐', icon: '🎵' },
+        { id: 'coding', label: 'AI编程', icon: '💻' },
+        { id: 'resource', label: '资源与社区', icon: '📚' }
+      ];
+      bar.innerHTML = cats.map(c => `
+        <button class="filter-btn ${c.id === 'all' ? 'active' : ''}" data-cat="${c.id}" onclick="filterByCategory('${c.id}')">
+          <span class="filter-icon">${c.icon}</span>
+          ${c.label}
+        </button>
+      `).join('');
+    }
+
+    function renderNewest() {
+      const container = document.getElementById('newestContainer');
+      const newest = toolsData.slice(-8).reverse();
+      container.innerHTML = newest.map(t => `
+        <a class="newest-item" href="detail.html?id=${t.id}">
+          <span class="newest-icon">${t.icon}</span>
+          <div class="newest-info">
+            <div class="newest-name">${t.name}</div>
+            <div class="newest-cat">${t.categoryLabel}</div>
+          </div>
+        </a>
+      `).join('');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('totalCount').textContent = toolsData.length;
+      const catSet = new Set(toolsData.map(t => t.categoryLabel));
+      document.getElementById('categoryCount').textContent = catSet.size;
+      
+      renderCategories();
+      renderTools();
+      renderNewest();
+    });
+  </script>
 </body>
 </html>
