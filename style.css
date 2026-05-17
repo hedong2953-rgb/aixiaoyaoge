@@ -85,7 +85,7 @@ nav a.active { background: linear-gradient(135deg, var(--primary), var(--primary
 .card-info h3 { font-size: 17px; font-weight: 600; margin-bottom: 5px; }
 .card-info p { font-size: 14px; color: var(--text-muted); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
-.detail-page { max-width: 800px; margin: 0 auto; padding: 40px 0; }
+.detail-page { max-width: 900px; margin: 0 auto; padding: 32px 16px; }
 
 footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border); color: var(--text-muted); background: rgba(255,255,255,.5); margin-top: 20px; }
 footer p { font-size: 15px; }
