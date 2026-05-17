@@ -1611,5 +1611,56 @@ id: "more-resource", name: "更多资源", icon: "📌",
   }
 ];
 
+// ===== 每日AI资讯 =====
+const aiNews = [
+  {
+    date: "2026-05-17",
+    title: "OpenAI 发布 GPT-4o 重大更新，多模态能力全面提升",
+    summary: "OpenAI 推出 GPT-4o 模型重大更新，在音频、视觉和文本理解方面均有显著提升，支持更自然的实时对话。",
+    tag: "🔥 热点",
+    tagClass: "hot",
+    source: "OpenAI",
+    url: "https://openai.com"
+  },
+  {
+    date: "2026-05-17",
+    title: "Claude 3.5 Sonnet 更新，编程能力超越 GPT-4o",
+    summary: "Anthropic 发布 Claude 3.5 Sonnet 更新版本，在编程和代码生成方面的表现超越 GPT-4o，成为新的编程辅助标杆。",
+    tag: "🆕 更新",
+    tagClass: "new",
+    source: "Anthropic",
+    url: "https://anthropic.com"
+  },
+  {
+    date: "2026-05-17",
+    title: "豆包大模型升级，新增视频理解功能",
+    summary: "字节跳动旗下豆包大模型完成升级，新增视频理解能力，可对视频内容进行分析、总结和问答。",
+    tag: "🏢 厂商",
+    tagClass: "company",
+    source: "字节跳动",
+    url: "https://www.doubao.com"
+  },
+  {
+    date: "2026-05-17",
+    title: "Midjourney V7 即将发布，将支持实时协作编辑",
+    summary: "Midjourney 官方透露 V7 版本将带来实时协作编辑功能，多个用户可同时编辑和调整同一图像。",
+    tag: "🔧 工具",
+    tagClass: "tool",
+    source: "Midjourney",
+    url: "https://www.midjourney.com"
+  },
+  {
+    date: "2026-05-17",
+    title: "Google Gemini 深度整合到 Android 系统",
+    summary: "Google 宣布 Gemini AI 将深度整合到 Android 系统中，取代 Google Assistant，支持更智能的系统级交互。",
+    tag: "🔥 热点",
+    tagClass: "hot",
+    source: "Google",
+    url: "https://gemini.google.com"
+  }
+];
+
+
+
 const categories = {};
 toolsData.forEach(t => { if (!categories[t.category]) categories[t.category] = t.categoryLabel; });
