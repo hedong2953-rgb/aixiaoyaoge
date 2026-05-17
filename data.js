@@ -1406,6 +1406,198 @@ const toolsData = [
       tags: ["ChatGPT","代充","账号","会员"]
     }
   }
+  {
+    id: "wa-writer", name: "蛙蛙写作", icon: "🐸",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI小说和内容创作工具",
+    url: "https://wawawriter.com",
+    detail: {
+      intro: "蛙蛙写作是一款AI小说创作工具，专为网文作者设计，支持AI续写、AI取名等。",
+      features: ["AI小说续写","角色和世界观设定","AI取名和对话","网文格式适配"],
+      pricing: "免费/付费",
+      tags: ["写作","小说","网文","创作"]
+    }
+  },
+  {
+    id: "metaso", name: "秘塔AI搜索", icon: "🔮",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "无广告直达结果的AI搜索引擎",
+    url: "https://metaso.cn",
+    detail: {
+      intro: "秘塔AI搜索是国内领先的AI搜索引擎，无广告直达结果，支持深度搜索和学术搜索。",
+      features: ["无广告直达结果","深度搜索模式","学术搜索","结构化答案"],
+      pricing: "免费",
+      tags: ["搜索","AI","国内","无广告"]
+    }
+  },
+  {
+    id: "liblibai", name: "LiblibAI哩布哩布", icon: "🖼️",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "国内领先的AI图像创作和模型社区",
+    url: "https://www.liblibai.com",
+    detail: {
+      intro: "LiblibAI（哩布哩布AI）是国内领先的AI图像创作平台和模型分享社区。",
+      features: ["SD模型在线运行","模型分享社区","在线AI生图","国产替代Civitai"],
+      pricing: "免费有额度/付费",
+      tags: ["绘画","模型","社区","国产"]
+    }
+  },
+  {
+    id: "seedance", name: "Seedance", icon: "🌱",
+    category: "video", categoryLabel: "AI视频",
+    desc: "专业AI视频创作平台",
+    url: "https://seedance.com",
+    detail: {
+      intro: "Seedance 是专业AI视频创作平台，支持真人素材参考，效果惊艳。",
+      features: ["真人素材参考","高质量视频生成","专业级效果","多种风格"],
+      pricing: "免费有额度/付费",
+      tags: ["视频","创作","AI","专业"]
+    }
+  },
+  {
+    id: "haishanp", name: "秒哒", icon: "⚡",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "无代码AI应用开发平台",
+    url: "https://mio.tech",
+    detail: {
+      intro: "秒哒是无代码AI应用开发平台，一句话就能做应用，无需编程经验。",
+      features: ["自然语言生成应用","无代码开发","一键部署","多平台支持"],
+      pricing: "免费/付费",
+      tags: ["编程","无代码","开发","平台"]
+    }
+  },
+  {
+    id: "aippt", name: "AiPPT", icon: "📽️",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "AI快速生成高质量PPT",
+    url: "https://www.aippt.cn",
+    detail: {
+      intro: "AiPPT是国内AI PPT生成工具，输入主题即可快速生成高质量的演示文稿。",
+      features: ["一键生成PPT","海量模板","AI排版","多格式导出"],
+      pricing: "免费有额度/付费",
+      tags: ["PPT","办公","生成","国产"]
+    }
+  },
+  {
+    id: "duiyou-ai", name: "堆友AI", icon: "🎯",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "阿里旗下全能AI绘画和视频工具",
+    url: "https://d.design",
+    detail: {
+      intro: "堆友AI是阿里旗下设计平台，提供AI绘画、AI视频、3D素材等一站式创作服务。",
+      features: ["AI绘画生成","AI视频创作","3D素材库","设计资源"],
+      pricing: "免费/付费",
+      tags: ["绘画","视频","设计","阿里"]
+    }
+  },
+  {
+    id: "meitu-design", name: "美图设计室", icon: "📷",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "美图旗下AI图像创作和设计平台",
+    url: "https://www.designkit.cn",
+    detail: {
+      intro: "美图设计室是美图公司推出的AI图像创作和设计平台，提供AI生图、AI设计等功能。",
+      features: ["AI生图","AI设计","AI去除水印","电商设计"],
+      pricing: "免费/付费",
+      tags: ["设计","图片","美图","国产"]
+    }
+  },
+  {
+    id: "xingliu-ai", name: "星流AI", icon: "✨",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "一站式AI设计与创作工具",
+    url: "https://xingliu.ai",
+    detail: {
+      intro: "星流AI是一站式AI设计与创作工具，提供多种AI绘画模型和创作功能。",
+      features: ["多模型支持","AI绘画","AI设计","风格多样"],
+      pricing: "免费有额度/付费",
+      tags: ["绘画","设计","创作","一站式"]
+    }
+  },
+  {
+    id: "huihua-ai", name: "绘蛙AI", icon: "🐸",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI电商营销工具，免费生成商品图",
+    url: "https://ai-bot.cn/sites/9195.html",
+    detail: {
+      intro: "绘蛙AI专注电商营销场景，免费生成商品图、模特图等，适合电商卖家。",
+      features: ["AI商品图生成","AI模特换装","电商场景图","免费有额度"],
+      pricing: "免费/付费",
+      tags: ["电商","营销","商品图","AI"]
+    }
+  },
+  {
+    id: "xiaohuanxiong", name: "办公小浣熊", icon: "🦝",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "AI数据分析助手，数据处理神器",
+    url: "https://www.xiaohuanxiong.com",
+    detail: {
+      intro: "办公小浣熊是AI数据分析助手，上传数据即可用自然语言进行分析和可视化。",
+      features: ["AI数据分析","自然语言查询","可视化图表","Excel/Python数据处理"],
+      pricing: "免费有额度/付费",
+      tags: ["办公","数据","分析","AI"]
+    }
+  },
+  {
+    id: "tusiart", name: "吐司AI", icon: "🍞",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "AI绘画模型社区和在线生图平台",
+    url: "https://tusiart.com",
+    detail: {
+      intro: "吐司AI是国内AI绘画模型社区和在线生图平台，支持在线运行SD模型。",
+      features: ["在线SD模型运行","模型社区","AI生图","国产免费"],
+      pricing: "免费/付费",
+      tags: ["绘画","模型","社区","在线"]
+    }
+  },
+  {
+    id: "zaodian", name: "造点AI", icon: "🔵",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "夸克团队AI图像与视频创作",
+    url: "https://ai-bot.cn/sites/63437.html",
+    detail: {
+      intro: "造点AI是夸克团队推出的AI图像与视频创作平台。",
+      features: ["AI图像创作","AI视频创作","夸克生态","免费使用"],
+      pricing: "免费",
+      tags: ["绘画","视频","夸克","阿里"]
+    }
+  },
+  {
+    id: "12sign", name: "响指HaiSnap", icon: "👆",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "通用AI Agent平台，工作学习皆可用",
+    url: "https://aisnap.com",
+    detail: {
+      intro: "响指HaiSnap是面向工作与学习场景的通用AI Agent平台。",
+      features: ["AI Agent","工作流自动化","多工具集成","学习辅助"],
+      pricing: "免费/付费",
+      tags: ["Agent","自动化","办公","AI"]
+    }
+  },
+  {
+    id: "wanzhi", name: "万小智", icon: "🏗️",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "阿里云企业级AI建站平台",
+    url: "https://ai-bot.cn/sites/77243.html",
+    detail: {
+      intro: "万小智是阿里云推出的企业级AI建站平台，AI自动生成网站。",
+      features: ["AI自动建站","企业级功能","阿里云生态","模板丰富"],
+      pricing: "免费/付费",
+      tags: ["建站","阿里云","企业","AI"]
+    }
+  },
+  {
+    id: "toduke-ai", name: "ToDesk AI", icon: "🖥️",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "桌面AI助手，支持远程控制",
+    url: "https://ai-bot.cn/sites/77198.html",
+    detail: {
+      intro: "ToDesk AI 是桌面端AI智能助手，支持微信远程操控电脑。",
+      features: ["AI桌面助手","远程控制","微信控制电脑","国产"],
+      pricing: "免费/付费",
+      tags: ["桌面","远程","助手","AI"]
+    }
+  }
 id: "more-resource", name: "更多资源", icon: "📌",
     category: "more", categoryLabel: "更多资源",
     desc: "更多AI相关资源和网站推荐",
