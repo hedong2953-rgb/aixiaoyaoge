@@ -245,7 +245,7 @@ const toolsData = [
     }
   },
   {
-    id: "uvideo", name: "Udio", icon: "🎶",
+    id: "udio", name: "Udio", icon: "🎶",
     category: "audio", categoryLabel: "AI音乐",
     desc: "AI音乐生成，音质细腻风格多样",
     url: "https://www.udio.com",
@@ -307,9 +307,9 @@ const toolsData = [
     }
   },
   {
-    id: "github", name: "GitHub AI", icon: "🐙",
+    id: "github-ai", name: "GitHub AI", icon: "🐙",
     category: "resource", categoryLabel: "资源与社区",
-    desc: "全球最大的代码托管平台，AI项目云集",
+    desc: "全球最大代码托管平台，AI开源项目云集",
     url: "https://github.com/explore",
     detail: {
       intro: "GitHub 是全球最大的代码托管平台，汇集了无数AI开源项目和前沿技术资源。",
