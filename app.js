@@ -36,7 +36,11 @@ var app = {
       { id: 'video', label: 'AI视频' },
       { id: 'audio', label: 'AI音乐' },
       { id: 'coding', label: 'AI编程' },
-      { id: 'resource', label: '资源与社区' }
+      { id: 'resource', label: '资源与社区' },
+      { id: 'writing', label: 'AI写作' },
+      { id: 'search', label: 'AI搜索' },
+      { id: 'design', label: 'AI设计' },
+      { id: 'agent', label: 'AI智能体' }
     ];
     var html = '';
     for(var i = 0; i < cats.length; i++) {
