@@ -1319,6 +1319,93 @@ const toolsData = [
       tags: ["搜索","AI","信息","问答"]
     }
   }
+  {
+    id: "ai-website-money", name: "AI建站赚钱", icon: "💰",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "用AI搭建网站赚广告费的副业指南",
+    url: "https://aiyoufeng.com",
+    detail: {
+      intro: "用AI搭建工具类网站，不卖产品也能靠广告赚钱。以下是与有风老师学习AI建站的全套资源。",
+      features: [
+        "有风AI建站教程：https://aiyoufeng.com",
+        "10Web AI建站：https://bit.ly/3sbe2pw（AI自动建站平台）",
+        "Hostinger主机：https://bit.ly/3BysRqP（高性价比建站主机）",
+        "Elementor页面构建器：https://bit.ly/49KRNsA（WordPress页面构建）",
+        "Shopify独立站：https://shopify.pxf.io（跨境电商独立站）",
+        "银河录像局ChatGPT代充：https://nf.video/C1dxn",
+        "有风知识星球：https://t.zsxq.com/16Q"
+      ],
+      pricing: "免费教程/付费工具",
+      tags: ["建站","赚钱","副业","AI"]
+    }
+  },
+  {
+    id: "website-analysis", name: "网站分析工具", icon: "📈",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "网站流量分析和SEO工具合集",
+    url: "https://analytics.google.com",
+    detail: {
+      intro: "做网站必备的流量分析和SEO优化工具，帮你获取更多流量和收入。",
+      features: [
+        "Google Analytics：https://analytics.google.com（网站流量分析）",
+        "Google Search Console：https://search.google.com/search-console（搜索表现分析）",
+        "Google Trends：https://trends.google.com（关键词趋势查询）",
+        "Google AdSense：https://adsense.google.com（广告变现）",
+        "Semrush：https://semrush.sjv.io（全能SEO和数据分析）",
+        "关键词规划师：https://business.google.com（Google关键词查询）"
+      ],
+      pricing: "免费/付费",
+      tags: ["分析","SEO","流量","广告"]
+    }
+  },
+  {
+    id: "fiverr", name: "Fiverr", icon: "🤝",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI自由职业外包平台",
+    url: "https://bit.ly/4c9cttG",
+    detail: {
+      intro: "Fiverr 是全球最大的自由职业平台，可以在上面找到AI设计、编程、写作等各种外包服务。",
+      features: ["AI相关服务外包","自由职业接单","全球化的设计师和开发者","价格透明"],
+      pricing: "按项目定价",
+      tags: ["外包","自由职业","服务","设计"]
+    }
+  },
+  {
+    id: "semrush", name: "Semrush", icon: "📊",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "全能网站数据分析和SEO工具",
+    url: "https://semrush.sjv.io",
+    detail: {
+      intro: "Semrush 是领先的在线可见性管理平台，提供SEO、PPC、内容营销等全方位分析。",
+      features: ["SEO关键词研究","竞争对手分析","网站流量估算","内容营销策略"],
+      pricing: "免费版有限额；Pro版$120/月",
+      tags: ["SEO","分析","营销","数据"]
+    }
+  },
+  {
+    id: "hostinger", name: "Hostinger", icon: "🌐",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "高性价比建站虚拟主机",
+    url: "https://bit.ly/3BysRqP",
+    detail: {
+      intro: "Hostinger 是经济实惠的共享主机服务商，适合搭建WordPress网站，有风老师推荐。",
+      features: ["超高性价比","一键安装WordPress","免费SSL证书","30天退款保证"],
+      pricing: "约$2-3/月起",
+      tags: ["主机","建站","WordPress","服务器"]
+    }
+  },
+  {
+    id: "yinhaoyinju", name: "银河录像局", icon: "🎬",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "ChatGPT会员代充和账号平台",
+    url: "https://nf.video/C1dxn",
+    detail: {
+      intro: "银河录像局提供ChatGPT Plus代充、账号购买服务，方便国内用户使用。",
+      features: ["ChatGPT Plus代充","账号购买","Midjourney代充","多种AI平台账号"],
+      pricing: "按服务定价",
+      tags: ["ChatGPT","代充","账号","会员"]
+    }
+  }
 id: "more-resource", name: "更多资源", icon: "📌",
     category: "more", categoryLabel: "更多资源",
     desc: "更多AI相关资源和网站推荐",
