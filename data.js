@@ -48,7 +48,55 @@ const toolsData = [
       tags: ["投资","股票","AI分析","App"]
     }
   },
-  // ===== 对话大模型 =====
+    {
+    id: "wps-ai", name: "WPS AI", icon: "📄",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "金山WPS内置AI，办公文档智能化",
+    url: "https://ai.wps.cn",
+    detail: {
+      intro: "WPS AI是金山办公推出的AI助手，集成在WPS Office中，支持AI写作、PPT生成、表格处理等。",
+      features: ["AI写作辅助","一键生成PPT","表格智能处理","PDF阅读总结"],
+      pricing: "免费有额度；会员使用更多",
+      tags: ["办公","文档","WPS","国产"]
+    }
+  },
+  {
+    id: "huawei-pangu", name: "华为盘古", icon: "🌌",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "华为盘古大模型，行业AI赋能",
+    url: "https://www.huaweicloud.com/product/pangu.html",
+    detail: {
+      intro: "华为盘古大模型是华为云推出的AI大模型，覆盖办公、气象、医药等多个行业场景。",
+      features: ["多行业覆盖","自然语言处理","图像识别","行业定制"],
+      pricing: "企业级定价",
+      tags: ["办公","华为","大模型","云"]
+    }
+  },
+  {
+    id: "baidu-note", name: "百度如流AI", icon: "💼",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "百度智能办公平台，AI协作",
+    url: "https://infoflow.baidu.com",
+    detail: {
+      intro: "百度如流是百度旗下的智能办公平台，集成了AI会议、文档协作、智能审批等功能。",
+      features: ["AI会议记录","文档协作","智能审批","企业通讯"],
+      pricing: "免费/付费",
+      tags: ["办公","协作","国产","百度"]
+    }
+  },
+  {
+    id: "jinshan-note", name: "金山文档AI", icon: "📝",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "在线文档AI助手，协作办公",
+    url: "https://www.kdocs.cn",
+    detail: {
+      intro: "金山文档AI是在线文档处理工具的AI增强版，支持多人协作和AI辅助写作。",
+      features: ["AI写作","多人协作","云存储","跨平台"],
+      pricing: "免费/付费",
+      tags: ["办公","文档","协作","国产"]
+    }
+  }
+// ===== 对话大模型 =====
   {
     id: "chatgpt", name: "ChatGPT", icon: "💬",
     category: "conversation", categoryLabel: "对话大模型",
@@ -157,7 +205,67 @@ const toolsData = [
       tags: ["对话","实时","社交","推理"]
     }
   },
-  // ===== AI绘图 =====
+    {
+    id: "baidu-erNIE", name: "文心一言", icon: "🐻",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "百度文心大模型AI对话",
+    url: "https://yiyan.baidu.com",
+    detail: {
+      intro: "文心一言是百度基于文心大模型推出的AI对话产品，在知识问答和信息检索方面具有独特优势。",
+      features: ["百度搜索生态整合","知识问答","文档处理","插件系统"],
+      pricing: "免费",
+      tags: ["对话","百度","国产","大模型"]
+    }
+  },
+  {
+    id: "iflytek-xinghuo", name: "讯飞星火", icon: "🔥",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "科大讯飞AI大模型，语音识别领先",
+    url: "https://xinghuo.xfyun.cn",
+    detail: {
+      intro: "讯飞星火是科大讯飞推出的AI大模型，在语音识别和多模态交互方面具有领先优势。",
+      features: ["语音识别领先","多模态交互","文档分析","API开放"],
+      pricing: "免费",
+      tags: ["对话","语音","科大讯飞","国产"]
+    }
+  },
+  {
+    id: "tencent-hunyuan", name: "腾讯混元", icon: "🌀",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "腾讯混元大模型，微信生态整合",
+    url: "https://hunyuan.tencent.com",
+    detail: {
+      intro: "腾讯混元是腾讯推出的AI大模型，深度整合微信和QQ生态，支持多种场景应用。",
+      features: ["微信生态整合","多模态理解","广告创意生成","社交场景优化"],
+      pricing: "免费",
+      tags: ["对话","腾讯","国产","社交"]
+    }
+  },
+  {
+    id: "baichuan", name: "百川智能", icon: "🌊",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "王小川创立的国产AI大模型",
+    url: "https://baichuan-ai.com",
+    detail: {
+      intro: "百川智能由前搜狗CEO王小川创立，其AI大模型在医疗、法律等垂直领域有独特优势。",
+      features: ["垂直领域优化","医疗法律专业","长文本处理","API开放"],
+      pricing: "免费/付费",
+      tags: ["对话","百川","国产","垂直"]
+    }
+  },
+  {
+    id: "zeroone", name: "零一万物", icon: "🔢",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "李开复创立的AI大模型公司",
+    url: "https://lingyiwanwu.com",
+    detail: {
+      intro: "零一万物由李开复博士创立，致力于打造世界级的AI大模型，在开放域对话方面表现优异。",
+      features: ["开放域对话","多语言支持","长上下文","推理能力强"],
+      pricing: "免费",
+      tags: ["对话","零一","国产","大模型"]
+    }
+  }
+// ===== AI绘图 =====
   {
     id: "midjourney", name: "Midjourney", icon: "🎨",
     category: "image", categoryLabel: "AI绘图",
