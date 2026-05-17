@@ -101,3 +101,10 @@ var app = {
 };
 
 document.addEventListener('DOMContentLoaded', function() { app.init(); });
+
+// 后备初始化：直接在 script 执行时就调用
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  app.init();
+} else {
+  document.addEventListener('DOMContentLoaded', function() { app.init(); });
+}

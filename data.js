@@ -1,5 +1,5 @@
 // v1.0.3
-const toolsData = [
+var toolsData = [
   // ===== AI办公 =====
   {
     id: "notionai", name: "Notion AI", icon: "📝",
