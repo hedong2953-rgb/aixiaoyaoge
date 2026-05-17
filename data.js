@@ -42,10 +42,10 @@ const toolsData = [
     desc: "我的投资小龙虾，AI智能投资助手",
     url: "https://claw.wind.com.cn",
     detail: {
-      intro: "WindClaw（我的投资小龙虾）是Wind旗下AI智能投资助手，帮助投资者把握市场机会。",
-      features: ["AI投资分析","市场数据追踪","智能选股","风险管理"],
-      pricing: "免费/付费",
-      tags: ["投资","股票","AI分析","理财"]
+      intro: "WindClaw（我的投资小龙虾）是Wind旗下AI智能投资助手，需下载App使用。请前往手机应用市场搜索「WindClaw」或「我的投资小龙虾」下载安装。",
+      features: ["AI投资分析","市场数据追踪","智能选股","风险管理","需下载App使用"],
+      pricing: "免费下载",
+      tags: ["投资","股票","AI分析","App"]
     }
   },
   // ===== 对话大模型 =====
