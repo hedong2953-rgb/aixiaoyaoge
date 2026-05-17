@@ -343,6 +343,146 @@ const toolsData = [
       tags: ["资源","推荐","导航"]
     }
   }
+
+  // ===== AI办公（新增）=====
+  {
+    id: "yuanbao", name: "腾讯元宝", icon: "💎",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "腾讯出品AI助手，写作办公全能",
+    url: "https://yuanbao.tencent.com",
+    detail: {
+      intro: "腾讯元宝是腾讯推出的AI助手应用，集成了腾讯混元大模型，支持写作、翻译、代码、文档分析等。",
+      features: ["腾讯混元大模型驱动","支持多轮对话","文件处理和文档分析","微信小程序无缝衔接"],
+      pricing: "免费",
+      tags: ["办公","写作","AI助手","国产"]
+    }
+  },
+  {
+    id: "xinghuo", name: "讯飞星火", icon: "🔥",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "科大讯飞AI大模型，语音办公见长",
+    url: "https://xinghuo.xfyun.cn",
+    detail: {
+      intro: "讯飞星火是科大讯飞推出的AI认知大模型，在语音识别和办公场景有独特优势。",
+      features: ["语音输入和识别极强","多轮对话能力","办公文档处理","丰富的API接口"],
+      pricing: "免费",
+      tags: ["办公","语音","AI助手","国产"]
+    }
+  },
+  // ===== AI绘图（新增）=====
+  {
+    id: "leonardo", name: "Leonardo.ai", icon: "🎭",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "功能强大的AI绘画平台，模型丰富",
+    url: "https://leonardo.ai",
+    detail: {
+      intro: "Leonardo.ai 是功能丰富的AI图像生成平台，提供大量预训练模型和风格控制。",
+      features: ["大量预训练模型","精细风格控制","图生图/视频功能","社区素材库"],
+      pricing: "免费版有额度；付费版$10/月起",
+      tags: ["绘画","生成","设计","模型"]
+    }
+  },
+  {
+    id: "comfyui", name: "ComfyUI", icon: "🔗",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "节点式AI绘画工作流，Stable Diffusion最强前端",
+    url: "https://github.com/comfyanonymous/ComfyUI",
+    detail: {
+      intro: "ComfyUI 是Stable Diffusion的节点式工作流前端，通过连接节点构建复杂的AI绘画管线。",
+      features: ["节点式可视化工作流","支持多种扩散模型","插件生态丰富","可控性极强"],
+      pricing: "开源免费",
+      tags: ["绘画","工作流","开源","Stable Diffusion"]
+    }
+  },
+  // ===== AI视频（新增）=====
+  {
+    id: "jimeng", name: "即梦 (Jimeng)", icon: "🌟",
+    category: "video", categoryLabel: "AI视频",
+    desc: "字节跳动AI视频生成，国产热门",
+    url: "https://jimeng.jianying.com",
+    detail: {
+      intro: "即梦是字节跳动旗下剪映推出的AI视频生成工具，支持文生视频和图生视频。",
+      features: ["文生视频和图生视频","与剪映深度整合","国产免费有额度","视频质量持续提升"],
+      pricing: "免费有额度",
+      tags: ["视频","国产","剪映","生成"]
+    }
+  },
+  // ===== AI音乐（新增）=====
+  {
+    id: "tiamat", name: "天工AI音乐", icon: "🎹",
+    category: "audio", categoryLabel: "AI音乐",
+    desc: "昆仑万维AI音乐生成，中文支持好",
+    url: "https://music.singularity-ai.com",
+    detail: {
+      intro: "天工AI音乐是昆仑万维推出的AI音乐生成工具，中文歌词和旋律表现出色。",
+      features: ["中文歌词生成","多种音乐风格","人声和伴奏分离","免费使用"],
+      pricing: "免费",
+      tags: ["音乐","中文","国产","生成"]
+    }
+  },
+  // ===== AI编程（新增）=====
+  {
+    id: "lovable", name: "Lovable", icon: "❤️",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "AI全栈应用生成器，描述即可生成网站",
+    url: "https://lovable.dev",
+    detail: {
+      intro: "Lovable 是一款AI驱动的全栈应用生成器，用自然语言描述需求即可生成完整的Web应用。",
+      features: ["自然语言生成全栈应用","前端+后端一次生成","实时预览和修改","部署一键完成"],
+      pricing: "免费版有限额；Pro版$20/月",
+      tags: ["全栈","生成","网站","开发"]
+    }
+  },
+  {
+    id: "bolt", name: "Bolt.new", icon: "⚡",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "浏览器内AI编程，实时预览部署",
+    url: "https://bolt.new",
+    detail: {
+      intro: "Bolt.new 是StackBlitz推出的AI编程工具，在浏览器中通过对话生成完整的Web应用。",
+      features: ["浏览器内全栈开发","AI对话生成代码","实时预览","一键部署"],
+      pricing: "免费版有限额；Pro版$20/月",
+      tags: ["编程","全栈","浏览器","实时"]
+    }
+  },
+  // ===== 资源与社区（新增）=====
+  {
+    id: "openrouter", name: "OpenRouter", icon: "🌐",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI模型聚合平台，一个API访问所有模型",
+    url: "https://openrouter.ai",
+    detail: {
+      intro: "OpenRouter 是一个AI模型聚合平台，通过一个API即可访问ChatGPT、Claude、Gemini等数十种模型。",
+      features: ["聚合数十种AI模型","统一API接口","按量付费","模型对比和测试"],
+      pricing: "按量付费",
+      tags: ["API","模型","聚合","开发"]
+    }
+  },
+  {
+    id: "replicate", name: "Replicate", icon: "🔄",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "云端运行开源AI模型的平台",
+    url: "https://replicate.com",
+    detail: {
+      intro: "Replicate 是一个云端AI模型运行平台，可以直接在云端运行数千个开源AI模型。",
+      features: ["数千个开源模型","云端运行无需GPU","简单的API调用","活跃的开发者社区"],
+      pricing: "按量付费",
+      tags: ["模型","云端","API","开源"]
+    }
+  },
+  // ===== 更多资源（新增）=====
+  {
+    id: "aitools", name: "更多AI工具", icon: "🧰",
+    category: "more", categoryLabel: "更多资源",
+    desc: "持续发现更多实用的AI工具",
+    url: "https://aixiaoyaoge.vercel.app",
+    detail: {
+      intro: "更多AI工具持续收录中，会不断充实这个导航站。",
+      features: ["持续更新中"],
+      pricing: "",
+      tags: ["资源","导航","发现"]
+    }
+  }
 ];
 
 const categories = {};
