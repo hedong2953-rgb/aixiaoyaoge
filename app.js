@@ -1,4 +1,3 @@
-
 var app = {
   currentFilter: 'all',
   currentSearch: '',
@@ -31,9 +30,9 @@ var app = {
   renderCategories: function() {
     var bar = document.getElementById('filterBar');
     var cats = [
-      { id: 'all', label: '全部' },
+      { id: 'all', label: '全部分类' },
       { id: 'productivity', label: 'AI办公' },
-      { id: 'dialogue', label: '对话大模型' },
+      { id: 'conversation', label: '对话大模型' },
       { id: 'image', label: 'AI绘图' },
       { id: 'video', label: 'AI视频' },
       { id: 'audio', label: 'AI音乐' },
@@ -44,7 +43,7 @@ var app = {
     for(var i = 0; i < cats.length; i++) {
       var c = cats[i];
       var cls = c.id === 'all' ? 'filter-btn active' : 'filter-btn';
-      html += '<button class="' + cls + '" data-cat="' + c.id + '" onclick="app.filterByCategory('' + c.id + '')">' + c.label + '</button>';
+      html += '<button class="' + cls + '" data-cat="' + c.id + '" onclick="app.filterByCategory(\'' + c.id + '\')">' + c.label + '</button>';
     }
     bar.innerHTML = html;
   },
