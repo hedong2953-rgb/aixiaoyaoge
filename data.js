@@ -1615,7 +1615,331 @@ var toolsData = [
       tags: ["资源","推荐","导航"]
     }
   }
-];
+,
+  {
+    id: "notion-calendar", name: "Notion Calendar", icon: "📅",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "Notion推出的智能日历管理工具",
+    url: "https://notion.so/calendar",
+    detail: {
+      intro: "集合任务管理、日历和数据库的强大工具",
+      features: ["集成Notion","智能日程","团队协作"],
+      pricing: "免费/付费",
+      tags: ["日历","Notion","效率"]
+    }
+  },
+  {
+    id: "fireflies", name: "Fireflies.ai", icon: "🔥",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "AI会议助手，自动记录和总结会议内容",
+    url: "https://fireflies.ai",
+    detail: {
+      intro: "自动加入会议，转录并总结对话",
+      features: ["自动录制","智能摘要","关键词搜索"],
+      pricing: "免费/付费",
+      tags: ["会议","转录","助手"]
+    }
+  },
+  {
+    id: "taskade", name: "Taskade", icon: "✅",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "AI驱动的智能任务管理和协作平台",
+    url: "https://taskade.com",
+    detail: {
+      intro: "集项目管理、笔记、思维导图于一体",
+      features: ["AI任务生成","实时协作","思维导图"],
+      pricing: "免费/付费",
+      tags: ["任务","协作","生产力"]
+    }
+  },
+  {
+    id: "m365-copilot", name: "Microsoft 365 Copilot", icon: "📊",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "集成Office全家桶的AI助手",
+    url: "https://copilot.microsoft.com",
+    detail: {
+      intro: "将AI融入Word、Excel、PPT、Teams",
+      features: ["Word智能写作","Excel数据分析","PPT自动生成"],
+      pricing: "免费/付费",
+      tags: ["Office","微软","AI"]
+    }
+  },
+  {
+    id: "leonardo", name: "Leonardo AI", icon: "🎨",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "强大的AI图像生成和创作平台",
+    url: "https://leonardo.ai",
+    detail: {
+      intro: "丰富的AI图像生成模型和精细控制",
+      features: ["多种模型","精细控制","批量生成"],
+      pricing: "免费/付费",
+      tags: ["生成","图像","创作"]
+    }
+  },
+  {
+    id: "adobe-firefly", name: "Adobe Firefly", icon: "✨",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "Adobe推出的创意生成式AI",
+    url: "https://firefly.adobe.com",
+    detail: {
+      intro: "与Photoshop、Illustrator深度集成",
+      features: ["文本生图","文字特效","矢量图"],
+      pricing: "免费/付费",
+      tags: ["Adobe","设计","创意"]
+    }
+  },
+  {
+    id: "playground-ai", name: "Playground AI", icon: "🖼️",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "在线AI图像编辑和生成平台",
+    url: "https://playgroundai.com",
+    detail: {
+      intro: "简单易用的AI图像生成编辑平台",
+      features: ["多模型","图生图","在线编辑"],
+      pricing: "免费/付费",
+      tags: ["在线","生成","编辑"]
+    }
+  },
+  {
+    id: "seaart", name: "SeaArt AI", icon: "🌊",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "国内AI图像生成和编辑社区",
+    url: "https://seaart.ai",
+    detail: {
+      intro: "国内领先的AI绘画社区平台",
+      features: ["国产模型","社区分享","AI绘画"],
+      pricing: "免费/付费",
+      tags: ["国内","社区","国风"]
+    }
+  },
+  {
+    id: "getimg", name: "GetImg AI", icon: "📸",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "一站式AI图像生成和编辑工具",
+    url: "https://getimg.ai",
+    detail: {
+      intro: "AI图像生成、编辑和修复工具套件",
+      features: ["AI生成","图生图","图像修复"],
+      pricing: "免费/付费",
+      tags: ["生成","编辑","修图"]
+    }
+  },
+  {
+    id: "clipchamp", name: "Clipchamp", icon: "✂️",
+    category: "video", categoryLabel: "AI视频",
+    desc: "微软在线AI视频编辑工具",
+    url: "https://clipchamp.com",
+    detail: {
+      intro: "微软旗下在线视频编辑器",
+      features: ["在线编辑","AI剪辑","字幕生成"],
+      pricing: "免费/付费",
+      tags: ["编辑","免费","微软"]
+    }
+  },
+  {
+    id: "heygen", name: "HeyGen", icon: "👤",
+    category: "video", categoryLabel: "AI视频",
+    desc: "AI数字人视频生成平台",
+    url: "https://heygen.com",
+    detail: {
+      intro: "领先的AI数字人视频生成平台",
+      features: ["数字人生成","多语言翻译","文本转视频"],
+      pricing: "免费/付费",
+      tags: ["数字人","视频","多语言"]
+    }
+  },
+  {
+    id: "invideo", name: "InVideo AI", icon: "🎬",
+    category: "video", categoryLabel: "AI视频",
+    desc: "AI文字转视频创作平台",
+    url: "https://invideo.io",
+    detail: {
+      intro: "输入文字即可生成完整视频",
+      features: ["文字转视频","AI配音","海量模板"],
+      pricing: "免费/付费",
+      tags: ["创作","模板","营销"]
+    }
+  },
+  {
+    id: "capcut", name: "剪映CapCut", icon: "✂️",
+    category: "video", categoryLabel: "AI视频",
+    desc: "字节跳动全能AI视频剪辑工具",
+    url: "https://capcut.com",
+    detail: {
+      intro: "抖音旗下视频剪辑工具",
+      features: ["AI剪辑","自动字幕","图文成片"],
+      pricing: "免费/付费",
+      tags: ["剪辑","免费","抖音"]
+    }
+  },
+  {
+    id: "vidyo", name: "Vidyo AI", icon: "📹",
+    category: "video", categoryLabel: "AI视频",
+    desc: "AI短视频自动生成工具",
+    url: "https://vidyo.ai",
+    detail: {
+      intro: "AI驱动短视频创作平台",
+      features: ["自动剪辑","短视频","内容提取"],
+      pricing: "免费/付费",
+      tags: ["短视频","剪辑","AI"]
+    }
+  },
+  {
+    id: "mubert", name: "Mubert", icon: "🎵",
+    category: "audio", categoryLabel: "AI音乐/音频",
+    desc: "AI实时免版税音乐生成",
+    url: "https://mubert.com",
+    detail: {
+      intro: "AI实时生成独特背景音乐",
+      features: ["实时生成","免版税","多风格"],
+      pricing: "免费/付费",
+      tags: ["音乐","生成","免版税"]
+    }
+  },
+  {
+    id: "resemble-ai", name: "Resemble AI", icon: "🎤",
+    category: "audio", categoryLabel: "AI音乐/音频",
+    desc: "AI语音合成和声音克隆平台",
+    url: "https://resemble.ai",
+    detail: {
+      intro: "专业级语音合成服务",
+      features: ["声音克隆","情感合成","多语言"],
+      pricing: "免费/付费",
+      tags: ["语音","合成","克隆"]
+    }
+  },
+  {
+    id: "voicemod", name: "Voicemod", icon: "🔊",
+    category: "audio", categoryLabel: "AI音乐/音频",
+    desc: "AI实时变声器，适合直播游戏",
+    url: "https://voicemod.net",
+    detail: {
+      intro: "实时AI变声器",
+      features: ["实时变声","语音效果","游戏集成"],
+      pricing: "免费/付费",
+      tags: ["变声","直播","游戏"]
+    }
+  },
+  {
+    id: "audacity-ai", name: "Audacity AI", icon: "🎙️",
+    category: "audio", categoryLabel: "AI音乐/音频",
+    desc: "开源音频编辑软件AI增强版",
+    url: "https://audacityteam.org",
+    detail: {
+      intro: "经典音频编辑软件的AI扩展",
+      features: ["免费开源","AI降噪","音频编辑"],
+      pricing: "免费/付费",
+      tags: ["音频","编辑","开源"]
+    }
+  },
+  {
+    id: "bolt", name: "Bolt.new", icon: "⚡",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "AI全栈Web应用即时生成器",
+    url: "https://bolt.new",
+    detail: {
+      intro: "描述想法即可生成完整Web应用",
+      features: ["全栈生成","实时预览","一键部署"],
+      pricing: "免费/付费",
+      tags: ["全栈","Web","生成"]
+    }
+  },
+  {
+    id: "lovable", name: "Lovable", icon: "💜",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "AI应用构建器，描述即可生成",
+    url: "https://lovable.dev",
+    detail: {
+      intro: "自然语言描述即可生成应用",
+      features: ["自然语言","应用生成","一键部署"],
+      pricing: "免费/付费",
+      tags: ["应用","生成","自然语言"]
+    }
+  },
+  {
+    id: "v0", name: "V0 by Vercel", icon: "🎯",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "Vercel前端AI代码生成工具",
+    url: "https://v0.dev",
+    detail: {
+      intro: "专注React/Next.js前端组件生成",
+      features: ["React组件","Next.js","实时预览"],
+      pricing: "免费/付费",
+      tags: ["前端","React","UI"]
+    }
+  },
+  {
+    id: "devin", name: "Devin", icon: "🦾",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "AI软件工程师，自主编程完成任务",
+    url: "https://cognition.ai",
+    detail: {
+      intro: "世界上第一个AI软件工程师",
+      features: ["自主编程","任务规划","Bug修复"],
+      pricing: "免费/付费",
+      tags: ["AI工程师","自主","编程"]
+    }
+  },
+  {
+    id: "augment", name: "Augment", icon: "📦",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "AI代码智能补全和重构工具",
+    url: "https://augmentcode.com",
+    detail: {
+      intro: "AI驱动的代码补全和重构",
+      features: ["代码补全","智能重构","上下文感知"],
+      pricing: "免费/付费",
+      tags: ["补全","重构","效率"]
+    }
+  },
+  {
+    id: "gemini", name: "Google Gemini", icon: "🔵",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "Google多模态AI大模型",
+    url: "https://gemini.google.com",
+    detail: {
+      intro: "支持文本、图像、视频多模态理解",
+      features: ["多模态","百万token","Google生态"],
+      pricing: "免费/付费",
+      tags: ["Google","多模态","大模型"]
+    }
+  },
+  {
+    id: "sensechat", name: "商汤日日新", icon: "🀄",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "商汤科技大模型对话平台",
+    url: "https://chat.sensetime.com",
+    detail: {
+      intro: "商汤科技AI对话平台",
+      features: ["多模态","视觉理解","国产模型"],
+      pricing: "免费/付费",
+      tags: ["商汤","国产","多模态"]
+    }
+  },
+  {
+    id: "minimax", name: "海螺AI (MiniMax)", icon: "🐚",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "MiniMax推出的AI对话助手",
+    url: "https://hailuoai.com",
+    detail: {
+      intro: "MiniMax公司AI对话产品",
+      features: ["AI对话","内容创作","文件分析"],
+      pricing: "免费/付费",
+      tags: ["MiniMax","国产","对话"]
+    }
+  },
+  {
+    id: "stepchat", name: "阶跃星辰", icon: "⭐",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "阶跃星辰大语言模型",
+    url: "https://stepchat.cn",
+    detail: {
+      intro: "国内AI初创公司对话大模型",
+      features: ["文本理解","内容创作","知识问答"],
+      pricing: "免费/付费",
+      tags: ["国产","新锐","对话"]
+    }
+  }];
 
 // ===== 每日AI资讯 =====
 const aiNews = [
