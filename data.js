@@ -36,6 +36,18 @@ const toolsData = [
       tags: ["Bot","搭建","自动化","国产"]
     }
   },
+  {
+    id: "windclaw", name: "WindClaw", icon: "🦞",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "我的投资小龙虾，AI投资助手",
+    url: "https://windclaw.com",
+    detail: {
+      intro: "WindClaw（我的投资小龙虾）是一款AI驱动的投资分析工具，帮助投资者做出更明智的决策。",
+      features: ["AI投资分析","市场数据追踪","智能选股","风险管理"],
+      pricing: "免费/付费",
+      tags: ["投资","股票","AI分析","理财"]
+    }
+  },
   // ===== 对话大模型 =====
   {
     id: "chatgpt", name: "ChatGPT", icon: "💬",
