@@ -6,7 +6,6 @@ var app = {
     document.getElementById('toolCount').textContent = toolsData.length;
     this.renderCategories();
     this.renderTools();
-    this.renderNewest();
   },
 
   filterByCategory: function(cat) {
@@ -80,20 +79,6 @@ var app = {
       html += '<p class="card-desc">' + t.desc + '</p>';
       if(tagHtml) html += '<div class="card-tags">' + tagHtml + '</div>';
       html += '</div></a>';
-    }
-    container.innerHTML = html;
-  },
-
-  renderNewest: function() {
-    var container = document.getElementById('newestContainer');
-    var start = Math.max(0, toolsData.length - 8);
-    var html = '';
-    for(var i = start; i < toolsData.length; i++) {
-      var t = toolsData[i];
-      html += '<a class="newest-item" href="detail.html?id=' + t.id + '">';
-      html += '<span class="newest-icon">' + t.icon + '</span>';
-      html += '<div class="newest-info"><div class="newest-name">' + t.name + '</div><div class="newest-cat">' + t.categoryLabel + '</div></div>';
-      html += '</a>';
     }
     container.innerHTML = html;
   }
