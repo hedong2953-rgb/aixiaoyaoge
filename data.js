@@ -1617,328 +1617,430 @@ var toolsData = [
   }
 ,
   {
-    id: "notion-calendar", name: "Notion Calendar", icon: "📅",
+    id: "kapi-ppt", name: "咔片PPT", icon: "📽️",
     category: "productivity", categoryLabel: "AI办公",
-    desc: "Notion推出的智能日历管理工具",
-    url: "https://notion.so/calendar",
-    detail: {
-      intro: "集合任务管理、日历和数据库的强大工具",
-      features: ["集成Notion","智能日程","团队协作"],
-      pricing: "免费/付费",
-      tags: ["日历","Notion","效率"]
-    }
+    desc: "AI PPT制作工具，设计美化自动化",
+    url: "https://ai-bot.cn/sites/kapi-ppt.html"
   },
   {
-    id: "fireflies", name: "Fireflies.ai", icon: "🔥",
+    id: "bosi-aippt", name: "博思AIPPT", icon: "📄",
     category: "productivity", categoryLabel: "AI办公",
-    desc: "AI会议助手，自动记录和总结会议内容",
-    url: "https://fireflies.ai",
-    detail: {
-      intro: "自动加入会议，转录并总结对话",
-      features: ["自动录制","智能摘要","关键词搜索"],
-      pricing: "免费/付费",
-      tags: ["会议","转录","助手"]
-    }
+    desc: "PPT效率神器，AI一键生成PPT",
+    url: "https://ai-bot.cn/sites/bosi-aippt.html"
   },
   {
-    id: "taskade", name: "Taskade", icon: "✅",
+    id: "wending-aippt", name: "文多多AiPPT", icon: "📋",
     category: "productivity", categoryLabel: "AI办公",
-    desc: "AI驱动的智能任务管理和协作平台",
-    url: "https://taskade.com",
-    detail: {
-      intro: "集项目管理、笔记、思维导图于一体",
-      features: ["AI任务生成","实时协作","思维导图"],
-      pricing: "免费/付费",
-      tags: ["任务","协作","生产力"]
-    }
+    desc: "AI一键生成PPT，支持配图和资料整合",
+    url: "https://ai-bot.cn/sites/wending-aippt.html"
   },
   {
-    id: "m365-copilot", name: "Microsoft 365 Copilot", icon: "📊",
+    id: "islide-aippt", name: "iSlide AIPPT", icon: "📉",
     category: "productivity", categoryLabel: "AI办公",
-    desc: "集成Office全家桶的AI助手",
-    url: "https://copilot.microsoft.com",
-    detail: {
-      intro: "将AI融入Word、Excel、PPT、Teams",
-      features: ["Word智能写作","Excel数据分析","PPT自动生成"],
-      pricing: "免费/付费",
-      tags: ["Office","微软","AI"]
-    }
+    desc: "AI一键设计精美PPT",
+    url: "https://ai-bot.cn/sites/islide-aippt.html"
   },
   {
-    id: "leonardo", name: "Leonardo AI", icon: "🎨",
+    id: "napkin", name: "Napkin AI", icon: "✍️",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "文本快速转演示图像的AI办公工具",
+    url: "https://ai-bot.cn/sites/napkin.html"
+  },
+  {
+    id: "xunfei-zhiwen", name: "讯飞智文", icon: "📝",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "一键生成PPT和Word文档",
+    url: "https://ai-bot.cn/sites/xunfei-zhiwen.html"
+  },
+  {
+    id: "kimi-ppt", name: "Kimi PPT助手", icon: "🤖",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "Kimi全新PPT助手，一键生成PPT",
+    url: "https://ai-bot.cn/sites/kimi-ppt.html"
+  },
+  {
+    id: "microsoft-designer", name: "Microsoft Designer", icon: "🎨",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "微软在线设计海报和宣传图工具",
+    url: "https://ai-bot.cn/sites/microsoft-designer.html"
+  },
+  {
+    id: "quark-ppt", name: "夸克PPT", icon: "🔍",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "夸克AI PPT生成工具",
+    url: "https://ai-bot.cn/sites/quark-ppt.html"
+  },
+  {
+    id: "wanshi-xing", name: "万兴智演", icon: "🎬",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "万兴科技AI PPT和演示制作软件",
+    url: "https://ai-bot.cn/sites/wanshi-xing.html"
+  },
+  {
+    id: "voxdeck", name: "VoxDeck", icon: "🔊",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "创新的AI演示文稿生成工具",
+    url: "https://ai-bot.cn/sites/voxdeck.html"
+  },
+  {
+    id: "swishy", name: "Swishy", icon: "✨",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "AI动态设计与动画生成平台",
+    url: "https://ai-bot.cn/sites/swishy.html"
+  },
+  {
+    id: "chartgen", name: "ChartGen", icon: "📈",
+    category: "productivity", categoryLabel: "AI办公",
+    desc: "AI图表生成工具",
+    url: "https://ai-bot.cn/sites/chartgen.html"
+  },
+  {
+    id: "qwen-chat", name: "通义千问 Qwen", icon: "🌐",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "阿里通义Qwen对话AI",
+    url: "https://ai-bot.cn/sites/qwen-chat.html"
+  },
+  {
+    id: "tencent-yuanbao", name: "腾讯元宝", icon: "💎",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "腾讯免费AI智能助手",
+    url: "https://ai-bot.cn/sites/tencent-yuanbao.html"
+  },
+  {
+    id: "huwei-xiaoyi", name: "华为小艺", icon: "🌺",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "华为小艺AI助手网页版",
+    url: "https://ai-bot.cn/sites/huwei-xiaoyi.html"
+  },
+  {
+    id: "tiangong-ai", name: "天工AI", icon: "⚡",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "昆仑万维AI智能助手",
+    url: "https://ai-bot.cn/sites/tiangong-ai.html"
+  },
+  {
+    id: "poe", name: "Poe", icon: "💬",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "Quora推出的AI问答机器人",
+    url: "https://ai-bot.cn/sites/poe.html"
+  },
+  {
+    id: "ms-copilot", name: "Microsoft Copilot", icon: "🧠",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "微软AI智能助手",
+    url: "https://ai-bot.cn/sites/ms-copilot.html"
+  },
+  {
+    id: "baixiaoying", name: "百小应", icon: "🔮",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "百川智能免费AI助手",
+    url: "https://ai-bot.cn/sites/baixiaoying.html"
+  },
+  {
+    id: "shushan", name: "书生大模型", icon: "📚",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "上海AI实验室大模型对话",
+    url: "https://ai-bot.cn/sites/shushan.html"
+  },
+  {
+    id: "longcat", name: "LongCat (美团)", icon: "🐱",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "美团自研大模型AI对话",
+    url: "https://ai-bot.cn/sites/longcat.html"
+  },
+  {
+    id: "bailing", name: "百灵大模型", icon: "🦅",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "蚂蚁集团Ling大模型对话",
+    url: "https://ai-bot.cn/sites/bailing.html"
+  },
+  {
+    id: "z-ai", name: "Z.ai (智谱)", icon: "🔵",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "智谱面向全球AI模型体验",
+    url: "https://ai-bot.cn/sites/z-ai.html"
+  },
+  {
+    id: "wenbai", name: "问小白", icon: "❓",
+    category: "conversation", categoryLabel: "对话大模型",
+    desc: "AI智能助手，支持DeepSeek满血版",
+    url: "https://ai-bot.cn/sites/wenbai.html"
+  },
+  {
+    id: "gaoding-ai", name: "稿定AI", icon: "🎨",
     category: "image", categoryLabel: "AI绘图",
-    desc: "强大的AI图像生成和创作平台",
-    url: "https://leonardo.ai",
-    detail: {
-      intro: "丰富的AI图像生成模型和精细控制",
-      features: ["多种模型","精细控制","批量生成"],
-      pricing: "免费/付费",
-      tags: ["生成","图像","创作"]
-    }
+    desc: "一站式AI设计工具集",
+    url: "https://ai-bot.cn/sites/gaoding-ai.html"
   },
   {
-    id: "adobe-firefly", name: "Adobe Firefly", icon: "✨",
+    id: "abesmart", name: "阿贝智能", icon: "📖",
     category: "image", categoryLabel: "AI绘图",
-    desc: "Adobe推出的创意生成式AI",
-    url: "https://firefly.adobe.com",
-    detail: {
-      intro: "与Photoshop、Illustrator深度集成",
-      features: ["文本生图","文字特效","矢量图"],
-      pricing: "免费/付费",
-      tags: ["Adobe","设计","创意"]
-    }
+    desc: "一站式AI绘本创作平台",
+    url: "https://ai-bot.cn/sites/abesmart.html"
   },
   {
-    id: "playground-ai", name: "Playground AI", icon: "🖼️",
+    id: "miao-suan", name: "秒画 (商汤)", icon: "🎭",
     category: "image", categoryLabel: "AI绘图",
-    desc: "在线AI图像编辑和生成平台",
-    url: "https://playgroundai.com",
-    detail: {
-      intro: "简单易用的AI图像生成编辑平台",
-      features: ["多模型","图生图","在线编辑"],
-      pricing: "免费/付费",
-      tags: ["在线","生成","编辑"]
-    }
+    desc: "商汤科技免费AI作画",
+    url: "https://ai-bot.cn/sites/miao-suan.html"
   },
   {
-    id: "seaart", name: "SeaArt AI", icon: "🌊",
+    id: "whee", name: "WHEE (美图)", icon: "🌈",
     category: "image", categoryLabel: "AI绘图",
-    desc: "国内AI图像生成和编辑社区",
-    url: "https://seaart.ai",
-    detail: {
-      intro: "国内领先的AI绘画社区平台",
-      features: ["国产模型","社区分享","AI绘画"],
-      pricing: "免费/付费",
-      tags: ["国内","社区","国风"]
-    }
+    desc: "美图AI图片和绘画创作",
+    url: "https://ai-bot.cn/sites/whee.html"
   },
   {
-    id: "getimg", name: "GetImg AI", icon: "📸",
+    id: "wuli", name: "呜哩 (阿里)", icon: "🦊",
     category: "image", categoryLabel: "AI绘图",
-    desc: "一站式AI图像生成和编辑工具",
-    url: "https://getimg.ai",
-    detail: {
-      intro: "AI图像生成、编辑和修复工具套件",
-      features: ["AI生成","图生图","图像修复"],
-      pricing: "免费/付费",
-      tags: ["生成","编辑","修图"]
-    }
+    desc: "阿里AIGC创意生产力平台",
+    url: "https://ai-bot.cn/sites/wuli.html"
   },
   {
-    id: "clipchamp", name: "Clipchamp", icon: "✂️",
+    id: "insmind", name: "insMind", icon: "🖼️",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "稿定面向全球AI图片编辑",
+    url: "https://ai-bot.cn/sites/insmind.html"
+  },
+  {
+    id: "runninghub", name: "RunningHub", icon: "🏃",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "云端ComfyUI图像视频创作",
+    url: "https://ai-bot.cn/sites/runninghub.html"
+  },
+  {
+    id: "photoroom", name: "Photoroom", icon: "📷",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "在线AI图片编辑工具",
+    url: "https://ai-bot.cn/sites/photoroom.html"
+  },
+  {
+    id: "ribbet", name: "Ribbet.ai", icon: "🖌️",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "免费多功能AI图片处理",
+    url: "https://ai-bot.cn/sites/ribbet.html"
+  },
+  {
+    id: "wanxiang", name: "通义万相", icon: "✨",
+    category: "image", categoryLabel: "AI绘图",
+    desc: "阿里AI创意内容生成平台",
+    url: "https://ai-bot.cn/sites/wanxiang.html"
+  },
+  {
+    id: "libtv", name: "LibTV", icon: "🎥",
     category: "video", categoryLabel: "AI视频",
-    desc: "微软在线AI视频编辑工具",
-    url: "https://clipchamp.com",
-    detail: {
-      intro: "微软旗下在线视频编辑器",
-      features: ["在线编辑","AI剪辑","字幕生成"],
-      pricing: "免费/付费",
-      tags: ["编辑","免费","微软"]
-    }
+    desc: "专业AI视频创作平台",
+    url: "https://ai-bot.cn/sites/libtv.html"
   },
   {
-    id: "heygen", name: "HeyGen", icon: "👤",
+    id: "soundview", name: "SoundView (讯飞)", icon: "🔊",
+    category: "video", categoryLabel: "AI视频",
+    desc: "讯飞AI短视频智能创作",
+    url: "https://ai-bot.cn/sites/soundview.html"
+  },
+  {
+    id: "chanjing", name: "蝉镜", icon: "🪞",
     category: "video", categoryLabel: "AI视频",
     desc: "AI数字人视频生成平台",
-    url: "https://heygen.com",
-    detail: {
-      intro: "领先的AI数字人视频生成平台",
-      features: ["数字人生成","多语言翻译","文本转视频"],
-      pricing: "免费/付费",
-      tags: ["数字人","视频","多语言"]
-    }
+    url: "https://ai-bot.cn/sites/chanjing.html"
   },
   {
-    id: "invideo", name: "InVideo AI", icon: "🎬",
+    id: "youyan", name: "有言", icon: "🗣️",
     category: "video", categoryLabel: "AI视频",
-    desc: "AI文字转视频创作平台",
-    url: "https://invideo.io",
-    detail: {
-      intro: "输入文字即可生成完整视频",
-      features: ["文字转视频","AI配音","海量模板"],
-      pricing: "免费/付费",
-      tags: ["创作","模板","营销"]
-    }
+    desc: "一站式AI视频和3D数字人",
+    url: "https://ai-bot.cn/sites/youyan.html"
   },
   {
-    id: "capcut", name: "剪映CapCut", icon: "✂️",
+    id: "bairimeng", name: "白日梦", icon: "💭",
     category: "video", categoryLabel: "AI视频",
-    desc: "字节跳动全能AI视频剪辑工具",
-    url: "https://capcut.com",
-    detail: {
-      intro: "抖音旗下视频剪辑工具",
-      features: ["AI剪辑","自动字幕","图文成片"],
-      pricing: "免费/付费",
-      tags: ["剪辑","免费","抖音"]
-    }
+    desc: "AI创作最长50分钟视频",
+    url: "https://ai-bot.cn/sites/bairimeng.html"
   },
   {
-    id: "vidyo", name: "Vidyo AI", icon: "📹",
+    id: "jimeng", name: "即梦AI", icon: "🌌",
     category: "video", categoryLabel: "AI视频",
-    desc: "AI短视频自动生成工具",
-    url: "https://vidyo.ai",
-    detail: {
-      intro: "AI驱动短视频创作平台",
-      features: ["自动剪辑","短视频","内容提取"],
-      pricing: "免费/付费",
-      tags: ["短视频","剪辑","AI"]
-    }
+    desc: "一站式AI视频图片数字人",
+    url: "https://ai-bot.cn/sites/jimeng.html"
   },
   {
-    id: "mubert", name: "Mubert", icon: "🎵",
+    id: "pollo-ai", name: "Pollo AI", icon: "🐘",
+    category: "video", categoryLabel: "AI视频",
+    desc: "一站式AI图像视频创作",
+    url: "https://ai-bot.cn/sites/pollo-ai.html"
+  },
+  {
+    id: "vidu", name: "Vidu", icon: "🎞️",
+    category: "video", categoryLabel: "AI视频",
+    desc: "生数科技AI视频生成大模型",
+    url: "https://ai-bot.cn/sites/vidu.html"
+  },
+  {
+    id: "mofa-xingyun", name: "魔珐星云", icon: "🌠",
+    category: "video", categoryLabel: "AI视频",
+    desc: "具身智能3D数字人平台",
+    url: "https://ai-bot.cn/sites/mofa-xingyun.html"
+  },
+  {
+    id: "joypix", name: "JoyPix", icon: "😊",
+    category: "video", categoryLabel: "AI视频",
+    desc: "AI数字人创作工具",
+    url: "https://ai-bot.cn/sites/joypix.html"
+  },
+  {
+    id: "tencent-hunyuan-video", name: "腾讯混元AI视频", icon: "🎬",
+    category: "video", categoryLabel: "AI视频",
+    desc: "腾讯推出的AI视频生成",
+    url: "https://ai-bot.cn/sites/tencent-hunyuan-video.html"
+  },
+  {
+    id: "topview", name: "Topview", icon: "📺",
+    category: "video", categoryLabel: "AI视频",
+    desc: "电商营销AI视频生成",
+    url: "https://ai-bot.cn/sites/topview.html"
+  },
+  {
+    id: "moyin", name: "魔音工坊", icon: "🎧",
     category: "audio", categoryLabel: "AI音乐/音频",
-    desc: "AI实时免版税音乐生成",
-    url: "https://mubert.com",
-    detail: {
-      intro: "AI实时生成独特背景音乐",
-      features: ["实时生成","免版税","多风格"],
-      pricing: "免费/付费",
-      tags: ["音乐","生成","免版税"]
-    }
+    desc: "AI配音工具，媲美真人声音",
+    url: "https://ai-bot.cn/sites/moyin.html"
   },
   {
-    id: "resemble-ai", name: "Resemble AI", icon: "🎤",
+    id: "xunfei-zhizuo", name: "讯飞智作", icon: "🎙️",
     category: "audio", categoryLabel: "AI音乐/音频",
-    desc: "AI语音合成和声音克隆平台",
-    url: "https://resemble.ai",
-    detail: {
-      intro: "专业级语音合成服务",
-      features: ["声音克隆","情感合成","多语言"],
-      pricing: "免费/付费",
-      tags: ["语音","合成","克隆"]
-    }
+    desc: "AI文本配音和数字人视频",
+    url: "https://ai-bot.cn/sites/xunfei-zhizuo.html"
   },
   {
-    id: "voicemod", name: "Voicemod", icon: "🔊",
+    id: "douge", name: "逗哥配音", icon: "🎤",
     category: "audio", categoryLabel: "AI音乐/音频",
-    desc: "AI实时变声器，适合直播游戏",
-    url: "https://voicemod.net",
-    detail: {
-      intro: "实时AI变声器",
-      features: ["实时变声","语音效果","游戏集成"],
-      pricing: "免费/付费",
-      tags: ["变声","直播","游戏"]
-    }
+    desc: "一站式AI配音工具",
+    url: "https://ai-bot.cn/sites/douge.html"
   },
   {
-    id: "audacity-ai", name: "Audacity AI", icon: "🎙️",
+    id: "langlang", name: "琅琅配音", icon: "🔊",
     category: "audio", categoryLabel: "AI音乐/音频",
-    desc: "开源音频编辑软件AI增强版",
-    url: "https://audacityteam.org",
-    detail: {
-      intro: "经典音频编辑软件的AI扩展",
-      features: ["免费开源","AI降噪","音频编辑"],
-      pricing: "免费/付费",
-      tags: ["音频","编辑","开源"]
-    }
+    desc: "智能文本转语音工具",
+    url: "https://ai-bot.cn/sites/langlang.html"
   },
   {
-    id: "bolt", name: "Bolt.new", icon: "⚡",
+    id: "qianyin", name: "千音漫语", icon: "🎵",
+    category: "audio", categoryLabel: "AI音乐/音频",
+    desc: "AI声音创作，支持声音克隆",
+    url: "https://ai-bot.cn/sites/qianyin.html"
+  },
+  {
+    id: "minimax-audio", name: "MiniMax Audio", icon: "🔊",
+    category: "audio", categoryLabel: "AI音乐/音频",
+    desc: "MiniMax AI语音合成工具",
+    url: "https://ai-bot.cn/sites/minimax-audio.html"
+  },
+  {
+    id: "notebooklm", name: "NotebookLM", icon: "📓",
+    category: "audio", categoryLabel: "AI音乐/音频",
+    desc: "谷歌AI笔记，生成播客对话",
+    url: "https://ai-bot.cn/sites/notebooklm.html"
+  },
+  {
+    id: "haimian-music", name: "海绵音乐", icon: "🧽",
+    category: "audio", categoryLabel: "AI音乐/音频",
+    desc: "字节跳动免费AI音乐创作",
+    url: "https://ai-bot.cn/sites/haimian-music.html"
+  },
+  {
+    id: "reecho", name: "Reecho睿声", icon: "🎤",
+    category: "audio", categoryLabel: "AI音乐/音频",
+    desc: "超拟真中英文AI语音克隆",
+    url: "https://ai-bot.cn/sites/reecho.html"
+  },
+  {
+    id: "wangyi-tianyin", name: "网易天音", icon: "🎶",
+    category: "audio", categoryLabel: "AI音乐/音频",
+    desc: "网易一站式AI音乐创作",
+    url: "https://ai-bot.cn/sites/wangyi-tianyin.html"
+  },
+  {
+    id: "turboscribe", name: "TurboScribe", icon: "📝",
+    category: "audio", categoryLabel: "AI音乐/音频",
+    desc: "专业AI音视频转文字",
+    url: "https://ai-bot.cn/sites/turboscribe.html"
+  },
+  {
+    id: "mureka", name: "Mureka", icon: "🎼",
+    category: "audio", categoryLabel: "AI音乐/音频",
+    desc: "昆仑万维AI商用音乐创作",
+    url: "https://ai-bot.cn/sites/mureka.html"
+  },
+  {
+    id: "ma-shang-fei", name: "码上飞", icon: "🛫",
     category: "coding", categoryLabel: "AI编程",
-    desc: "AI全栈Web应用即时生成器",
-    url: "https://bolt.new",
-    detail: {
-      intro: "描述想法即可生成完整Web应用",
-      features: ["全栈生成","实时预览","一键部署"],
-      pricing: "免费/付费",
-      tags: ["全栈","Web","生成"]
-    }
+    desc: "一句话生成小程序/APP/网页",
+    url: "https://ai-bot.cn/sites/ma-shang-fei.html"
   },
   {
-    id: "lovable", name: "Lovable", icon: "💜",
+    id: "codex", name: "Codex (OpenAI)", icon: "🤖",
     category: "coding", categoryLabel: "AI编程",
-    desc: "AI应用构建器，描述即可生成",
-    url: "https://lovable.dev",
-    detail: {
-      intro: "自然语言描述即可生成应用",
-      features: ["自然语言","应用生成","一键部署"],
-      pricing: "免费/付费",
-      tags: ["应用","生成","自然语言"]
-    }
+    desc: "OpenAI AI编程智能体",
+    url: "https://ai-bot.cn/sites/codex.html"
   },
   {
-    id: "v0", name: "V0 by Vercel", icon: "🎯",
+    id: "qoder", name: "Qoder", icon: "🏆",
     category: "coding", categoryLabel: "AI编程",
-    desc: "Vercel前端AI代码生成工具",
-    url: "https://v0.dev",
-    detail: {
-      intro: "专注React/Next.js前端组件生成",
-      features: ["React组件","Next.js","实时预览"],
-      pricing: "免费/付费",
-      tags: ["前端","React","UI"]
-    }
+    desc: "阿里巴巴AI编程工具",
+    url: "https://ai-bot.cn/sites/qoder.html"
   },
   {
-    id: "devin", name: "Devin", icon: "🦾",
+    id: "opencode", name: "OpenCode", icon: "📂",
     category: "coding", categoryLabel: "AI编程",
-    desc: "AI软件工程师，自主编程完成任务",
-    url: "https://cognition.ai",
-    detail: {
-      intro: "世界上第一个AI软件工程师",
-      features: ["自主编程","任务规划","Bug修复"],
-      pricing: "免费/付费",
-      tags: ["AI工程师","自主","编程"]
-    }
+    desc: "开源AI编程，Claude Code平替",
+    url: "https://ai-bot.cn/sites/opencode.html"
   },
   {
-    id: "augment", name: "Augment", icon: "📦",
+    id: "youware", name: "YouWare", icon: "💻",
     category: "coding", categoryLabel: "AI编程",
-    desc: "AI代码智能补全和重构工具",
-    url: "https://augmentcode.com",
-    detail: {
-      intro: "AI驱动的代码补全和重构",
-      features: ["代码补全","智能重构","上下文感知"],
-      pricing: "免费/付费",
-      tags: ["补全","重构","效率"]
-    }
+    desc: "一站式AI编程社区与开发平台",
+    url: "https://ai-bot.cn/sites/youware.html"
   },
   {
-    id: "gemini", name: "Google Gemini", icon: "🔵",
-    category: "conversation", categoryLabel: "对话大模型",
-    desc: "Google多模态AI大模型",
-    url: "https://gemini.google.com",
-    detail: {
-      intro: "支持文本、图像、视频多模态理解",
-      features: ["多模态","百万token","Google生态"],
-      pricing: "免费/付费",
-      tags: ["Google","多模态","大模型"]
-    }
+    id: "zcode", name: "Zcode (智谱)", icon: "💡",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "智谱轻量级AI IDE编程",
+    url: "https://ai-bot.cn/sites/zcode.html"
   },
   {
-    id: "sensechat", name: "商汤日日新", icon: "🀄",
-    category: "conversation", categoryLabel: "对话大模型",
-    desc: "商汤科技大模型对话平台",
-    url: "https://chat.sensetime.com",
-    detail: {
-      intro: "商汤科技AI对话平台",
-      features: ["多模态","视觉理解","国产模型"],
-      pricing: "免费/付费",
-      tags: ["商汤","国产","多模态"]
-    }
+    id: "codebuddy", name: "CodeBuddy IDE", icon: "🧑‍💻",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "腾讯全栈开发AI IDE",
+    url: "https://ai-bot.cn/sites/codebuddy.html"
   },
   {
-    id: "minimax", name: "海螺AI (MiniMax)", icon: "🐚",
-    category: "conversation", categoryLabel: "对话大模型",
-    desc: "MiniMax推出的AI对话助手",
-    url: "https://hailuoai.com",
-    detail: {
-      intro: "MiniMax公司AI对话产品",
-      features: ["AI对话","内容创作","文件分析"],
-      pricing: "免费/付费",
-      tags: ["MiniMax","国产","对话"]
-    }
+    id: "catpaw", name: "CatPaw (美团)", icon: "🐾",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "美团AI IDE编程工具",
+    url: "https://ai-bot.cn/sites/catpaw.html"
   },
   {
-    id: "stepchat", name: "阶跃星辰", icon: "⭐",
-    category: "conversation", categoryLabel: "对话大模型",
-    desc: "阶跃星辰大语言模型",
-    url: "https://stepchat.cn",
-    detail: {
-      intro: "国内AI初创公司对话大模型",
-      features: ["文本理解","内容创作","知识问答"],
-      pricing: "免费/付费",
-      tags: ["国产","新锐","对话"]
-    }
+    id: "monkeycode", name: "MonkeyCode", icon: "🐵",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "长亭科技AI编程助手",
+    url: "https://ai-bot.cn/sites/monkeycode.html"
+  },
+  {
+    id: "firebase-studio", name: "Firebase Studio", icon: "🔥",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "谷歌一站式全栈AI编程",
+    url: "https://ai-bot.cn/sites/firebase-studio.html"
+  },
+  {
+    id: "google-antigravity", name: "Google Antigravity", icon: "🚀",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "谷歌AI IDE编程智能体",
+    url: "https://ai-bot.cn/sites/google-antigravity.html"
+  },
+  {
+    id: "replit-agent", name: "Replit Agent", icon: "🔄",
+    category: "coding", categoryLabel: "AI编程",
+    desc: "Replit AI编程工具",
+    url: "https://ai-bot.cn/sites/replit-agent.html"
   }];
 
 // ===== 每日AI资讯 =====
