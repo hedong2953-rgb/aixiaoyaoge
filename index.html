@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI逍遥哥 - AI工具导航</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏮</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <span class="logo-icon">🏮</span>
+        <span class="logo-text">AI逍遥哥</span>
+      </div>
+      <nav>
+        <a href="index.html" class="active">首页</a>
+        <a href="#categories">分类</a>
+        <a href="submit.html">提交收录</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>AI工具箱·一站直达</h1>
+      <p>精选AI工具，分类整理，帮你找到最顺手的那个</p>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="搜索AI工具..." oninput="filterTools()">
+      </div>
+    </div>
+  </section>
+
+  <section class="categories">
+    <div class="container">
+      <div class="category-tabs" id="categoryTabs"></div>
+    </div>
+  </section>
+
+  <section class="tools-grid">
+    <div class="container">
+      <div class="grid" id="toolsGrid"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>🏮 AI逍遥哥 · 发现好用的AI工具</p>
+      <p class="footer-sub">© 2026 aixiaoyaoge.top</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
