@@ -347,7 +347,3 @@ const toolsData = [
 
 const categories = {};
 toolsData.forEach(t => { if (!categories[t.category]) categories[t.category] = t.categoryLabel; });
-
-
-const categories = {};
-toolsData.forEach(t => { if (!categories[t.category]) categories[t.category] = t.categoryLabel; });
