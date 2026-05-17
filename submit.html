@@ -7,7 +7,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏮</text></svg>">
   <link rel="stylesheet" href="style.css">
   <style>
-    .submit-page { max-width: 600px; margin: 40px auto; padding: 0 24px; }
+    .submit-page { max-width: 600px; margin: 40px auto; padding: 0; }
     .submit-page h1 { font-size: 24px; margin-bottom: 8px; }
     .submit-page .sub { color: #64748b; margin-bottom: 32px; }
     .form-group { margin-bottom: 20px; }
@@ -22,8 +22,11 @@
 </head>
 <body>
   <header>
-    <div class="header-content">
-      <div class="logo"><span class="logo-icon">🏮</span><span class="logo-text">AI工具导航</span></div>
+    <div class="container" style="display:flex;align-items:center;height:76px;justify-content:space-between;">
+      <div class="logo">
+        <span class="logo-icon">🏮</span>
+        <span class="logo-text">AI工具导航</span>
+      </div>
       <nav>
         <a href="index.html">首页</a>
         <a href="#categories">分类</a>
@@ -32,19 +35,23 @@
     </div>
   </header>
 
-  <div class="submit-page">
-    <h1>提交AI工具收录</h1>
-    <p class="sub">推荐好用的AI工具，一起丰富AI工具导航</p>
-    <form id="submitForm">
-      <div class="form-group"><label>工具名称 *</label><input type="text" name="name" required placeholder="例如：ChatGPT"></div>
-      <div class="form-group"><label>网站地址 *</label><input type="url" name="url" required placeholder="https://example.com"></div>
-      <div class="form-group"><label>分类 *</label><select name="category" required><option value="">请选择分类</option><option value="conversation">对话大模型</option><option value="image">AI绘图</option><option value="video">AI视频</option><option value="audio">AI音乐/音频</option><option value="coding">AI编程</option><option value="productivity">AI办公</option><option value="resource">资源与社区</option></select></div>
-      <div class="form-group"><label>一句话简介 *</label><input type="text" name="desc" required placeholder="用一句话描述这个工具"></div>
-      <div class="form-group"><label>详细介绍</label><textarea name="intro" placeholder="详细介绍一下这个工具的功能和特点"></textarea></div>
-      <button type="submit" class="submit-btn">提交 →</button>
-    </form>
-    <div class="success-msg" id="successMsg">✅ 提交成功！感谢你的推荐 🏮<br><small>我们会尽快审核收录</small></div>
-  </div>
+  <section>
+    <div class="container">
+      <div class="submit-page">
+        <h1>提交AI工具收录</h1>
+        <p class="sub">推荐好用的AI工具，一起丰富AI工具导航</p>
+        <form id="submitForm">
+          <div class="form-group"><label>工具名称 *</label><input type="text" name="name" required placeholder="例如：ChatGPT"></div>
+          <div class="form-group"><label>网站地址 *</label><input type="url" name="url" required placeholder="https://example.com"></div>
+          <div class="form-group"><label>分类 *</label><select name="category" required><option value="">请选择分类</option><option value="conversation">对话大模型</option><option value="image">AI绘图</option><option value="video">AI视频</option><option value="audio">AI音乐/音频</option><option value="coding">AI编程</option><option value="productivity">AI办公</option><option value="resource">资源与社区</option></select></div>
+          <div class="form-group"><label>一句话简介 *</label><input type="text" name="desc" required placeholder="用一句话描述这个工具"></div>
+          <div class="form-group"><label>详细介绍</label><textarea name="intro" placeholder="详细介绍一下这个工具的功能和特点"></textarea></div>
+          <button type="submit" class="submit-btn">提交 →</button>
+        </form>
+        <div class="success-msg" id="successMsg">✅ 提交成功！感谢你的推荐 🏮<br><small>我们会尽快审核收录</small></div>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <div class="container">
