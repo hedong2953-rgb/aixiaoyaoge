@@ -1081,6 +1081,244 @@ const toolsData = [
       tags: ["资讯","新闻","行业","前沿"]
     }
   },
+  {
+    id: "jasper", name: "Jasper AI", icon: "✍️",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI营销写作平台，企业级内容生成",
+    url: "https://www.jasper.ai",
+    detail: {
+      intro: "Jasper 是企业级AI写作平台，专注于营销内容创作、品牌文案生成等场景。",
+      features: ["AI营销文案生成","品牌语调统一","多平台内容分发","团队协作"],
+      pricing: "免费试用；Creator版$39/月",
+      tags: ["写作","营销","企业","内容"]
+    }
+  },
+  {
+    id: "grammarly", name: "Grammarly", icon: "✏️",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI英文写作助手，语法检查和润色",
+    url: "https://www.grammarly.com",
+    detail: {
+      intro: "Grammarly 是AI英文写作助手，提供语法检查、拼写纠正、语气优化等功能。",
+      features: ["实时语法检查","AI写作润色","语气和风格调整","抄袭检测"],
+      pricing: "免费版基础功能；Premium$12/月",
+      tags: ["写作","英文","语法","润色"]
+    }
+  },
+  {
+    id: "descript", name: "Descript", icon: "🎙️",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI音视频编辑，像编辑文档一样编辑视频",
+    url: "https://www.descript.com",
+    detail: {
+      intro: "Descript 是一款AI音视频编辑工具，通过编辑文字来编辑视频，支持AI语音克隆。",
+      features: ["文字编辑视频","AI语音克隆","自动字幕","屏幕录制"],
+      pricing: "免费版有限额；Pro版$24/月",
+      tags: ["视频","编辑","语音","音视频"]
+    }
+  },
+  {
+    id: "otter", name: "Otter.ai", icon: "🦦",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI会议记录，实时转写和总结",
+    url: "https://otter.ai",
+    detail: {
+      intro: "Otter.ai 是AI会议记录工具，实时语音转文字、自动生成会议纪要。",
+      features: ["实时语音转文字","AI会议总结","发言人识别","整合Zoom/Teams"],
+      pricing: "免费版每月300分钟；Pro版$17/月",
+      tags: ["会议","转写","记录","办公"]
+    }
+  },
+  {
+    id: "synthesia", name: "Synthesia", icon: "👤",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI数字人视频生成，企业培训视频",
+    url: "https://www.synthesia.io",
+    detail: {
+      intro: "Synthesia 是AI数字人视频生成平台，输入文字即可生成有AI主播讲解的视频。",
+      features: ["AI数字人主播","140+语言","无需拍摄和演员","企业培训视频"],
+      pricing: "免费试用；Creator版$29/月",
+      tags: ["视频","数字人","培训","营销"]
+    }
+  },
+  {
+    id: "mem", name: "Mem AI", icon: "🧠",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI笔记工具，自动组织和关联笔记",
+    url: "https://mem.ai",
+    detail: {
+      intro: "Mem 是AI原生笔记工具，自动将笔记关联、分类，并智能推荐相关内容。",
+      features: ["AI自动组织笔记","智能关联推荐","快速搜索","团队知识库"],
+      pricing: "免费版基础功能；Pro版$10/月",
+      tags: ["笔记","知识管理","AI","效率"]
+    }
+  },
+  {
+    id: "notion-tools", name: "Notion工具集", icon: "📋",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "Notion生态中的AI工具和模板",
+    url: "https://www.notion.so/templates",
+    detail: {
+      intro: "Notion生态中有大量AI相关的模板和工具，提升工作和学习效率。",
+      features: [
+        "Notion AI：https://www.notion.so/product/ai",
+        "Notion模板市场：https://www.notion.so/templates",
+        "Notion中文社区：https://notionchina.cn",
+        "Notion API文档：https://developers.notion.com"
+      ],
+      pricing: "免费/付费",
+      tags: ["Notion","模板","效率","工具"]
+    }
+  },
+  {
+    id: "gamma-more", name: "AI演示工具", icon: "📊",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI PPT和演示工具合集",
+    url: "https://gamma.app",
+    detail: {
+      intro: "AI自动生成PPT和演示文稿的工具合集。",
+      features: [
+        "Gamma：https://gamma.app（AI生成PPT/文档/网页）",
+        "Beautiful.ai：https://www.beautiful.ai（AI设计PPT）",
+        "Tome：https://tome.app（AI叙事演示）",
+        "Pitch：https://pitch.com（AI协作演示）",
+        "SlidesAI：https://www.slidesai.io（Google Slides AI插件）"
+      ],
+      pricing: "免费/付费",
+      tags: ["PPT","演示","设计","效率"]
+    }
+  },
+  {
+    id: "ai-chatbots", name: "AI聊天机器人", icon: "🤖",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI聊天机器人和客服工具合集",
+    url: "https://www.coze.com",
+    detail: {
+      intro: "搭建AI聊天机器人和智能客服的平台工具合集。",
+      features: [
+        "Coze扣子：https://www.coze.com",
+        "Dify：https://dify.ai",
+        "Chatbase：https://www.chatbase.co",
+        "Voiceflow：https://www.voiceflow.com",
+        "Dialogflow：https://dialogflow.cloud.google.com",
+        "Botpress：https://botpress.com"
+      ],
+      pricing: "免费/付费",
+      tags: ["聊天","机器人","客服","搭建"]
+    }
+  },
+  {
+    id: "ai-education", name: "AI教育工具", icon: "🎓",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI在教育和学习中的应用工具",
+    url: "https://www.khanacademy.org/khan-labs",
+    detail: {
+      intro: "AI在教育领域中的应用工具，从AI辅导到自动批改。",
+      features: [
+        "Khanmigo：https://www.khanacademy.org/khan-labs（Khan Academy AI辅导）",
+        "Photomath：https://photomath.com（AI拍照解题）",
+        "Quizlet AI：https://quizlet.com（AI学习卡片）",
+        "Gauthmath：https://www.gauthmath.com（AI数学解题）",
+        "有道AI：https://ai.youdao.com（AI翻译和学习）",
+        "Duolingo AI：https://www.duolingo.com（AI语言学习）"
+      ],
+      pricing: "免费/付费",
+      tags: ["教育","学习","辅导","工具"]
+    }
+  },
+  {
+    id: "ai-medical", name: "AI医疗健康", icon: "🏥",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI在医疗健康领域应用",
+    url: "https://www.google.com/health-ai",
+    detail: {
+      intro: "AI在医疗健康领域的应用，从辅助诊断到健康管理。",
+      features: [
+        "Google Health AI：https://health.google",
+        "智云健康：https://www.zyhealth.com",
+        "腾讯觅影：https://maying.tencent.com",
+        "推想科技：https://www.infervision.com",
+        "鹰瞳科技：https://www.airdoc.com"
+      ],
+      pricing: "企业级",
+      tags: ["医疗","健康","诊断","AI"]
+    }
+  },
+  {
+    id: "ai-translation", name: "AI翻译工具", icon: "🌍",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI翻译和语言工具合集",
+    url: "https://translate.google.com",
+    detail: {
+      intro: "AI驱动的翻译和语言工具，打破语言障碍。",
+      features: [
+        "Google翻译：https://translate.google.com",
+        "DeepL：https://www.deepl.com（最准的AI翻译）",
+        "有道翻译：https://fanyi.youdao.com",
+        "百度翻译：https://fanyi.baidu.com",
+        "OpenAI翻译（ChatGPT）：https://chat.openai.com",
+        "沉浸式翻译：https://immersivetranslate.com（浏览器翻译插件）"
+      ],
+      pricing: "免费/付费",
+      tags: ["翻译","语言","多语言","工具"]
+    }
+  },
+  {
+    id: "ai-voice", name: "AI语音工具", icon: "🎤",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI语音识别和合成工具合集",
+    url: "https://www.iflytek.com",
+    detail: {
+      intro: "AI语音技术工具，包括语音识别、语音合成、语音克隆等。",
+      features: [
+        "讯飞听见：https://www.iflyrec.com（语音转文字）",
+        "ElevenLabs：https://elevenlabs.io（AI语音合成）",
+        "Whisper（OpenAI）：https://openai.com/research/whisper",
+        "Azure语音：https://azure.microsoft.com/zh-cn/services/cognitive-services/speech-services",
+        "剪映语音：https://jimeng.jianying.com"
+      ],
+      pricing: "免费/付费",
+      tags: ["语音","识别","合成","TTS"]
+    }
+  },
+  {
+    id: "ai-design", name: "AI设计工具", icon: "🎭",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI辅助设计和创意工具合集",
+    url: "https://www.figma.com",
+    detail: {
+      intro: "AI驱动的设计和创意工具，助你快速产出设计作品。",
+      features: [
+        "Figma AI：https://www.figma.com（AI设计工具）",
+        "Canva AI：https://www.canva.com（在线设计AI）",
+        "Magician（Figma插件）：https://magician.design",
+        "Uizard：https://uizard.io（AI生成UI设计）",
+        "Galileo AI：https://www.usegalileo.ai（AI设计生成）",
+        "Visily：https://www.visily.ai（AI原型设计）"
+      ],
+      pricing: "免费/付费",
+      tags: ["设计","UI","创意","工具"]
+    }
+  },
+  {
+    id: "ai-search-engines", name: "AI搜索引擎", icon: "🔍",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI搜索引擎和知识发现工具",
+    url: "https://www.perplexity.ai",
+    detail: {
+      intro: "新一代AI搜索引擎，直接给出答案而非链接列表。",
+      features: [
+        "Perplexity：https://www.perplexity.ai",
+        "You.com：https://you.com",
+        "天工AI搜索：https://www.tiangong.cn",
+        "360AI搜索：https://www.so.com",
+        "秘塔AI搜索：https://metaso.cn",
+        "Devv AI（编程搜索）：https://devv.ai"
+      ],
+      pricing: "免费/付费",
+      tags: ["搜索","AI","信息","问答"]
+    }
+  }
 id: "more-resource", name: "更多资源", icon: "📌",
     category: "more", categoryLabel: "更多资源",
     desc: "更多AI相关资源和网站推荐",
