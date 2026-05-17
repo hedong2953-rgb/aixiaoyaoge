@@ -619,7 +619,161 @@ const toolsData = [
     }
   }// ===== 更多资源 =====
   {
-    id: "more-resource", name: "更多资源", icon: "📌",
+      {
+    id: "learn-python", name: "Python学习", icon: "🐍",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI编程入门首选Python教程",
+    url: "https://www.python.org",
+    detail: {
+      intro: "Python是AI和机器学习最主流的编程语言。",
+      features: [
+        "廖雪峰Python教程：https://liaoxuefeng.com",
+        "莫烦Python：https://mofanpy.com",
+        "吴恩达Python课程：https://www.deeplearning.ai",
+        "菜鸟教程：https://www.runoob.com/python"
+      ],
+      pricing: "免费",
+      tags: ["学习","Python","编程","入门"]
+    }
+  },
+  {
+    id: "learn-ml", name: "机器学习教程", icon: "🧠",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "机器学习系统学习资源合集",
+    url: "https://www.deeplearning.ai",
+    detail: {
+      intro: "机器学习系统学习资源，从入门到进阶。",
+      features: [
+        "吴恩达机器学习：https://www.coursera.org/specializations/machine-learning-introduction",
+        "李沐动手学深度学习：https://d2l.ai",
+        "Kaggle机器学习：https://www.kaggle.com/learn",
+        "Fast.ai深度学习：https://www.fast.ai"
+      ],
+      pricing: "免费/部分付费",
+      tags: ["学习","机器学习","深度","教程"]
+    }
+  },
+  {
+    id: "prompt-engineering", name: "提示词工程", icon: "🎯",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "Prompt Engineering学习指南",
+    url: "https://www.promptingguide.ai",
+    detail: {
+      intro: "提示词工程（Prompt Engineering）是AI应用的关键技能。",
+      features: [
+        "Prompt Engineering Guide：https://www.promptingguide.ai",
+        "OpenAI提示词最佳实践：https://platform.openai.com/docs/guides/prompt-engineering",
+        "Learn Prompting：https://learnprompting.com"
+      ],
+      pricing: "免费",
+      tags: ["提示词","Prompt","学习","指南"]
+    }
+  },
+  {
+    id: "langchain", name: "LangChain教程", icon: "⛓️",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "LangChain框架学习，AI应用开发",
+    url: "https://python.langchain.com",
+    detail: {
+      intro: "LangChain是构建LLM应用的主流框架。",
+      features: [
+        "LangChain官方文档：https://python.langchain.com",
+        "LangGraph工作流：https://langchain-ai.github.io/langgraph",
+        "LangSmith调试：https://smith.langchain.com"
+      ],
+      pricing: "免费/开源",
+      tags: ["LangChain","框架","开发","RAG"]
+    }
+  },
+  {
+    id: "llm-deploy", name: "模型部署教程", icon: "🚀",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "本地部署AI大模型工具合集",
+    url: "https://ollama.ai",
+    detail: {
+      intro: "在本地部署和运行AI大模型的工具和教程。",
+      features: [
+        "Ollama：https://ollama.ai",
+        "LM Studio：https://lmstudio.ai",
+        "vLLM：https://vllm.ai",
+        "llama.cpp：https://github.com/ggerganov/llama.cpp",
+        "Open WebUI：https://openwebui.com"
+      ],
+      pricing: "免费/开源",
+      tags: ["部署","本地","开源","模型"]
+    }
+  },
+  {
+    id: "ai-tools-platform", name: "AI搭建平台", icon: "🔨",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "低代码AI应用搭建平台合集",
+    url: "https://www.coze.com",
+    detail: {
+      intro: "无需编程即可搭建AI应用的平台工具。",
+      features: [
+        "Coze扣子：https://www.coze.com",
+        "Dify：https://dify.ai",
+        "FastGPT：https://fastgpt.in",
+        "百度千帆：https://cloud.baidu.com/product/wenxinworkshop",
+        "阿里百炼：https://bailian.aliyun.com"
+      ],
+      pricing: "免费/付费",
+      tags: ["搭建","低代码","平台","Bot"]
+    }
+  },
+  {
+    id: "ai-api", name: "AI API接口", icon: "🔌",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "主流AI模型API接口汇总",
+    url: "https://platform.openai.com",
+    detail: {
+      intro: "各大AI平台的API接口文档和开发者资源。",
+      features: [
+        "OpenAI API：https://platform.openai.com",
+        "Claude API：https://docs.anthropic.com",
+        "DeepSeek API：https://platform.deepseek.com",
+        "通义千问API：https://help.aliyun.com/zh/model-studio",
+        "讯飞星火API：https://www.xfyun.cn/doc/spark"
+      ],
+      pricing: "按量付费",
+      tags: ["API","开发","接口","模型"]
+    }
+  },
+  {
+    id: "sd-tutorial", name: "Stable Diffusion教程", icon: "🎨",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "Stable Diffusion从入门到精通",
+    url: "https://stablediffusionweb.com",
+    detail: {
+      intro: "Stable Diffusion是开源AI绘画模型，以下教程助你掌握。",
+      features: [
+        "SD WebUI：https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+        "ComfyUI教程：https://comfyanonymous.github.io/ComfyUI_examples",
+        "CivitAI模型社区：https://civitai.com",
+        "ControlNet教程：https://github.com/lllyasviel/ControlNet"
+      ],
+      pricing: "免费/开源",
+      tags: ["SD","Stable Diffusion","绘画","教程"]
+    }
+  },
+  {
+    id: "ai-news", name: "AI新闻资讯", icon: "📰",
+    category: "resource", categoryLabel: "资源与社区",
+    desc: "AI行业资讯和前沿动态",
+    url: "https://jiqizhixin.com",
+    detail: {
+      intro: "AI行业前沿资讯和深度报道渠道。",
+      features: [
+        "机器之心：https://jiqizhixin.com",
+        "量子位：https://qbitai.com",
+        "36氪AI频道：https://36kr.com/info/ai",
+        "雷锋网AI：https://leiphone.com"
+      ],
+      pricing: "免费",
+      tags: ["资讯","新闻","行业","前沿"]
+    }
+  },
+id: "more-resource", name: "更多资源", icon: "📌",
     category: "more", categoryLabel: "更多资源",
     desc: "更多AI相关资源和网站推荐",
     url: "#",
