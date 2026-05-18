@@ -82,6 +82,12 @@ footer { background: #1e293b; color: #94a3b8; margin-top: 20px; padding: 14px 0;
   .topbar-logo { font-size: 13px; margin-right: 6px; }
   .topbar-nav a { padding: 3px 5px; font-size: 11px; }
   .topbar-right a { padding: 3px 6px; font-size: 11px; }
+  .sidebar { display: none; }
+  .layout { padding: 0 8px; }
+  .topbar-inner { height: 40px; padding: 0 6px; }
+  .topbar-logo { font-size: 13px; margin-right: 6px; }
+  .topbar-nav a { padding: 3px 5px; font-size: 11px; }
+  .topbar-right a { padding: 3px 6px; font-size: 11px; }
   .hero-area h1 { font-size: 18px; }
   .hero-area p { font-size: 12px; }
   .search-area input { font-size: 14px; padding: 8px 12px; }
