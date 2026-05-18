@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>if(/Mobile|Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){location.href='mobile/'}</script>
 <title>逍遥搜AI — 一站式AI工具大全</title>
-<link rel="stylesheet" href="style.css?v6">
+<link rel="stylesheet" href="style.css?v7">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
 </head>
 <body>
@@ -37,75 +37,19 @@
   </div>
 </header>
 
-<div class="layout">
-  <aside class="sidebar">
-    <div class="sidebar-block">
-      <div class="sidebar-tabs">
-        <span class="sidebar-tab active">常用搜索</span>
-        <span class="sidebar-tab">社区</span>
-        <span class="sidebar-tab">图片</span>
-        <span class="sidebar-tab">生活</span>
-      </div>
-      <div class="sidebar-content active" id="sb-search">
-        <a href="https://www.baidu.com" target="_blank">百度</a>
-        <a href="https://www.google.com" target="_blank">Google</a>
-        <a href="https://www.bing.com" target="_blank">Bing</a>
-        <a href="https://perplexity.ai" target="_blank">Perplexity</a>
-        <a href="https://metaso.cn" target="_blank">秘塔AI</a>
-        <a href="https://so.com" target="_blank">360</a>
-        <a href="https://www.sogou.com" target="_blank">搜狗</a>
-        <a href="https://www.shenma.com" target="_blank">神马</a>
-      </div>
-      <div class="sidebar-content" id="sb-community">
-        <a href="https://huggingface.co" target="_blank">Hugging Face</a>
-        <a href="https://github.com" target="_blank">GitHub</a>
-        <a href="https://aistudio.baidu.com" target="_blank">飞桨</a>
-        <a href="https://www.modelscope.cn" target="_blank">魔搭</a>
-        <a href="https://www.heywhale.com" target="_blank">和鲸</a>
-        <a href="https://juejin.cn" target="_blank">掘金</a>
-        <a href="https://zhihu.com" target="_blank">知乎</a>
-      </div>
-      <div class="sidebar-content" id="sb-image">
-        <a href="https://yige.baidu.com" target="_blank">文心一格</a>
-        <a href="https://civitai.com" target="_blank">Civitai</a>
-        <a href="https://openart.ai" target="_blank">OpenArt</a>
-        <a href="https://lexica.art" target="_blank">Lexica</a>
-        <a href="https://www.deviantart.com" target="_blank">DeviantArt</a>
-      </div>
-      <div class="sidebar-content" id="sb-life">
-        <a href="https://www.taobao.com" target="_blank">淘宝</a>
-        <a href="https://www.jd.com" target="_blank">京东</a>
-        <a href="https://www.xiachufang.com" target="_blank">下厨房</a>
-        <a href="https://www.12306.cn" target="_blank">12306</a>
-        <a href="https://www.kuaidi100.com" target="_blank">快递100</a>
-      </div>
-    </div>
-    <div class="sidebar-block sidebar-news">
-      <h3><a href="https://ai-bot.cn/daily-ai-news/" target="_blank">🔥 每日AI快讯</a></h3>
-      <div class="news-list">
-        <div class="news-item" onclick="window.open('https://ai-bot.cn/ai-tutorials-a-practical-guide-to-building-agents/')">OpenAI《构建 Agents 实用指南》</div>
-        <div class="news-item" onclick="window.open('https://ai-bot.cn/building-effective-agents-claude/')">Claude 官方《Agent 构建指南》</div>
-        <div class="news-item" onclick="window.open('https://ai-bot.cn/google-agent-white-paper/')">谷歌《智能体Agent》白皮书</div>
-        <div class="news-item" onclick="window.open('https://ai-bot.cn/anthropic-ai-economic-index-report/')">Anthropic《AI 经济指数报告》</div>
-        <div class="news-item" onclick="window.open('https://ai-bot.cn/ai-tutorials-prompt-engineering/')">谷歌《Prompt Engineering》白皮书</div>
-      </div>
-    </div>
-  </aside>
+<main class="container">
+  <div class="hero-area">
+    <h1>发现最好的 <span class="gradient-text">AI 工具</span></h1>
+    <p>收录 <strong>547</strong> 款AI工具，覆盖办公·绘图·视频·编程·写作全领域</p>
+  </div>
 
-  <main class="main-content">
-    <div class="hero-area">
-      <h1>发现最好的 <span class="gradient-text">AI 工具</span></h1>
-      <p>收录 <strong>547</strong> 款AI工具，覆盖办公·绘图·视频·编程·写作全领域</p>
-    </div>
+  <div class="search-area">
+    <input id="searchInput" type="text" placeholder="搜索AI工具名称或用途..." oninput="app.filterTools()">
+  </div>
 
-    <div class="search-area">
-      <input id="searchInput" type="text" placeholder="搜索AI工具名称或用途..." oninput="app.filterTools()">
-    </div>
-
-    <div id="filterBar" class="filter-bar"></div>
-    <div id="toolsContainer" class="tools-grid"></div>
-  </main>
-</div>
+  <div id="filterBar" class="filter-bar"></div>
+  <div id="toolsContainer" class="tools-grid"></div>
+</main>
 
 <footer>
   <div class="footer-inner">
