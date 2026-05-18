@@ -4,12 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>逍遥搜AI — 一站式AI工具大全</title>
-<link rel="stylesheet" href="style.css?v5">
+<link rel="stylesheet" href="style.css?v6">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
 </head>
 <body>
 
-<!-- Top Bar -->
 <header class="topbar">
   <div class="topbar-inner">
     <a href="/" class="topbar-logo">🏮 逍遥搜AI</a>
@@ -38,7 +37,6 @@
 </header>
 
 <div class="layout">
-  <!-- Sidebar -->
   <aside class="sidebar">
     <div class="sidebar-block">
       <div class="sidebar-tabs">
@@ -81,8 +79,6 @@
         <a href="https://www.kuaidi100.com" target="_blank">快递100</a>
       </div>
     </div>
-
-    <!-- 每日AI快讯 -->
     <div class="sidebar-block sidebar-news">
       <h3><a href="https://ai-bot.cn/daily-ai-news/" target="_blank">🔥 每日AI快讯</a></h3>
       <div class="news-list">
@@ -96,30 +92,41 @@
   </aside>
 
   <main class="main-content">
-    <!-- 搜索 -->
-    <div class="search-area">
-      <input id="searchInput" type="text" placeholder="搜索AI工具..." oninput="app.filterTools()">
+    <div class="hero-area">
+      <h1>发现最好的 <span class="gradient-text">AI 工具</span></h1>
+      <p>收录 <strong>547</strong> 款AI工具，覆盖办公·绘图·视频·编程·写作全领域</p>
     </div>
 
-    <!-- 分类导航标签 -->
-    <div id="filterBar" class="filter-bar"></div>
+    <div class="search-area">
+      <input id="searchInput" type="text" placeholder="搜索AI工具名称或用途..." oninput="app.filterTools()">
+    </div>
 
-    <!-- 工具网格（分类显示） -->
-    <div id="categorySections"></div>
+    <div id="filterBar" class="filter-bar"></div>
+    <div id="toolsContainer" class="tools-grid"></div>
   </main>
 </div>
 
 <footer>
-  <div class="footer-links">
-    <a href="/">首页</a>
-    <a href="https://ai-bot.cn/ai-tools/" target="_blank">AI工具</a>
-    <a href="https://ai-bot.cn/the-latest-ai-projects/" target="_blank">最新AI项目</a>
-    <a href="https://ai-bot.cn/ai-app-store/" target="_blank">AI应用商店</a>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-logo">🏮 逍遥搜AI</div>
+      <div class="footer-desc">一站式AI工具大全，收录547+优质AI工具。</div>
+    </div>
+    <div class="footer-col">
+      <h4>快速链接</h4>
+      <a href="/">首页</a>
+      <a href="https://ai-bot.cn/daily-ai-news/" target="_blank">AI资讯</a>
+      <a href="https://ai-bot.cn/ai-tools/" target="_blank">热门分类</a>
+    </div>
+    <div class="footer-col">
+      <h4>推荐工具</h4>
+      <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
+      <a href="https://claude.ai" target="_blank">Claude</a>
+      <a href="https://www.doubao.com" target="_blank">豆包</a>
+      <a href="https://metaso.cn" target="_blank">秘塔AI</a>
+    </div>
   </div>
-  <div class="footer-copy">
-    <span class="footer-brand">🏮 逍遥搜AI</span>
-    <span> 数据参考自 ai-bot.cn</span>
-  </div>
+  <div class="footer-copy">&copy; 2026 逍遥搜AI · 数据参考自 ai-bot.cn</div>
 </footer>
 
 <script src="data.js"></script>

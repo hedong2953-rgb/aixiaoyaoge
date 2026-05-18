@@ -40,8 +40,7 @@ var app = {
   },
 
   filterTools: function() {
-    var input = document.getElementById('searchInput');
-    this.currentSearch = input.value.trim().toLowerCase();
+    this.currentSearch = document.getElementById('searchInput').value.trim().toLowerCase();
     this.renderTools();
   },
 
@@ -56,72 +55,36 @@ var app = {
   },
 
   renderTools: function() {
-    var container = document.getElementById('categorySections');
+    var container = document.getElementById('toolsContainer');
     var search = this.currentSearch;
+    var filtered = [];
 
-    // 分组
-    var groups = {};
     for(var i = 0; i < toolsData.length; i++) {
       var t = toolsData[i];
-      if(!groups[t.category]) groups[t.category] = [];
-      groups[t.category].push(t);
+      var matchCat = this.currentFilter === 'all' || t.category === this.currentFilter;
+      var matchSearch = true;
+      if(search) {
+        matchSearch = t.name.toLowerCase().indexOf(search) >= 0 ||
+          t.desc.toLowerCase().indexOf(search) >= 0;
+      }
+      if(matchCat && matchSearch) filtered.push(t);
     }
 
-    // 分类顺序
-    var catOrder = [];
-    for(var i = 0; i < this.categoryDefs.length; i++) {
-      if(this.categoryDefs[i].id !== 'all') catOrder.push(this.categoryDefs[i].id);
+    if(filtered.length === 0) {
+      container.innerHTML = '<div class="empty-state">没有找到对应的工具</div>';
+      return;
     }
 
     var html = '';
-    var count = 0;
-
-    for(var ci = 0; ci < catOrder.length; ci++) {
-      var catId = catOrder[ci];
-      var tools = groups[catId];
-      if(!tools) continue;
-
-      // 筛选
-      var filtered = [];
-      for(var i = 0; i < tools.length; i++) {
-        var t = tools[i];
-        var matchCat = this.currentFilter === 'all' || t.category === this.currentFilter;
-        var matchSearch = true;
-        if(search) {
-          matchSearch = t.name.toLowerCase().indexOf(search) >= 0 || t.desc.toLowerCase().indexOf(search) >= 0;
-        }
-        if(matchCat && matchSearch) filtered.push(t);
-      }
-      if(filtered.length === 0) continue;
-      count += filtered.length;
-
-      var label = catId;
-      for(var d = 0; d < this.categoryDefs.length; d++) {
-        if(this.categoryDefs[d].id === catId) { label = this.categoryDefs[d].label; break; }
-      }
-
-      html += '<div class="cat-section">';
-      html += '<div class="cat-section-header"><span class="cat-section-title">' + label + '</span><a class="cat-section-more" href="https://ai-bot.cn/favorites/ai-' + catId + '-tools/" target="_blank">查看更多 &gt;&gt;</a></div>';
-      html += '<div class="tools-grid">';
-      var maxShow = (this.currentFilter !== 'all' || search) ? filtered.length : 6;
-      var shown = 0;
-      for(var i = 0; i < filtered.length && shown < maxShow; i++) {
-        var t = filtered[i];
-        shown++;
-        html += '<a class="tool-card" href="' + (t.url || '#') + '" target="_blank">';
-        html += '<div class="card-icon">' + t.icon + '</div>';
-        html += '<div class="card-body">';
-        html += '<div class="card-title">' + t.name + '</div>';
-        html += '<div class="card-desc">' + t.desc + '</div>';
-        html += '</div></a>';
-      }
-      html += '</div></div>';
+    for(var i = 0; i < filtered.length; i++) {
+      var t = filtered[i];
+      html += '<a class="tool-card" href="' + (t.url || '#') + '" target="_blank">';
+      html += '<div class="card-icon">' + t.icon + '</div>';
+      html += '<div class="card-body">';
+      html += '<div class="card-title-row"><span class="card-title">' + t.name + '</span><span class="card-badge">' + t.categoryLabel + '</span></div>';
+      html += '<p class="card-desc">' + t.desc + '</p>';
+      html += '</div></a>';
     }
-
-    if(count === 0) {
-      html = '<div class="empty-state">没有找到对应的工具</div>';
-    }
-
     container.innerHTML = html;
   }
 };
