@@ -97,9 +97,15 @@ var app = {
       return;
     }
 
+    // 首页"全部"模式只显示22个，不搜素时也是，其余在分类里查看
+    var displayList = filtered;
+    if (!search && this.currentFilter === 'all') {
+      displayList = filtered.slice(0, 22);
+    }
+
     var html = '';
-    for (var i = 0; i < filtered.length; i++) {
-      var t = filtered[i];
+    for (var i = 0; i < displayList.length; i++) {
+      var t = displayList[i];
       html += '<a class="tool-card" href="' + (t.url || '#') + '" target="_blank">';
       html += '<div class="card-icon">' + (t.icon || '🛠️') + '</div>';
       html += '<div class="card-body">';
