@@ -21,7 +21,7 @@
 </head>
 <body>
 <div class="page-wrap">
-    <aside class="sidebar" id="sidebar">
+  <aside class="sidebar" id="sidebar">
     <a href="/" class="sidebar-logo">🏮 逍遥搜AI</a>
     <nav class="sidebar-nav" id="sidebarNav">
       <a href="/">🔥 全部热门</a>
@@ -41,8 +41,8 @@
       </div>
     </nav>
   </aside>
-<div class="main-content">
-  <div class="main-topbar">
+  <div class="main-content">
+    <div class="main-topbar">
       <a href="/" class="topbar-logo-mobile">🏮 逍遥搜AI</a>
       <div class="topbar-search">
         <input id="searchInput" type="text" placeholder="搜索AI工具名称...">
@@ -53,22 +53,45 @@
         <a href="/about.html">关于</a>
       </div>
     </div>
-<main class="container">
-<div class="hero-area">
-<h1>📰 <span class="gradient-text">AI 资讯</span></h1>
-<p>AI行业最新动态与资讯汇总</p>
-</div>
-<div class="news-list"><div class="news-list" id="newsList">
-    <!-- 由JS动态生成 -->
+    <main class="container">
+      <div class="hero-area">
+        <h1>📰 <span class="gradient-text">AI 资讯</span></h1>
+        <p>AI行业最新动态与资讯汇总</p>
+      </div>
+      <div class="news-list">
+        <div id="newsList">
+          <!-- 由JS动态生成 -->
+        </div>
+        <p style="text-align:center;font-size:11px;color:#94a3b8;margin:20px 0">数据来源：AI工具集 (ai-bot.cn) | 持续更新中</p>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-col">
+          <div class="footer-logo">🏮 逍遥搜AI</div>
+          <div class="footer-desc">一站式AI工具大全，收录1500+优质AI工具，持续更新中。</div>
+        </div>
+        <div class="footer-col">
+          <h4>关于</h4>
+          <a href="/about.html">关于我们</a>
+          <a href="/privacy.html">隐私政策</a>
+          <a href="/contact.html">联系我们</a>
+        </div>
+        <div class="footer-col">
+          <h4>热门推荐</h4>
+          <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
+          <a href="https://claude.ai" target="_blank">Claude</a>
+          <a href="https://www.doubao.com" target="_blank">豆包</a>
+          <a href="https://metaso.cn" target="_blank">秘塔AI</a>
+          <a href="https://kimi.moonshot.cn" target="_blank">Kimi</a>
+        </div>
+      </div>
+      <div class="footer-copy">&copy; 2026 逍遥搜AI · 数据参考自 ai-bot.cn</div>
+    </footer>
   </div>
-
-  <p style="text-align:center;font-size:11px;color:#94a3b8;margin:20px 0">数据来源：AI工具集 (ai-bot.cn) | 持续更新中</p>
-</main>
-
-
-
+</div>
 <script>
-// 预置AI资讯数据（从ai-bot.cn抓取）
+// 预置AI资讯数据
 var newsData = [
   {date:'3月18日·周三',title:'MiniMax推出MiniMax M2.7，开启模型的自我进化',summary:'MiniMax推出M2.7模型，首次实现模型深度参与自我迭代。在SWE-Pro基准测试中得分56.22%接近Opus水平。',source:'MiniMax 稀宇科技'},
   {date:'3月18日·周三',title:'LiblibAI推出专业AI视频创作平台LibTV',summary:'首个同时面向人类创作者与AI Agent的专业视频创作平台，支持剧本解析、分镜管理等20余种AI能力。',source:'哩布哩布AI'},
@@ -106,32 +129,5 @@ var newsData = [
   list.innerHTML = html;
 })();
 </script>
-</div>
-</main>
-  <footer>
-      <div class="footer-inner">
-        <div class="footer-col">
-          <div class="footer-logo">🏮 逍遥搜AI</div>
-          <div class="footer-desc">一站式AI工具大全，收录1500+优质AI工具，持续更新中。</div>
-        </div>
-        <div class="footer-col">
-          <h4>关于</h4>
-          <a href="/about.html">关于我们</a>
-          <a href="/privacy.html">隐私政策</a>
-          <a href="/contact.html">联系我们</a>
-        </div>
-        <div class="footer-col">
-          <h4>热门推荐</h4>
-          <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
-          <a href="https://claude.ai" target="_blank">Claude</a>
-          <a href="https://www.doubao.com" target="_blank">豆包</a>
-          <a href="https://metaso.cn" target="_blank">秘塔AI</a>
-          <a href="https://kimi.moonshot.cn" target="_blank">Kimi</a>
-        </div>
-      </div>
-      <div class="footer-copy">&copy; 2026 逍遥搜AI · 数据参考自 ai-bot.cn</div>
-    </footer>
-</div>
-</div>
 </body>
 </html>
