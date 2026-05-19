@@ -6,111 +6,124 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>if(/Mobile|Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){location.href='mobile/'}</script>
 <title>逍遥搜AI — 一站式AI工具大全</title>
-<link rel="stylesheet" href="style.css?v7">
+<link rel="stylesheet" href="style.css?v8">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
 </head>
 <body>
 
-<header class="topbar">
-  <div class="topbar-inner">
-    <a href="/" class="topbar-logo">🏮 逍遥搜AI</a>
-    <nav class="topbar-nav" id="topNav">
-      <a href="/">🔥 首页</a>
-      <a href="/categories.html">📂 全部分类</a>
-      <a href="/news.html">📰 AI资讯</a>
+<div class="page-wrap">
+
+  <!-- 左侧固定导航 (ai-bot.cn 风格) -->
+  <aside class="sidebar" id="sidebar">
+    <a href="/" class="sidebar-logo">🏮 逍遥搜AI</a>
+    <nav class="sidebar-nav" id="sidebarNav">
+      <a href="/" class="active" data-cat="all" onclick="return app.filterFromSidebar('all')">🔥 全部分类</a>
+      <a href="#" data-cat="writing" onclick="return app.filterFromSidebar('writing')">✍️ AI写作</a>
+      <a href="#" data-cat="image" onclick="return app.filterFromSidebar('image')">🎨 AI图像</a>
+      <a href="#" data-cat="video" onclick="return app.filterFromSidebar('video')">🎬 AI视频</a>
+      <a href="#" data-cat="productivity" onclick="return app.filterFromSidebar('productivity')">📊 AI办公</a>
+      <a href="#" data-cat="agent" onclick="return app.filterFromSidebar('agent')">🤖 AI智能体</a>
+      <a href="#" data-cat="conversation" onclick="return app.filterFromSidebar('conversation')">💬 AI聊天</a>
+      <a href="#" data-cat="coding" onclick="return app.filterFromSidebar('coding')">💻 AI编程</a>
+      <a href="#" data-cat="design" onclick="return app.filterFromSidebar('design')">🎯 AI设计</a>
+      <a href="#" data-cat="audio" onclick="return app.filterFromSidebar('audio')">🎵 AI音频</a>
+      <a href="#" data-cat="search" onclick="return app.filterFromSidebar('search')">🔍 AI搜索</a>
+      <a href="#" data-cat="platform" onclick="return app.filterFromSidebar('platform')">⚙️ AI开发</a>
+      <a href="#" data-cat="learning" onclick="return app.filterFromSidebar('learning')">📚 AI学习</a>
+      <a href="#" data-cat="model" onclick="return app.filterFromSidebar('model')">🧠 AI模型</a>
+      <a href="#" data-cat="detect" onclick="return app.filterFromSidebar('detect')">🔬 AI检测</a>
+      <a href="#" data-cat="prompt" onclick="return app.filterFromSidebar('prompt')">💡 AI提示词</a>
+      <a href="#" data-cat="side-project" onclick="return app.filterFromSidebar('side-project')">💼 AI副业</a>
+      <a href="#" data-cat="resource" onclick="return app.filterFromSidebar('resource')">🌐 AI社区</a>
+      <div class="sidebar-ext">
+        <a href="/news.html">📰 AI资讯</a>
+        <a href="/prompts.html">💬 AI提示词大全</a>
+        <a href="/categories.html">📂 全部分类</a>
+        <a href="/about.html">ℹ️ 关于我们</a>
+      </div>
     </nav>
-    <div class="topbar-right">
-      <a href="/about.html">关于</a>
-    </div>
-  </div>
-</header>
+  </aside>
 
-<main class="container">
-  <!-- Hero区域 -->
-  <div class="hero-area">
-    <h1>发现最好的 <span class="gradient-text">AI 工具</span></h1>
-    <p>收录 <strong id="toolCountHeader">1476</strong> 款AI工具，覆盖办公·绘图·视频·编程·写作·设计全领域</p>
-  </div>
+  <!-- 右侧主内容区 -->
+  <div class="main-content">
 
-  <!-- 搜索栏 -->
-  <div class="search-area">
-    <input id="searchInput" type="text" placeholder="搜索所有AI工具名称或用途..." oninput="app.filterTools()">
-  </div>
-
-  <!-- 广告位-搜索下方（审核通过后显示） -->
-  <div id="ad-banner" class="ad-container" style="display:none;text-align:center;margin:10px 0;min-height:90px;background:#f8f9fa;border-radius:8px;padding:10px">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4192236532369703" crossorigin="anonymous"></script>
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4192236532369703" data-ad-slot="" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-
-  <!-- 主业：热门推荐区域 -->
-  <section id="hot" class="home-section">
-    <div class="section-header">
-      <h2>🔥 热门推荐</h2>
-      <span class="section-subtitle">当下最热门的AI工具精选</span>
+    <!-- 顶部条（含搜索框） -->
+    <div class="main-topbar">
+      <a href="/" class="topbar-logo-mobile">🏮 逍遥搜AI</a>
+      <div class="topbar-search">
+        <input id="searchInput" type="text" placeholder="搜索AI工具名称..." oninput="app.filterTools()">
+      </div>
+      <div class="topbar-links">
+        <a href="/categories.html">全部分类</a>
+        <a href="/news.html">AI资讯</a>
+        <a href="/about.html">关于</a>
+      </div>
     </div>
 
-    <!-- 热门分类快捷按钮 -->
-    <div id="hotFilterBar" class="filter-bar">
-      <button class="filter-btn active" data-cat="all" onclick="app.filterByCategory('all')">全部热门</button>
-      <button class="filter-btn" data-cat="conversation" onclick="app.filterByCategory('conversation')">💬 AI聊天</button>
-      <button class="filter-btn" data-cat="image" onclick="app.filterByCategory('image')">🎨 AI绘图</button>
-      <button class="filter-btn" data-cat="writing" onclick="app.filterByCategory('writing')">✍️ AI写作</button>
-      <button class="filter-btn" data-cat="video" onclick="app.filterByCategory('video')">🎬 AI视频</button>
-      <button class="filter-btn" data-cat="productivity" onclick="app.filterByCategory('productivity')">📊 AI办公</button>
-      <button class="filter-btn" data-cat="coding" onclick="app.filterByCategory('coding')">💻 AI编程</button>
-      <button class="filter-btn" data-cat="design" onclick="app.filterByCategory('design')">🎯 AI设计</button>
-      <button class="filter-btn" data-cat="learning" onclick="app.filterByCategory('learning')">📚 AI教程</button>
-      <button class="filter-btn" data-cat="resource" onclick="app.filterByCategory('resource')">🌐 AI社区</button>
-      <a href="/news.html" class="filter-btn" style="text-decoration:none;display:inline-flex;align-items:center;gap:4px">📰 AI资讯</a>
-      <a href="/categories.html" class="filter-btn" style="text-decoration:none;display:inline-flex;align-items:center;gap:4px">📂 更多资源</a>
-    </div>
+    <main class="container">
+      <!-- Hero区域 -->
+      <div class="hero-area">
+        <h1>发现最好的 <span class="gradient-text">AI 工具</span></h1>
+        <p>收录 <strong id="toolCountHeader">1476</strong> 款AI工具，覆盖办公·绘图·视频·编程·写作·设计</p>
+      </div>
 
-    <div id="toolsContainer" class="tools-grid"></div>
-  </section>
+      <!-- 广告位-搜索下方 -->
+      <div id="ad-banner" class="ad-container" style="display:none;text-align:center;margin:10px 0;min-height:90px;background:#f8f9fa;border-radius:8px;padding:10px">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4192236532369703" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4192236532369703" data-ad-slot="" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
 
-  <!-- 广告位-工具列表下方 -->
-  <div id="ad-middle" class="ad-container" style="display:none;text-align:center;margin:20px 0;min-height:90px;background:#f8f9fa;border-radius:8px;padding:10px">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4192236532369703" crossorigin="anonymous"></script>
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4192236532369703" data-ad-slot="" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      <section id="hot" class="home-section">
+        <div class="section-header">
+          <h2 id="sectionTitle">🔥 全部分类</h2>
+          <span class="section-subtitle" id="sectionSubtitle">浏览全部AI工具</span>
+        </div>
+        <div id="toolsContainer" class="tools-grid"></div>
+      </section>
+
+      <!-- 广告位 -->
+      <div id="ad-middle" class="ad-container" style="display:none;text-align:center;margin:20px 0;min-height:90px;background:#f8f9fa;border-radius:8px;padding:10px">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4192236532369703" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4192236532369703" data-ad-slot="" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+      <div id="ad-footer" class="ad-container" style="display:none;text-align:center;margin:20px auto;max-width:728px;min-height:90px;background:#f8f9fa;border-radius:8px;padding:10px">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4192236532369703" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4192236532369703" data-ad-slot="" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-col">
+          <div class="footer-logo">🏮 逍遥搜AI</div>
+          <div class="footer-desc">一站式AI工具大全，收录1500+优质AI工具，持续更新中。</div>
+        </div>
+        <div class="footer-col">
+          <h4>关于</h4>
+          <a href="/about.html">关于我们</a>
+          <a href="/privacy.html">隐私政策</a>
+          <a href="/contact.html">联系我们</a>
+        </div>
+        <div class="footer-col">
+          <h4>热门推荐</h4>
+          <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
+          <a href="https://claude.ai" target="_blank">Claude</a>
+          <a href="https://www.doubao.com" target="_blank">豆包</a>
+          <a href="https://metaso.cn" target="_blank">秘塔AI</a>
+          <a href="https://kimi.moonshot.cn" target="_blank">Kimi</a>
+        </div>
+      </div>
+      <div class="footer-copy">&copy; 2026 逍遥搜AI · 数据参考自 ai-bot.cn</div>
+    </footer>
+
   </div>
-
-  <!-- 广告位-页脚上方 -->
-  <div id="ad-footer" class="ad-container" style="display:none;text-align:center;margin:20px auto;max-width:728px;min-height:90px;background:#f8f9fa;border-radius:8px;padding:10px">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4192236532369703" crossorigin="anonymous"></script>
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4192236532369703" data-ad-slot="" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-
-</main>
-
-<footer>
-  <div class="footer-inner">
-    <div class="footer-col">
-      <div class="footer-logo">🏮 逍遥搜AI</div>
-      <div class="footer-desc">一站式AI工具大全，收录1476+优质AI工具，持续更新中。</div>
-    </div>
-    <div class="footer-col">
-      <h4>关于</h4>
-      <a href="/about.html">关于我们</a>
-      <a href="/privacy.html">隐私政策</a>
-      <a href="/contact.html">联系我们</a>
-    </div>
-    <div class="footer-col">
-      <h4>热门推荐</h4>
-      <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
-      <a href="https://claude.ai" target="_blank">Claude</a>
-      <a href="https://www.doubao.com" target="_blank">豆包</a>
-      <a href="https://metaso.cn" target="_blank">秘塔AI</a>
-      <a href="https://kimi.moonshot.cn" target="_blank">Kimi</a>
-    </div>
-  </div>
-  <div class="footer-copy">&copy; 2026 逍遥搜AI · 数据参考自 ai-bot.cn</div>
-</footer>
+</div>
 
 <script src="data.js"></script>
-<script src="app.js?v2"></script>
+<script src="app.js?v3"></script>
 </body>
 </html>
