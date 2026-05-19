@@ -3,148 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI提示词大全 - aixiaoyaoge.top</title>
+<title>AI提示词大全 - 逍遥搜AI</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🏮</text></svg>">
 <meta name="description" content="各行业AI提示词大全">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4192236532369703" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css?v10">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans SC',sans-serif;background:#f5f6fa;color:#333}
-.nav{background:linear-gradient(135deg,#1a1a2e,#0f3460);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-.nav .logo{color:#fff;font-size:20px;font-weight:700;text-decoration:none}
-.nav a{color:rgba(255,255,255,.85);text-decoration:none;font-size:15px;padding:6px 14px;border-radius:20px}
-.nav a:hover{background:rgba(255,255,255,.15);color:#fff}
-.nav .sel{background:rgba(255,255,255,.1);color:#fff}
-.cont{max-width:1200px;margin:0 auto;padding:20px 16px}
-.hero{text-align:center;padding:30px 20px}
-.hero h1{font-size:30px;font-weight:800;background:linear-gradient(135deg,#667eea,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
-.hero p{font-size:16px;color:#666;max-width:600px;margin:0 auto}
-.search{max-width:500px;margin:0 auto 20px;position:relative}
-.search input{width:100%;padding:10px 40px 10px 16px;border:2px solid #ddd;border-radius:20px;font-size:15px;outline:none;transition:.3s}
-.search input:focus{border-color:#667eea;box-shadow:0 0 0 3px rgba(102,126,234,.15)}
-.search .ic{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:16px;color:#999;pointer-events:none}
-.cats{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;justify-content:center}
-.cats button{padding:6px 16px;border:1px solid #ddd;border-radius:16px;background:#fff;cursor:pointer;font-size:13px;color:#555;transition:.3s}
-.cats button:hover{border-color:#667eea;color:#667eea}
-.cats .on{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-color:transparent;box-shadow:0 2px 8px rgba(102,126,234,.3)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-bottom:30px}
-.card{background:#fff;border-radius:10px;padding:18px;cursor:pointer;transition:.3s;box-shadow:0 2px 6px rgba(0,0,0,.05);border:1px solid #eee;position:relative}
-.card:hover{transform:translateY(-3px);box-shadow:0 6px 16px rgba(102,126,234,.12);border-color:#667eea}
-.card .ico{font-size:32px;margin-bottom:8px;display:block}
-.card h3{font-size:15px;font-weight:700;margin-bottom:4px;color:#333}
-.card .ct{font-size:12px;color:#999;margin-bottom:6px}
-.card .ds{font-size:12px;color:#666;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.bdg{position:absolute;top:10px;right:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;font-size:10px;padding:2px 8px;border-radius:8px}
-.det{display:none}
-.det .bk{display:inline-block;padding:8px 16px;background:#fff;border:1px solid #ddd;border-radius:20px;cursor:pointer;font-size:13px;margin-bottom:16px;color:#666}
-.det .bk:hover{background:#f5f5f5;color:#333}
-.det .dt{font-size:22px;font-weight:700;margin-bottom:16px}
-.it{border:1px solid #eee;border-radius:8px;padding:14px;margin-bottom:10px;background:#fff}
-.it:hover{border-color:#667eea;box-shadow:0 2px 8px rgba(102,126,234,.08)}
-.it .pt{font-size:14px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-.it pre{background:#f8f9ff;border:1px solid #e8e8f0;border-radius:6px;padding:12px;font-size:12px;line-height:1.5;overflow-x:auto;white-space:pre-wrap;word-break:break-all;font-family:monospace;margin-bottom:6px;color:#444}
-.it .cp{padding:5px 12px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;border-radius:12px;cursor:pointer;font-size:12px;transition:.3s}
-.it .cp:hover{opacity:.9;transform:scale(1.05)}
-.it .dn{background:#52c41a}
-.footer{background:linear-gradient(135deg,#1a1a2e,#0f3460);color:rgba(255,255,255,.7);padding:24px 20px;text-align:center;margin-top:30px}
-.footer a{color:rgba(255,255,255,.8);text-decoration:none;margin:0 8px;font-size:13px}
-.footer a:hover{color:#fff}
-.footer p{margin-top:10px;font-size:12px}
-@media(max-width:768px){.grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}.nav a{font-size:13px;padding:4px 8px}}
+.prompt-cont{max-width:1000px;margin:0 auto}
+.prompt-hero{text-align:center;padding:20px 20px 10px}
+.prompt-hero h1{font-size:26px;font-weight:800;background:linear-gradient(135deg,#667eea,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px}
+.prompt-hero p{color:#64748b;font-size:13px}
+.prompt-search{margin:0 auto 12px;max-width:400px}
+.prompt-search input{width:100%;padding:8px 14px;border:1px solid #e2e8f0;border-radius:8px;outline:none;font-size:13px;background:#fff}
+.prompt-search input:focus{border-color:#667eea;box-shadow:0 0 0 3px rgba(102,126,234,.12)}
+.prompt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px}
+.prompt-card{padding:12px;background:#fff;border:1px solid #e2e8f0;border-radius:8px;cursor:pointer;transition:all .15s}
+.prompt-card:hover{border-color:#c4b5fd;box-shadow:0 3px 10px rgba(99,102,241,.1);transform:translateY(-1px)}
+.prompt-card .p-icon{font-size:20px;margin-bottom:4px}
+.prompt-card .p-name{font-size:14px;font-weight:600;color:#1e293b}
+.prompt-card .p-desc{font-size:12px;color:#64748b;margin-top:2px}
+.prompt-card .p-count{font-size:11px;color:#a78bfa;margin-top:2px}
+.prompt-detail{display:none;margin-top:8px}
+.prompt-detail.show{display:block}
+.prompt-detail .p-item{padding:10px 12px;margin-bottom:6px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px}
+.prompt-detail .p-item .p-title{font-size:13px;font-weight:600;color:#1e293b}
+.prompt-detail .p-item .p-content{font-size:12px;color:#475569;margin-top:4px;line-height:1.6;white-space:pre-wrap}
+.prompt-detail .p-item .copy-btn{padding:3px 10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;border-radius:4px;font-size:11px;cursor:pointer;margin-top:4px}
+.prompt-detail .p-item .copy-btn:hover{opacity:.9}
+.prompt-back{display:none;margin-bottom:10px;color:#667eea;cursor:pointer;font-size:13px}
+.prompt-back.show{display:inline-block}
+.tag-bar{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px}
+.tag-btn{padding:4px 10px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;font-size:12px;cursor:pointer;color:#475569}
+.tag-btn:hover{border-color:#a78bfa;background:#f5f3ff}
+.tag-btn.active{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;border-color:transparent}
 </style>
 </head>
 <body>
-<div class="nav">
-  <a href="/" class="logo">🏮 逍遥AI</a>
-  <div>
-    <a href="/">🔥首页</a>
-    <a href="/categories.html">📂分类</a>
-    <a href="/prompts.html" class="sel">💡提示词</a>
-    <a href="/news.html">📰资讯</a>
-  </div>
+<div class="page-wrap">
+  <aside class="sidebar" id="sidebar">
+    <a href="/" class="sidebar-logo">🏮 逍遥搜AI</a>
+    <nav class="sidebar-nav" id="sidebarNav">
+      <a href="/" class="active" data-cat="all">🔥 全部热门</a>
+      <a href="/categories.html" data-cat="">💬 AI聊天</a>
+      <a href="/categories.html" data-cat="">🎨 AI绘图</a>
+      <a href="/categories.html" data-cat="">✍️ AI写作</a>
+      <a href="/categories.html" data-cat="">🎬 AI视频</a>
+      <a href="/categories.html" data-cat="">📊 AI办公</a>
+      <a href="/categories.html" data-cat="">💻 AI编程</a>
+      <a href="/categories.html" data-cat="">🎯 AI设计</a>
+      <a href="/categories.html" data-cat="">📚 AI教程</a>
+      <a href="/categories.html" data-cat="">🌐 AI社区</a>
+      <div class="sidebar-ext">
+        <a href="/news.html">📰 AI资讯</a>
+        <a href="/categories.html">📂 全部分类</a>
+        <a href="/prompts.html">💬 提示词大全</a>
+        <a href="/about.html">ℹ️ 关于</a>
+      </div>
+    </nav>
+  </aside>
+<div class="main-content">
+  <div class="main-topbar">
+      <a href="/" class="topbar-logo-mobile">🏮 逍遥搜AI</a>
+      <div class="topbar-search">
+        <input id="searchInput" type="text" placeholder="搜索AI工具名称...">
+      </div>
+      <div class="topbar-links">
+        <a href="/categories.html">全部分类</a>
+        <a href="/news.html">AI资讯</a>
+        <a href="/about.html">关于</a>
+      </div>
+    </div>
+<main class="container">
+<div class="prompt-cont">
+<div class="prompt-hero">
+<h1>💬 AI提示词大全</h1>
+<p>各行业AI提示词模板，一键复制使用</p>
 </div>
-
-<div id="main">
-<div class="cont">
-  <div class="hero"><h1>💡 AI提示词大全</h1><p>覆盖各行业的AI提示词模板，一键复制，让AI成为你的行业专家</p></div>
-  <div class="search"><input type="text" id="si" placeholder="输入行业或提示词后按回车搜索" oninput="gs()" onkeydown="if(event.key=='Enter')gs()"><span class="ic">🔍</span></div>
-  <div class="cats" id="cats"></div>
-  <div class="grid" id="g"></div>
+<div class="prompt-search">
+<input id="promptSearch" type="text" placeholder="搜索提示词..." oninput="filterPrompts()" onkeydown="if(event.key==='Enter')filterPrompts()">
+</div>
+<div class="tag-bar" id="tagBar"></div>
+<div class="prompt-back" id="promptBack" onclick="backToList()">← 返回分类列表</div>
+<div id="promptContainer"></div>
+</div>
+</main>
+  <footer>
+      <div class="footer-inner">
+        <div class="footer-col">
+          <div class="footer-logo">🏮 逍遥搜AI</div>
+          <div class="footer-desc">一站式AI工具大全，收录1500+优质AI工具，持续更新中。</div>
+        </div>
+        <div class="footer-col">
+          <h4>关于</h4>
+          <a href="/about.html">关于我们</a>
+          <a href="/privacy.html">隐私政策</a>
+          <a href="/contact.html">联系我们</a>
+        </div>
+        <div class="footer-col">
+          <h4>热门推荐</h4>
+          <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
+          <a href="https://claude.ai" target="_blank">Claude</a>
+          <a href="https://www.doubao.com" target="_blank">豆包</a>
+          <a href="https://metaso.cn" target="_blank">秘塔AI</a>
+          <a href="https://kimi.moonshot.cn" target="_blank">Kimi</a>
+        </div>
+      </div>
+      <div class="footer-copy">&copy; 2026 逍遥搜AI · 数据参考自 ai-bot.cn</div>
+    </footer>
 </div>
 </div>
-
-<div id="det" class="det">
-<div class="cont">
-  <button class="bk" onclick="bk()">&#8592; 返回列表</button>
-  <div class="dt" id="dt"></div>
-  <div id="pl"></div>
-</div>
-</div>
-
-<div class="footer">
-  <div>
-    <a href="/">🔥首页</a>
-    <a href="/categories.html">📂全部分类</a>
-    <a href="/prompts.html">💡提示词</a>
-    <a href="/news.html">📰AI资讯</a>
-    <a href="/about.html">关于我们</a>
-    <a href="/privacy.html">隐私政策</a>
-  </div>
-  <p>&copy; 2026 aixiaoyaoge.top</p>
-</div>
-
 <script src="prompts_data.js"></script>
 <script>
-var fl = 'all', sr = '';
-function rd() {
-  var it = PROMPTS_DATA;
-  if (fl !== 'all') it = it.filter(function(x){return x.k===fl});
-  if (sr) { var s = sr.toLowerCase(); it = it.filter(function(x){return x.n.toLowerCase().indexOf(s)>=0||x.d.toLowerCase().indexOf(s)>=0}); }
-  var g = document.getElementById('g'); g.innerHTML = '';
-  if (!it.length) { var p = document.createElement('p'); p.style.cssText = 'color:#999;text-align:center;padding:40px'; p.textContent = '没有找到匹配的行业 😅'; g.appendChild(p); return; }
-  for (var i = 0; i < it.length; i++) {
-    var d = it[i];
-    var c = document.createElement('div'); c.className = 'card';
-    c.onclick = function(k){return function(){sd(k)}}(d.k);
-    c.innerHTML = '<span class="bdg">'+d.c+'条</span><span class="ico">'+d.i+'</span><h3>'+d.n+'</h3><div class="ct">共'+d.c+'条提示词</div><div class="ds">'+d.d+'</div>';
-    g.appendChild(c);
-  }
-}
-function rc() {
-  var b = document.getElementById('cats'); b.innerHTML = '';
-  var a = document.createElement('button'); a.className = fl==='all'?'on':''; a.textContent = '🎯 全部行业';
-  a.onclick = function(){fl='all';sr='';document.getElementById('si').value='';rc();rd()}; b.appendChild(a);
+var currentTag = 'all';
+function filterPrompts() {
+  var q = (document.getElementById('promptSearch').value || '').trim().toLowerCase();
+  var container = document.getElementById('promptContainer');
+  var tagBar = document.getElementById('tagBar');
+  var html = '';
+  var tagHtml = '<button class="tag-btn' + (currentTag === 'all' ? ' active' : '') + '" onclick="currentTag=\'all\';filterPrompts()">🏷️ 全部</button>';
   for (var i = 0; i < PROMPTS_DATA.length; i++) {
-    var d = PROMPTS_DATA[i];
-    var btn = document.createElement('button'); btn.className = fl===d.k?'on':''; btn.textContent = d.i+' '+d.n;
-    btn.onclick = function(k){return function(){fl=k;sr='';document.getElementById('si').value='';rc();rd()}}(d.k);
-    b.appendChild(btn);
+    var p = PROMPTS_DATA[i];
+    tagHtml += '<button class="tag-btn' + (currentTag === p.k ? ' active' : '') + '" onclick="currentTag=\'' + p.k + '\';filterPrompts()">' + p.i + ' ' + p.n + '</button>';
+    if (currentTag !== 'all' && currentTag !== p.k) continue;
+    var items = p.items;
+    if (q) {
+      items = [];
+      for (var j = 0; j < p.items.length; j++) {
+        if (p.items[j].t.toLowerCase().indexOf(q) >= 0 || p.items[j].c.toLowerCase().indexOf(q) >= 0) items.push(p.items[j]);
+      }
+    }
+    if (items.length === 0) continue;
+    html += '<div class="prompt-card" onclick="toggleDetail(\'pd' + i + '\')"><div class="p-icon">' + p.i + '</div><div class="p-name">' + p.n + '</div><div class="p-desc">' + p.d + '</div><div class="p-count">📋 ' + items.length + '条</div><span style="float:right;color:#94a3b8;font-size:12px">点击展开 ➤</span></div>';
+    html += '<div class="prompt-detail" id="pd' + i + '">';
+    for (var j = 0; j < items.length; j++) {
+      var it = items[j];
+      html += '<div class="p-item"><div class="p-title">' + it.t + '</div><div class="p-content" id="pc' + i + '_' + j + '">' + it.c + '</div><button class="copy-btn" onclick="copyPrompt(\'pc' + i + '_' + j + '\')">📋 复制</button></div>';
+    }
+    html += '</div>';
   }
+  tagBar.innerHTML = tagHtml;
+  container.innerHTML = html || '<div style="text-align:center;padding:20px;color:#94a3b8">没有找到匹配的提示词</div>';
 }
-function gs() { sr = document.getElementById('si').value.trim(); fl = 'all'; rc(); rd(); }
-function bk() { document.getElementById('det').style.display = 'none'; document.getElementById('main').style.display = 'block'; rd(); }
-function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>'); }
-function sd(key) {
-  document.getElementById('main').style.display = 'none'; document.getElementById('det').style.display = 'block';
-  var data = null; for (var i = 0; i < PROMPTS_DATA.length; i++) { if (PROMPTS_DATA[i].k === key) { data = PROMPTS_DATA[i]; break; } }
-  if (!data) return;
-  var items = data.items || [];
-  document.getElementById('dt').innerHTML = data.i + ' ' + data.n + ' <span style="font-size:14px;color:#999;font-weight:400">共'+items.length+'条</span>';
-  var list = document.getElementById('pl'); list.innerHTML = '';
-  for (var i = 0; i < items.length; i++) {
-    var p = items[i];
-    var div = document.createElement('div'); div.className = 'it';
-    var pt = document.createElement('div'); pt.className = 'pt'; pt.innerHTML = '<strong>'+esc(p[0])+'</strong>';
-    var pre = document.createElement('pre'); pre.textContent = p[1];
-    var btn = document.createElement('button'); btn.className = 'cp'; btn.textContent = '📋 复制';
-    btn.onclick = function(pr,bn){return function(){
-      navigator.clipboard.writeText(pr.textContent).then(function(){bn.textContent='✅ 已复制';bn.classList.add('dn');setTimeout(function(){bn.textContent='📋 复制';bn.classList.remove('dn')},2000)}).catch(function(){var ta=document.createElement('textarea');ta.value=pr.textContent;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);bn.textContent='✅ 已复制';bn.classList.add('dn');setTimeout(function(){bn.textContent='📋 复制';bn.classList.remove('dn')},2000)});
-    }}(pre,btn);
-    div.appendChild(pt); div.appendChild(pre); div.appendChild(btn);
-    list.appendChild(div);
-  }
-}
-rc(); rd();
+function toggleDetail(id) { var el = document.getElementById(id); if (el) { el.classList.toggle('show'); var back = document.getElementById('promptBack'); if (back) back.classList.toggle('show', !!document.querySelector('.prompt-detail.show')); } }
+function backToList() { var details = document.querySelectorAll('.prompt-detail.show'); for (var i = 0; i < details.length; i++) details[i].classList.remove('show'); document.getElementById('promptBack').classList.remove('show'); }
+function copyPrompt(id) { var el = document.getElementById(id); if (!el) return; var text = el.textContent; var ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); alert('✅ 已复制到剪贴板'); }
+filterPrompts();
 </script>
 </body>
 </html>
