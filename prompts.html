@@ -67,7 +67,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans S
 <div id="main">
 <div class="cont">
   <div class="hero"><h1>💡 AI提示词大全</h1><p>覆盖各行业的AI提示词模板，一键复制，让AI成为你的行业专家</p></div>
-  <div class="search"><input type="text" id="si" placeholder="搜索行业或提示词..." oninput="gs()"><span class="ic">🔍</span></div>
+  <div class="search"><input type="text" id="si" placeholder="输入行业或提示词后按回车搜索" oninput="gs()" onkeydown="if(event.key=='Enter')gs()"><span class="ic">🔍</span></div>
   <div class="cats" id="cats"></div>
   <div class="grid" id="g"></div>
 </div>
