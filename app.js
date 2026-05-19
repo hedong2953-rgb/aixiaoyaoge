@@ -85,9 +85,25 @@ var app = {
       return;
     }
 
+    // 首页"全部"模式只显示87个+1个更多资源卡片 = 88个（22行×4列）
+    var displayList = filtered;
+    if (!search && this.currentFilter === 'all') {
+      displayList = filtered.slice(0, 88);
+    }
+
     var html = '';
-    for (var i = 0; i < filtered.length; i++) {
-      var t = filtered[i];
+    for (var i = 0; i < displayList.length; i++) {
+      // 第88个替换为"更多资源"卡片
+      if (!search && this.currentFilter === 'all' && i === 87) {
+        html += '<a class="tool-card more-resource-card" href="/categories.html">';
+        html += '<div class="card-icon" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;font-size:20px">📂</div>';
+        html += '<div class="card-body">';
+        html += '<div class="card-title-row"><span class="card-title" style="color:#667eea">更多资源</span><span class="card-badge" style="background:#667eea;color:#fff">点击查看全部</span></div>';
+        html += '<p class="card-desc">浏览全部1526+款AI工具</p>';
+        html += '</div></a>';
+        continue;
+      }
+      var t = displayList[i];
       html += '<a class="tool-card" href="' + (t.url || '#') + '" target="_blank">';
       html += '<div class="card-icon">' + (t.icon || '🛠️') + '</div>';
       html += '<div class="card-body">';
