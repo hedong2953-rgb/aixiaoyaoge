@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 100">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c7d2fe"/>
+      <stop offset="100%" style="stop-color:#bfaef0"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="10" width="80" height="80" rx="20" fill="#5961f9"/>
+  <text x="22" y="52" font-family="Arial" font-size="22" font-weight="bold" fill="white">AI</text>
+  <text x="18" y="72" font-family="Arial" font-size="15" fill="rgba(255,255,255,.7)">工具</text>
+  <text x="100" y="56" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="44" font-weight="800" fill="white">AI工具大全</text>
+  <text x="100" y="80" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="rgba(255,255,255,.5)">发现好用的AI工具</text>
+</svg>

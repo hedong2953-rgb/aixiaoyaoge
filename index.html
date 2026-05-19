@@ -1,116 +1,135 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-CN" class="io-grey-mode">
 <head>
 <meta charset="UTF-8">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4192236532369703" crossorigin="anonymous"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>if(/Mobile|Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){location.href='mobile/'}</script>
-<title>逍遥搜AI — 一站式AI工具大全</title>
-<link rel="stylesheet" href="style.css?v9">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI工具大全 - 1000+AI工具导航</title>
+<meta name="theme-color" content="#f9f9f9" />
+<meta name="keywords" content="AI工具,AI导航,AI写作,AI绘画,AI视频,AI编程,AI聊天,AI工具集" />
+<meta name="description" content="AI工具大全官网收录了国内外数百个AI工具，该导航网站包括AI写作工具、AI图像生成和背景移除、AI视频制作、AI音频转录、AI辅助编程、AI音乐生成、AI绘画设计、AI对话聊天等AI工具集合大全，以及AI学习开发的常用网站、框架和模型，帮助你加入人工智能浪潮，自动化高效完成任务！" />
+<link rel="shortcut icon" href="assets/favicon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4016659_bcqo253fh2d.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="page-wrap">
-
-  <!-- 左侧固定导航 -->
-  <aside class="sidebar" id="sidebar">
-    <a href="/" class="sidebar-logo">🏮 逍遥搜AI</a>
-    <nav class="sidebar-nav" id="sidebarNav">
-      <a href="/" class="active" data-cat="all">🔥 全部热门</a>
-      <a href="#" data-cat="conversation">💬 AI聊天</a>
-      <a href="#" data-cat="image">🎨 AI绘图</a>
-      <a href="#" data-cat="writing">✍️ AI写作</a>
-      <a href="#" data-cat="video">🎬 AI视频</a>
-      <a href="#" data-cat="productivity">📊 AI办公</a>
-      <a href="#" data-cat="coding">💻 AI编程</a>
-      <a href="#" data-cat="design">🎯 AI设计</a>
-      <a href="#" data-cat="learning">📚 AI教程</a>
-      <a href="#" data-cat="resource">🌐 AI社区</a>
-      <a href="/news.html">📰 AI资讯</a>
-      <a href="/prompts.html">💬 AI提示词大全</a>
-      <div class="sidebar-ext">
-        <a href="/about.html">ℹ️ 关于我们</a>
+  <div id="sidebar" class="sticky sidebar-nav fade">
+    <div class="modal-dialog h-100 sidebar-nav-inner">
+      <div class="sidebar-logo border-bottom border-color">
+        <div class="logo overflow-hidden">
+          <a href="/" class="logo-expanded">
+            <img src="assets/logo.svg" height="40" class="logo-light" alt="AI工具大全">
+            <img src="assets/logo-white.svg" height="40" class="logo-dark d-none" alt="AI工具大全">
+          </a>
+          <a href="/" class="logo-collapsed">
+            <img src="assets/favicon.png" height="40" class="logo-light" alt="AI工具大全">
+            <img src="assets/favicon.png" height="40" class="logo-dark d-none" alt="AI工具大全">
+          </a>
+        </div>
       </div>
-    </nav>
-  </aside>
-
-  <!-- 右侧主内容区 -->
-  <div class="main-content">
-
-    <div class="main-topbar">
-      <a href="/" class="topbar-logo-mobile">🏮 逍遥搜AI</a>
-      <div class="topbar-search">
-        <input id="searchInput" type="text" placeholder="搜索AI工具名称..." oninput="app.filterTools()">
+      <div class="sidebar-menu flex-fill">
+        <div class="sidebar-scroll">
+          <div class="sidebar-menu-inner">
+            <ul id="sidebarUl"></ul>
+          </div>
+        </div>
       </div>
-      <div class="topbar-links">
-        <a href="/categories.html">全部分类</a>
-        <a href="/news.html">AI资讯</a>
-        <a href="/about.html">关于</a>
+    </div>
+  </div>
+
+  <div class="main-content flex-fill">
+    <div class="no-big-header header-nav">
+      <div id="header" class="page-header sticky">
+        <div class="navbar navbar-expand-md">
+          <div class="container-fluid p-0 position-relative">
+            <div class="collapse navbar-collapse order-2 order-md-1">
+              <div class="header-mini-btn">
+                <label>
+                  <input id="mini-button" type="checkbox" checked="checked">
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path class="line--1" d="M0 40h62c18 0 18-20-17 5L31 55"></path>
+                    <path class="line--2" d="M0 50h80"></path>
+                    <path class="line--3" d="M0 60h62c18 0 18 20-17-5L31 45"></path>
+                  </svg>
+                </label>
+              </div>
+              <ul class="navbar-nav navbar-top site-menu mr-4" id="topMenu">
+                <li class="menu-item menu-item-has-children">
+                  <a href="/">AI工具大全</a>
+                  <ul class="sub-menu" id="topMenuSub"></ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="placeholder"></div>
+    </div>
+
+    <div class="header-big no-bg mb-4">
+      <div class="s-search">
+        <div id="search" class="s-search mx-auto">
+          <div class="text-center mb-3">
+            <img src="assets/logo-big.svg" height="100px" class="logo-light" alt="AI工具大全">
+            <img src="assets/logo-big-white.svg" height="100px" class="logo-dark d-none" alt="AI工具大全">
+          </div>
+          <div id="search-list-menu">
+            <div class="s-type text-center">
+              <div class="s-type-list big tab-auto-scrollbar overflow-x-auto">
+                <div class="anchor" style="position:absolute;left:50%;opacity:0"></div>
+                <label class="active" data-page="home" data-id="group-a"><span>常用</span></label>
+                <label data-page="home" data-id="group-b"><span>搜索</span></label>
+                <label data-page="home" data-id="group-d"><span>社区</span></label>
+                <label data-page="home" data-id="group-f"><span>图片</span></label>
+                <label data-page="home" data-id="group-e"><span>生活</span></label>
+              </div>
+            </div>
+          </div>
+          <form action="javascript:void(0)" method="get" class="super-search-fm">
+            <input type="text" id="search-text" class="form-control smart-tips search-key" placeholder="输入关键词搜索AI工具" style="outline:0" autocomplete="off">
+            <button type="submit" id="btn_search" onclick="doSearch()"><i class="iconfont icon-search"></i></button>
+          </form>
+          <div id="search-list" class="hide-type-list">
+            <div class="search-group justify-content-center group-a s-current">
+              <ul class="search-type tab-auto-scrollbar overflow-x-auto">
+                <li><input checked hidden type="radio" name="type" data-page="home" id="type-zhannei" value=""><label for="type-zhannei"><span class="text-muted">站内</span></label></li>
+                <li><input hidden type="radio" name="type" data-page="home" id="type-bing" value="https://cn.bing.com/search?q=%s%"><label for="type-bing"><span class="text-muted">Bing</span></label></li>
+                <li><input hidden type="radio" name="type" data-page="home" id="type-baidu" value="https://www.baidu.com/s?wd=%s%"><label for="type-baidu"><span class="text-muted">百度</span></label></li>
+                <li><input hidden type="radio" name="type" data-page="home" id="type-google" value="https://www.google.com/search?q=%s%"><label for="type-google"><span class="text-muted">Google</span></label></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <main class="container">
-      <div class="hero-area">
-        <h1>发现最好的 <span class="gradient-text">AI 工具</span></h1>
-        <p>收录 <strong id="toolCountHeader">1526</strong> 款AI工具，覆盖办公·绘图·视频·编程·写作·设计</p>
-      </div>
-
-      <div id="ad-banner" class="ad-container" style="display:none;text-align:center;margin:10px 0;min-height:90px;background:#f8f9fa;border-radius:8px;padding:10px">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4192236532369703" crossorigin="anonymous"></script>
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4192236532369703" data-ad-slot="" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      </div>
-
-      <section id="hot" class="home-section">
-        <div class="section-header">
-          <h2 id="sectionTitle">🔥 全部分类</h2>
-          <span class="section-subtitle" id="sectionSubtitle">浏览全部AI工具</span>
-        </div>
-        <div id="toolsContainer" class="tools-grid"></div>
-      </section>
-
-      <div id="ad-middle" class="ad-container" style="display:none;text-align:center;margin:20px 0;min-height:90px;background:#f8f9fa;border-radius:8px;padding:10px">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4192236532369703" crossorigin="anonymous"></script>
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4192236532369703" data-ad-slot="" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      </div>
-      <div id="ad-footer" class="ad-container" style="display:none;text-align:center;margin:20px auto;max-width:728px;min-height:90px;background:#f8f9fa;border-radius:8px;padding:10px">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4192236532369703" crossorigin="anonymous"></script>
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4192236532369703" data-ad-slot="" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      </div>
-
-    </main>
-
-    <footer>
-      <div class="footer-inner">
-        <div class="footer-col">
-          <div class="footer-logo">🏮 逍遥搜AI</div>
-          <div class="footer-desc">一站式AI工具大全，收录1500+优质AI工具，持续更新中。</div>
-        </div>
-        <div class="footer-col">
-          <h4>关于</h4>
-          <a href="/about.html">关于我们</a>
-          <a href="/privacy.html">隐私政策</a>
-          <a href="/contact.html">联系我们</a>
-        </div>
-        <div class="footer-col">
-          <h4>热门推荐</h4>
-          <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
-          <a href="https://claude.ai" target="_blank">Claude</a>
-          <a href="https://www.doubao.com" target="_blank">豆包</a>
-          <a href="https://metaso.cn" target="_blank">秘塔AI</a>
-          <a href="https://kimi.moonshot.cn" target="_blank">Kimi</a>
+    <!-- 分类面包屑导航（点击分类时显示） -->
+    <div class="container container-lg" id="catBarContainer" style="display:none">
+      <div class="row" style="margin:0">
+        <div class="col-12" style="padding:0">
+          <h4 class="text-gray text-lg mb-4" id="catTitle">
+            <i class="site-tag iconfont icon-tag icon-lg mr-1"></i>
+            <span id="catNameSpan">全部工具</span>
+            <small class="text-muted" id="catCountSpan"></small>
+          </h4>
         </div>
       </div>
-      <div class="footer-copy">&copy; 2026 逍遥搜AI · 数据参考自 ai-bot.cn</div>
-    </footer>
+    </div>
 
+    <div id="content" class="container container-lg">
+      <div class="content-wrap">
+        <div class="content-layout">
+          <div class="row" id="toolGrid"></div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 
-<script src="data.js"></script>
-<script src="app.js?v3"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

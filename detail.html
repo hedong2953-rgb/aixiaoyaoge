@@ -1,35 +1,41 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="io-grey-mode">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI工具导航 - 工具详情</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏮</text></svg>">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI工具大全 - 工具详情</title>
+<meta name="description" content="AI工具大全收录了国内外数百个AI工具，涵盖AI写作、AI图像、AI视频、AI编程、AI聊天等分类。">
+<link rel="shortcut icon" href="assets/favicon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4016659_bcqo253fh2d.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="logo">
-        <span class="logo-icon">🏮</span>
-        <span class="logo-text">AI工具导航</span>
+
+  <div id="sidebar" class="sticky sidebar-nav fade">
+    <div class="modal-dialog h-100 sidebar-nav-inner">
+      <div class="sidebar-logo border-bottom border-color">
+        <div class="logo overflow-hidden">
+          <a href="/" class="logo-expanded">
+            <img src="assets/logo.svg" height="40" class="logo-light" alt="AI工具大全">
+            <img src="assets/logo-white.svg" height="40" class="logo-dark d-none" alt="AI工具大全">
+          </a>
+          <a href="/" class="logo-collapsed">
+            <img src="assets/favicon.png" height="40" class="logo-light" alt="AI工具大全">
+            <img src="assets/favicon.png" height="40" class="logo-dark d-none" alt="AI工具大全">
+          </a>
+        </div>
       </div>
-      <nav><a href="index.html">首页</a>
-        <a href="#categories">分类</a>
-        <a href="submit.html">提交收录</a></nav>
+      <div class="sidebar-menu flex-fill">
+        <div class="sidebar-scroll">
+          <div class="sidebar-menu-inner">
+            <ul id="sidebarUl"></ul>
+          </div>
+        </div>
+      </div>
     </div>
-  </header>
+  </div>
 
-  <section>
-    <div class="detail-page" id="detailContainer"></div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>🏮 AI工具导航 · 发现好用的AI工具</p>
-      <p class="footer-sub">© 2026 aixiaoyaoge.top</p>
-    </div>
-  </footer>
+  <div class="detail-main" id="detailContainer"></div>
 
   <script src="data.js"></script>
   <script src="detail.js"></script>
