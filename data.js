@@ -20663,7 +20663,7 @@ var toolsData = [
       features: ["AI提示词工具"],
       tags: ["AI提示词"]
     }
-  }
+  },
   {id: 1477, name: 'SpotScribe', icon: '🎙️', category: 'audio', categoryLabel: 'AI音频', desc: '长音频转文字工具，播客内容一键转录为可搜索的文本资产', url: 'https://spotscribe.com'},
   {id: 1478, name: 'GNOMI', icon: '💬', category: 'conversation', categoryLabel: 'AI聊天', desc: '全球动态实时情报语音助手，围绕新闻、市场动态和实时数据的AI解读', url: 'https://gnomi.ai'},
   {id: 1479, name: 'Explorium', icon: '🛠️', category: 'platform', categoryLabel: 'AI开发', desc: 'AI驱动商业数据底座，面向GTM团队的B2B数据整合和分析平台', url: 'https://explorium.ai'},
