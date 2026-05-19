@@ -149,7 +149,7 @@ var app = {
     for(var i = 0; i < items.length; i++) {
       var t = items[i];
       var label = t.categoryLabel || '';
-      h += '<a class="tool-item" href="' + (t.url || '#') + '" target="_blank" rel="noopener">';
+      h += '<a class="tool-item" href="' + (t.url || '#') + '" rel="noopener">';
       h += '<div class="t-icon">' + t.icon + '</div>';
       h += '<div class="t-body">';
       h += '<div class="t-name">' + t.name + '<span class="t-badge">' + label + '</span></div>';
