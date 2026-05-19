@@ -3,7 +3,7 @@ var app = {
   currentSearch: '',
 
   // 热门分类（主业展示的）
-  hotCategories: ['conversation','image','writing','video','productivity','coding','design','resource','search','side-project'],
+  hotCategories: ['conversation','image','writing','video','productivity','coding','design','resource','side-project'],
 
   // 全部分类
   allCategories: [
