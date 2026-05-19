@@ -3,7 +3,7 @@ var app = {
   currentSearch: '',
 
   // 热门分类（主业展示的）
-  hotCategories: ['conversation','image','writing','video','productivity','coding','design','resource','search'],
+  hotCategories: ['conversation','image','writing','video','productivity','coding','design','resource','search','side-project'],
 
   // 全部分类
   allCategories: [
@@ -60,8 +60,10 @@ var app = {
     var bar = document.getElementById('fullFilterBar');
     if (!bar) return;
     var html = '';
+    // 跳过resource（只保留顶部热门栏）
     for (var i = 0; i < this.allCategories.length; i++) {
       var c = this.allCategories[i];
+      if (c.id === 'resource') continue;
       html += '<button class="filter-btn' + (c.id === 'all' ? '' : '') + '" data-cat="' + c.id + '" onclick="app.filterByCategory(\'' + c.id + '\')">' + c.label + '</button>';
     }
     bar.innerHTML = html;
