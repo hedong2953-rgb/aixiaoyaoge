@@ -97,10 +97,10 @@ var app = {
       return;
     }
 
-    // 首页"全部"模式只显示22个，不搜素时也是，其余在分类里查看
+    // 首页"全部"模式只显示88个（22行×4列），不搜素时也是，其余在分类里查看
     var displayList = filtered;
     if (!search && this.currentFilter === 'all') {
-      displayList = filtered.slice(0, 22);
+      displayList = filtered.slice(0, 88);
     }
 
     var html = '';
