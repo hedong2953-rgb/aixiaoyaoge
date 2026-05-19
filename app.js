@@ -1,29 +1,9 @@
+// app.js - 修复版
 var app = {
   currentFilter: 'all',
   currentSearch: '',
-  categoryDefs: [
-    { id: 'all', label: '全部分类' },
-    { id: 'writing', label: 'AI写作' },
-    { id: 'image', label: 'AI图像' },
-    { id: 'video', label: 'AI视频' },
-    { id: 'productivity', label: 'AI办公' },
-    { id: 'agent', label: 'AI智能体' },
-    { id: 'conversation', label: 'AI聊天' },
-    { id: 'coding', label: 'AI编程' },
-    { id: 'design', label: 'AI设计' },
-    { id: 'audio', label: 'AI音频' },
-    { id: 'search', label: 'AI搜索' },
-    { id: 'platform', label: 'AI开发' },
-    { id: 'learning', label: 'AI学习' },
-    { id: 'model', label: 'AI模型' },
-    { id: 'detect', label: 'AI检测' },
-    { id: 'prompt', label: 'AI提示' },
-    { id: 'side-project', label: 'AI副业' },
-    { id: 'resource', label: '资源' }
-  ],
 
   init: function() {
-    document.getElementById('toolCount').textContent = toolsData.length;
     this.renderCategories();
     this.renderTools();
   },
@@ -53,6 +33,27 @@ var app = {
     }
     bar.innerHTML = html;
   },
+
+  categoryDefs: [
+    { id: 'all', label: '全部分类' },
+    { id: 'writing', label: 'AI写作' },
+    { id: 'image', label: 'AI图像' },
+    { id: 'video', label: 'AI视频' },
+    { id: 'productivity', label: 'AI办公' },
+    { id: 'agent', label: 'AI智能体' },
+    { id: 'conversation', label: 'AI聊天' },
+    { id: 'coding', label: 'AI编程' },
+    { id: 'design', label: 'AI设计' },
+    { id: 'audio', label: 'AI音频' },
+    { id: 'search', label: 'AI搜索' },
+    { id: 'platform', label: 'AI开发' },
+    { id: 'learning', label: 'AI学习' },
+    { id: 'model', label: 'AI模型' },
+    { id: 'detect', label: 'AI检测' },
+    { id: 'prompt', label: 'AI提示' },
+    { id: 'side-project', label: 'AI副业' },
+    { id: 'resource', label: '资源' }
+  ],
 
   renderTools: function() {
     var container = document.getElementById('toolsContainer');
