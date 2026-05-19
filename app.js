@@ -2,71 +2,61 @@ var app = {
   currentFilter: 'all',
   currentSearch: '',
 
-  // 热门分类（主业展示的）
-  hotCategories: ['conversation','image','writing','video','productivity','coding','design','resource','learning'],
-
-  // 全部分类
   allCategories: [
-    { id: 'all', label: '全部分类' },
-    { id: 'writing', label: 'AI写作' },
-    { id: 'image', label: 'AI绘图' },
-    { id: 'video', label: 'AI视频' },
-    { id: 'productivity', label: 'AI办公' },
-    { id: 'agent', label: 'AI智能体' },
-    { id: 'conversation', label: '对话大模型' },
-    { id: 'coding', label: 'AI编程' },
-    { id: 'design', label: 'AI设计' },
-    { id: 'audio', label: 'AI音乐/音频' },
-    { id: 'search', label: 'AI搜索' },
-    { id: 'platform', label: 'AI开发' },
-    { id: 'learning', label: 'AI学习' },
-    { id: 'model', label: 'AI模型' },
-    { id: 'detect', label: 'AI检测' },
-    { id: 'prompt', label: 'AI提示词' },
-    { id: 'side-project', label: 'AI副业' },
-    { id: 'resource', label: '资源与社区' }
+    { id: 'all', label: '全部分类', title: '🔥 全部分类', subtitle: '浏览全部AI工具' },
+    { id: 'writing', label: 'AI写作', title: '✍️ AI写作工具', subtitle: 'AI写作助手、内容创作、论文辅助' },
+    { id: 'image', label: 'AI图像', title: '🎨 AI图像工具', subtitle: 'AI绘画、图像生成、图片编辑' },
+    { id: 'video', label: 'AI视频', title: '🎬 AI视频工具', subtitle: 'AI视频生成、数字人、视频编辑' },
+    { id: 'productivity', label: 'AI办公', title: '📊 AI办公工具', subtitle: 'AI PPT、数据分析、文档处理' },
+    { id: 'agent', label: 'AI智能体', title: '🤖 AI智能体', subtitle: 'AI Agent、自动化工作流' },
+    { id: 'conversation', label: 'AI聊天', title: '💬 AI聊天助手', subtitle: '对话大模型、AI助手' },
+    { id: 'coding', label: 'AI编程', title: '💻 AI编程工具', subtitle: 'AI IDE、代码助手、开发工具' },
+    { id: 'design', label: 'AI设计', title: '🎯 AI设计工具', subtitle: 'AI设计平台、UI/UX、原型工具' },
+    { id: 'audio', label: 'AI音频', title: '🎵 AI音频工具', subtitle: 'AI音乐、语音合成、配音工具' },
+    { id: 'search', label: 'AI搜索', title: '🔍 AI搜索引擎', subtitle: 'AI搜索、学术搜索、知识检索' },
+    { id: 'platform', label: 'AI开发', title: '⚙️ AI开发平台', subtitle: 'AI框架、模型平台、API服务' },
+    { id: 'learning', label: 'AI学习', title: '📚 AI学习网站', subtitle: 'AI课程、教程、学习资源' },
+    { id: 'model', label: 'AI模型', title: '🧠 AI训练模型', subtitle: '大模型、开源模型、模型评测' },
+    { id: 'detect', label: 'AI检测', title: '🔬 AI内容检测', subtitle: 'AI文本检测、图像检测、原创度' },
+    { id: 'prompt', label: 'AI提示词', title: '💡 AI提示指令', subtitle: '提示词工具、Prompt工程' },
+    { id: 'side-project', label: 'AI副业', title: '💼 AI副业工具', subtitle: '内容变现、自媒体、联盟营销' },
+    { id: 'resource', label: 'AI社区', title: '🌐 资源与社区', subtitle: 'AI社区、资源汇总、工具导航' }
   ],
 
   init: function() {
-    // Update tool counts
     document.getElementById('toolCountHeader').textContent = toolsData.length;
-    var footerCount = document.getElementById('toolCountFooter');
-    if (footerCount) footerCount.textContent = toolsData.length;
-
-    this.renderFullCategories();
     this.renderTools();
   },
 
-  filterByCategory: function(cat) {
+  filterFromSidebar: function(cat) {
     this.currentFilter = cat;
     this.currentSearch = '';
     var inp = document.getElementById('searchInput');
     if (inp) inp.value = '';
 
-    // Update all filter buttons
-    var btns = document.querySelectorAll('.filter-btn');
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].classList.toggle('active', btns[i].dataset.cat === cat);
+    // Update sidebar active state
+    var links = document.querySelectorAll('#sidebarNav a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].classList.toggle('active', links[i].dataset.cat === cat);
     }
+
+    // Update section title
+    var info = null;
+    for (var i = 0; i < this.allCategories.length; i++) {
+      if (this.allCategories[i].id === cat) { info = this.allCategories[i]; break; }
+    }
+    if (info) {
+      document.getElementById('sectionTitle').textContent = info.title;
+      document.getElementById('sectionSubtitle').textContent = info.subtitle;
+    }
+
     this.renderTools();
+    return false; // prevent link navigation
   },
 
   filterTools: function() {
     this.currentSearch = (document.getElementById('searchInput').value || '').trim().toLowerCase();
     this.renderTools();
-  },
-
-  renderFullCategories: function() {
-    var bar = document.getElementById('fullFilterBar');
-    if (!bar) return;
-    var html = '';
-    // 跳过resource（只保留顶部热门栏）
-    for (var i = 0; i < this.allCategories.length; i++) {
-      var c = this.allCategories[i];
-      if (c.id === 'resource') continue;
-      html += '<button class="filter-btn' + (c.id === 'all' ? '' : '') + '" data-cat="' + c.id + '" onclick="app.filterByCategory(\'' + c.id + '\')">' + c.label + '</button>';
-    }
-    bar.innerHTML = html;
   },
 
   renderTools: function() {
@@ -75,11 +65,9 @@ var app = {
 
     var search = this.currentSearch;
     var filtered = [];
-    var isHotMode = this.hotCategories.indexOf(this.currentFilter) >= 0 || this.currentFilter === 'all';
 
     for (var i = 0; i < toolsData.length; i++) {
       var t = toolsData[i];
-      // If in hot mode, only show hot categories
       var matchCat = this.currentFilter === 'all' || t.category === this.currentFilter;
       if (!matchCat) continue;
 
@@ -97,25 +85,9 @@ var app = {
       return;
     }
 
-    // 首页"全部"模式只显示88个（22行×4列），不搜素时也是，其余在分类里查看
-    var displayList = filtered;
-    if (!search && this.currentFilter === 'all') {
-      displayList = filtered.slice(0, 88);
-    }
-
     var html = '';
-    for (var i = 0; i < displayList.length; i++) {
-      // 第88个替换为"更多资源"卡片
-      if (!search && this.currentFilter === 'all' && i === 87) {
-        html += '<a class="tool-card more-resource-card" href="/categories.html">';
-        html += '<div class="card-icon" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;font-size:24px">📂</div>';
-        html += '<div class="card-body">';
-        html += '<div class="card-title-row"><span class="card-title" style="color:#667eea">更多资源</span><span class="card-badge" style="background:#667eea;color:#fff">点击查看全部</span></div>';
-        html += '<p class="card-desc">浏览全部1476+款AI工具，全部分类汇总</p>';
-        html += '</div></a>';
-        continue;
-      }
-      var t = displayList[i];
+    for (var i = 0; i < filtered.length; i++) {
+      var t = filtered[i];
       html += '<a class="tool-card" href="' + (t.url || '#') + '" target="_blank">';
       html += '<div class="card-icon">' + (t.icon || '🛠️') + '</div>';
       html += '<div class="card-body">';
