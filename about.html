@@ -1,136 +1,39 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>关于我们 - AI工具导航</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏮</text></svg>">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .about-page { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-    .about-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 32px; margin-bottom: 20px; }
-    .about-card h2 { font-size: 20px; font-weight: 700; margin-bottom: 16px; }
-    .about-card p { font-size: 15px; line-height: 1.8; color: #475569; margin-bottom: 12px; }
-    .about-card ul { list-style: none; padding: 0; }
-    .about-card ul li { padding: 8px 0; font-size: 14px; color: #475569; display: flex; align-items: center; gap: 8px; }
-    .about-card ul li::before { content: "✓"; color: #6366f1; font-weight: 700; }
-    .about-icon { font-size: 48px; display: block; text-align: center; margin-bottom: 16px; }
-    .about-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin: 24px 0; }
-    .about-stat { text-align: center; padding: 20px; background: #f8fafc; border-radius: 12px; }
-    .about-stat .num { font-size: 32px; font-weight: 800; color: #6366f1; }
-    .about-stat .label { font-size: 13px; color: #94a3b8; margin-top: 4px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关于我们 - AI逍遥阁</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Color Emoji","Apple Color Emoji",sans-serif;background:#f2f4f7;color:#1e293b;font-size:14px;line-height:1.8}
+.container{max-width:800px;margin:0 auto;padding:20px}
+h1{font-size:24px;margin:20px 0 10px}
+h2{font-size:18px;margin:15px 0 8px;color:#2563eb}
+p{margin-bottom:12px}
+.back{display:inline-block;margin-bottom:20px;color:#2563eb;text-decoration:none}
+.back:hover{text-decoration:underline}
+.footer{text-align:center;padding:20px;color:#64748b;font-size:12px}
+</style>
 </head>
 <body>
-  <header>
-    <div class="header-inner">
-      <a href="index.html" class="header-logo">
-        <span class="logo-icon">🏮</span>
-        <span class="logo-text">AI工具导航</span>
-      </a>
-      <nav class="header-nav">
-        <a href="index.html">首页</a>
-        <a href="#categories">分类</a>
-        <a href="submit.html">提交收录</a>
-        <a href="about.html" style="background:#eef2ff;color:#6366f1">关于</a>
-      </nav>
-    </div>
-  </header>
+<div class="container">
+<a href="/" class="back">← 返回首页</a>
+<h1>关于 AI逍遥阁</h1>
+<p>AI逍遥阁是一个免费的AI工具导航网站，致力于收集和整理国内外优秀的AI工具，帮助用户快速发现和使用各种AI应用。</p>
+<p>我们的目标是为所有对AI感兴趣的用户提供一个便捷、全面的工具索引平台，无论你是AI从业者、研究者，还是普通用户，都能在这里找到适合自己的AI工具。</p>
 
-  <section class="about-page">
-    <div class="about-card" style="text-align:center;padding:40px">
-      <span class="about-icon">🏮</span>
-      <h1 style="font-size:28px;font-weight:800;margin-bottom:8px">关于 AI工具导航</h1>
-      <p style="color:#64748b;font-size:15px">一站式AI工具大全 · 发现最好用的AI工具</p>
-    </div>
+<h2>我们的使命</h2>
+<p>让AI工具触手可及。在这个AI快速发展的时代，我们希望降低AI工具的使用门槛，让每个人都能享受到AI技术带来的便利。</p>
 
-    <div class="about-stats">
-      <div class="about-stat">
-        <div class="num">119</div>
-        <div class="label">收录工具</div>
-      </div>
-      <div class="about-stat">
-        <div class="num">8</div>
-        <div class="label">分类数量</div>
-      </div>
-      <div class="about-stat">
-        <div class="num">∞</div>
-        <div class="label">持续更新</div>
-      </div>
-    </div>
+<h2>收录范围</h2>
+<p>目前我们收录了超过1400款AI工具，涵盖AI写作、AI绘图、AI视频、AI办公、AI编程、AI设计、AI音乐等多个领域，并持续更新中。</p>
 
-    <div class="about-card">
-      <h2>🎯 我们的目标</h2>
-      <p>打造最全面的AI工具导航站，收录所有与AI相关的工具、平台、教程和资源。让每一个需要AI的人，都能在这里找到最适合的工具。</p>
-      <p>无论是AI新手还是专业人士，都能在这里发现新的AI工具、学习AI知识、提高工作效率。</p>
-    </div>
-
-    <div class="about-card">
-      <h2>📋 收录范围</h2>
-      <ul>
-        <li>对话大模型（ChatGPT、Claude、通义千问等）</li>
-        <li>AI绘画和设计工具（Midjourney、Stable Diffusion等）</li>
-        <li>AI视频生成和编辑工具</li>
-        <li>AI音乐和音频工具</li>
-        <li>AI编程助手（Cursor、Copilot等）</li>
-        <li>AI办公效率工具</li>
-        <li>AI学习教程和资源</li>
-        <li>AI建站和变现工具</li>
-        <li>国内外各大AI平台</li>
-      </ul>
-    </div>
-
-    <div class="about-card">
-      <h2>📬 联系我们</h2>
-      <p>如果您有好的AI工具推荐，或者发现了错误的信息，欢迎通过以下方式联系我们。</p>
-      <ul>
-        <li>提交收录：前往「<a href="submit.html" style="color:#6366f1">提交收录</a>」页面填写信息</li>
-        <li>邮箱：请通过提交收录页面联系</li>
-      </ul>
-    </div>
-
-    <div class="about-card" style="text-align:center">
-      <p style="color:#94a3b8;font-size:13px">© 2026 AI工具导航 · aixiaoyaoge.top · 逍遥出品</p>
-    </div>
-
-    <div style="text-align:center;margin:16px 0 40px">
-      <a href="index.html" style="display:inline-flex;align-items:center;gap:6px;color:#6366f1;font-size:15px;text-decoration:none">← 返回首页</a>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-col">
-        <div class="footer-logo">🏮 AI工具导航</div>
-        <p class="footer-desc">一站式AI工具大全，发现好用的AI工具和资源。</p>
-      </div>
-      <div class="footer-col">
-        <h4>快速链接</h4>
-        <a href="index.html">首页</a>
-        <a href="#categories">全部分类</a>
-        <a href="submit.html">提交收录</a>
-        <a href="about.html">关于我们</a>
-      </div>
-      <div class="footer-col">
-        <h4>热门分类</h4>
-        <a href="index.html" onclick="if(location.href.includes('?')){}">对话大模型</a>
-        <a href="index.html">AI绘图</a>
-        <a href="index.html">AI视频</a>
-        <a href="index.html">AI编程</a>
-      </div>
-      <div class="footer-col">
-        <h4>关于我们</h4>
-        <p>一点一滴，打造最强AI导航站</p>
-        <p class="footer-copy">© 2026 aixiaoyaoge.top</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="data.js"></script>
-  <script>
-    document.querySelectorAll('.about-stat .num')[0].textContent = toolsData.length;
-    const catSet = new Set(toolsData.map(t => t.categoryLabel));
-    document.querySelectorAll('.about-stat .num')[1].textContent = catSet.size;
-  </script>
+<h2>联系我们</h2>
+<p>如果你有好的AI工具推荐，或者发现链接失效、信息错误，欢迎通过 <a href="/contact.html">联系我们</a> 页面反馈。</p>
+</div>
+<div class="footer">
+<p>&copy; 2026 AI逍遥阁. 本站工具均来源于网络，仅供学习参考。</p>
+</div>
 </body>
 </html>
