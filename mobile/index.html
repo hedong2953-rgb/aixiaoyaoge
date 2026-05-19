@@ -24,7 +24,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto
 /* Category tabs - horizontal scroll full width */
 .cat-tabs { display: flex; gap: 6px; overflow-x: auto; padding: 8px 0 6px; scrollbar-width: none; -ms-overflow-style: none; }
 .cat-tabs::-webkit-scrollbar { display: none; }
-.cat-tab { padding: 8px 16px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; font-size: 15px; color: #475569; white-space: nowrap; }
+.cat-tab { padding: 8px 12px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; font-size: 13px; color: #475569; white-space: nowrap; display: inline-flex; align-items: center; gap: 3px; }
 .cat-tab.active { background: linear-gradient(135deg,#6366f1,#8b5cf6); color: #fff; border-color: transparent; }
 
 /* Tool list */
@@ -51,7 +51,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto
 <div class="mobile-top">
   <div class="mobile-header">
     <a href="/" class="mobile-logo">🏮 逍遥搜AI</a>
-    <a href="/news.html" class="mobile-top-link">📰 AI资讯</a>
   </div>
   <div class="search-box">
     <input id="searchInput" type="text" placeholder="搜索AI工具..." oninput="app.filter()">
@@ -74,24 +73,18 @@ var app = {
   currentCat: 'all',
   currentSearch: '',
   cats: [
-    { id: 'all', label: '全部' },
-    { id: 'writing', label: '写作' },
-    { id: 'image', label: '图像' },
-    { id: 'video', label: '视频' },
-    { id: 'productivity', label: '办公' },
-    { id: 'conversation', label: '聊天' },
-    { id: 'coding', label: '编程' },
-    { id: 'design', label: '设计' },
-    { id: 'audio', label: '音频' },
-    { id: 'search', label: '搜索' },
-    { id: 'platform', label: '开发' },
-    { id: 'learning', label: '学习' },
-    { id: 'model', label: '模型' },
-    { id: 'resource', label: '资源' },
-    { id: 'agent', label: '智能体' },
-    { id: 'detect', label: '检测' },
-    { id: 'prompt', label: '提示' },
-    { id: 'side-project', label: '副业' }
+    { id: 'all', label: '全部热门' },
+    { id: 'conversation', label: '💬 AI聊天' },
+    { id: 'image', label: '🎨 AI绘图' },
+    { id: 'writing', label: '✍️ AI写作' },
+    { id: 'video', label: '🎬 AI视频' },
+    { id: 'productivity', label: '📊 AI办公' },
+    { id: 'coding', label: '💻 AI编程' },
+    { id: 'design', label: '🎯 AI设计' },
+    { id: 'learning', label: '📚 AI教程' },
+    { id: 'resource', label: '🌐 AI社区' },
+    { id: 'news-link', label: '📰 AI资讯' },
+    { id: 'more-link', label: '📂 更多资源' }
   ],
 
   init: function() {
@@ -103,7 +96,13 @@ var app = {
     var h = '';
     for(var i = 0; i < this.cats.length; i++) {
       var c = this.cats[i];
-      h += '<span class="cat-tab' + (c.id === 'all' ? ' active' : '') + '" data-cat="' + c.id + '">' + c.label + '</span>';
+      if (c.id === 'news-link') {
+        h += '<a href="/news.html" class="cat-tab" style="text-decoration:none">' + c.label + '</a>';
+      } else if (c.id === 'more-link') {
+        h += '<a href="/categories.html" class="cat-tab" style="text-decoration:none">' + c.label + '</a>';
+      } else {
+        h += '<span class="cat-tab' + (c.id === 'all' ? ' active' : '') + '" data-cat="' + c.id + '">' + c.label + '</span>';
+      }
     }
     document.getElementById('catTabs').innerHTML = h;
     var tabs = document.getElementById('catTabs');
