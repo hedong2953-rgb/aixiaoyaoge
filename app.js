@@ -3,28 +3,28 @@ var app = {
   currentSearch: '',
 
   allCategories: [
-    { id: 'all', label: '全部分类', title: '🔥 全部分类', subtitle: '浏览全部AI工具' },
+    { id: 'all', label: '全部热门', title: '🔥 全部热门', subtitle: '当下最热门的AI工具精选' },
+    { id: 'conversation', label: 'AI聊天', title: '💬 AI聊天助手', subtitle: '对话大模型、AI助手' },
+    { id: 'image', label: 'AI绘图', title: '🎨 AI绘图工具', subtitle: 'AI绘画、图像生成、图片编辑' },
     { id: 'writing', label: 'AI写作', title: '✍️ AI写作工具', subtitle: 'AI写作助手、内容创作、论文辅助' },
-    { id: 'image', label: 'AI图像', title: '🎨 AI图像工具', subtitle: 'AI绘画、图像生成、图片编辑' },
     { id: 'video', label: 'AI视频', title: '🎬 AI视频工具', subtitle: 'AI视频生成、数字人、视频编辑' },
     { id: 'productivity', label: 'AI办公', title: '📊 AI办公工具', subtitle: 'AI PPT、数据分析、文档处理' },
-    { id: 'agent', label: 'AI智能体', title: '🤖 AI智能体', subtitle: 'AI Agent、自动化工作流' },
-    { id: 'conversation', label: 'AI聊天', title: '💬 AI聊天助手', subtitle: '对话大模型、AI助手' },
     { id: 'coding', label: 'AI编程', title: '💻 AI编程工具', subtitle: 'AI IDE、代码助手、开发工具' },
     { id: 'design', label: 'AI设计', title: '🎯 AI设计工具', subtitle: 'AI设计平台、UI/UX、原型工具' },
-    { id: 'audio', label: 'AI音频', title: '🎵 AI音频工具', subtitle: 'AI音乐、语音合成、配音工具' },
-    { id: 'search', label: 'AI搜索', title: '🔍 AI搜索引擎', subtitle: 'AI搜索、学术搜索、知识检索' },
-    { id: 'platform', label: 'AI开发', title: '⚙️ AI开发平台', subtitle: 'AI框架、模型平台、API服务' },
-    { id: 'learning', label: 'AI学习', title: '📚 AI学习网站', subtitle: 'AI课程、教程、学习资源' },
-    { id: 'model', label: 'AI模型', title: '🧠 AI训练模型', subtitle: '大模型、开源模型、模型评测' },
-    { id: 'detect', label: 'AI检测', title: '🔬 AI内容检测', subtitle: 'AI文本检测、图像检测、原创度' },
-    { id: 'prompt', label: 'AI提示词', title: '💡 AI提示指令', subtitle: '提示词工具、Prompt工程' },
-    { id: 'side-project', label: 'AI副业', title: '💼 AI副业工具', subtitle: '内容变现、自媒体、联盟营销' },
-    { id: 'resource', label: 'AI社区', title: '🌐 资源与社区', subtitle: 'AI社区、资源汇总、工具导航' }
+    { id: 'learning', label: 'AI教程', title: '📚 AI教程资源', subtitle: 'AI课程、教程、学习资源' },
+    { id: 'resource', label: 'AI社区', title: '🌐 AI社区', subtitle: 'AI社区、资源汇总、工具导航' }
   ],
 
   init: function() {
     document.getElementById('toolCountHeader').textContent = toolsData.length;
+    // Bind sidebar clicks
+    var links = document.querySelectorAll('#sidebarNav a[data-cat]');
+    for (var i = 0; i < links.length; i++) {
+      links[i].onclick = function(e) {
+        app.filterFromSidebar(this.dataset.cat);
+        return false;
+      };
+    }
     this.renderTools();
   },
 
