@@ -16,34 +16,107 @@
 <link rel="stylesheet" href="style.css">
 <style>
 .category-section { margin-bottom: 32px; }
-.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
-.section-header h2 { margin: 0; font-size: 18px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
-.section-header h2 i { color: #5961f9; }
-.section-header a { font-size: 13px; color: #5961f9; text-decoration: none; }
-.section-header a:hover { text-decoration: underline; }
+.category-section h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+.category-section h2 a { font-size: 13px; font-weight: 400; color: #5961f9; margin-left: auto; }
+.category-section h2 a:hover { text-decoration: underline; }
 .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; }
 .cat-tool-card { background: #fff; border: 1px solid #eee; border-radius: 10px; padding: 10px 14px; display: flex; align-items: center; gap: 8px; text-decoration: none; transition: all .2s; }
 .cat-tool-card:hover { border-color: #5961f9; box-shadow: 0 2px 8px rgba(89,97,249,0.12); }
 .cat-tool-card .tool-icon { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
 .cat-tool-card .tool-info { flex: 1; min-width: 0; }
-.cat-tool-card .tool-name { font-size: 14px; font-weight: 600; color: #333; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.cat-tool-card .tool-desc { font-size: 12px; color: #999; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cat-tool-card .tool-name { font-size: 14px; font-weight: 600; color: #333; }
+.cat-tool-card .tool-desc { font-size: 12px; color: #999; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.section-header h2 { margin: 0; font-size: 18px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.section-header h2 i { color: #5961f9; }
+.section-header a { font-size: 13px; color: #5961f9; }
+.section-header a:hover { text-decoration: underline; }
 .hot-tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin-bottom: 36px; }
 .hot-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 18px; text-decoration: none; color: #fff; transition: transform .2s, box-shadow .2s; display: block; }
 .hot-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(102,126,234,0.35); }
 .hot-card .hc-icon { font-size: 32px; margin-bottom: 8px; }
 .hot-card .hc-name { font-size: 15px; font-weight: 700; }
-.hot-card .hc-desc { font-size: 12px; opacity: .85; margin-top: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hot-card .hc-desc { font-size: 12px; opacity: .85; margin-top: 4px; }
 .hot-card .hc-cat { font-size: 11px; opacity: .7; margin-top: 6px; }
 </style>
 </head>
 <body>
-<div id="sidebar" class="sticky sidebar-nav fade"><div class="modal-dialog h-100 sidebar-nav-inner"><div class="sidebar-logo border-bottom border-color"><div class="logo overflow-hidden"><a href="index.html"><img src="assets/logo.svg" height="32" alt="AI工具大全"></a></div></div><div class="sidebar-menu flex-fill"><div class="sidebar-scroll"><div class="sidebar-menu-inner"><ul id="sidebarUl"></ul></div></div></div></div></div>
-<div class="main-content flex-fill"><div class="no-big-header header-nav"><div id="header" class="page-header sticky"><div class="navbar navbar-expand-md"><div class="container-fluid p-0 position-relative"><div class="collapse navbar-collapse order-2 order-md-1"><div class="header-mini-btn"><label><input id="mini-button" type="checkbox" checked="checked"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path class="line--1" d="M0 40h62c18 0 18-20-17 5L31 55"></path><path class="line--2" d="M0 50h80"></path><path class="line--3" d="M0 60h62c18 0 18 20-17-5L31 45"></path></svg></label></div><ul class="navbar-nav navbar-top site-menu mr-4" id="topMenu"></ul></div></div></div><div class="placeholder"></div></div>
-<div class="header-big no-bg mb-4"><div class="s-search"><div id="search" class="s-search mx-auto"><div class="text-center mb-3"><img src="assets/logo-big.svg" height="100px" alt="AI工具大全"></div><form action="javascript:void(0)" method="get" class="super-search-fm"><input type="text" id="search-text" class="form-control smart-tips search-key" placeholder="搜索AI工具名称或描述…" style="outline:0" autocomplete="off"><button type="submit" id="btn_search" onclick="doSearch()"><i class="iconfont icon-search"></i></button></form><div id="search-list" class="hide-type-list"><div class="search-group justify-content-center group-a s-current"><ul class="search-type tab-auto-scrollbar overflow-x-auto"><li><input checked hidden type="radio" name="type" data-page="home" id="type-zhannei" value=""><label for="type-zhannei"><span class="text-muted">站内</span></label></li><li><input hidden type="radio" name="type" data-page="home" id="type-bing" value="https://cn.bing.com/search?q=%s%"><label for="type-bing"><span class="text-muted">Bing</span></label></li><li><input hidden type="radio" name="type" data-page="home" id="type-baidu" value="https://www.baidu.com/s?wd=%s%"><label for="type-baidu"><span class="text-muted">百度</span></label></li><li><input hidden type="radio" name="type" data-page="home" id="type-google" value="https://www.google.com/search?q=%s%"><label for="type-google"><span class="text-muted">Google</span></label></li></ul></div></div></div></div></div>
-<div class="container container-lg" id="catBarContainer" style="display:none"><div class="row" style="margin:0"><div class="col-12" style="padding:0"><h4 class="text-gray text-lg mb-4" id="catTitle"><i class="site-tag iconfont icon-tag icon-lg mr-1"></i><span id="catNameSpan">全部工具</span><small class="text-muted" id="catCountSpan"></small></h4></div></div></div>
-<div id="homeContent"><div class="container container-lg" id="categorySections"></div></div>
-<div id="toolContent" class="container container-lg" style="display:none"><div class="content-wrap"><div class="content-layout"><div class="row" id="toolGrid"></div></div></div></div></div>
+<div id="sidebar" class="sticky sidebar-nav fade">
+  <div class="modal-dialog h-100 sidebar-nav-inner">
+    <div class="sidebar-logo border-bottom border-color">
+      <div class="logo overflow-hidden">
+        <a href="index.html"><img src="assets/logo.svg" height="32" alt="AI工具大全"></a>
+      </div>
+    </div>
+    <div class="sidebar-menu flex-fill">
+      <div class="sidebar-scroll">
+        <div class="sidebar-menu-inner">
+          <ul id="sidebarUl"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main-content flex-fill">
+  <div class="no-big-header header-nav">
+    <div id="header" class="page-header sticky">
+      <div class="navbar navbar-expand-md">
+        <div class="container-fluid p-0 position-relative">
+          <div class="collapse navbar-collapse order-2 order-md-1">
+            <div class="header-mini-btn">
+              <label>
+                <input id="mini-button" type="checkbox" checked="checked">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <path class="line--1" d="M0 40h62c18 0 18-20-17 5L31 55"></path>
+                  <path class="line--2" d="M0 50h80"></path>
+                  <path class="line--3" d="M0 60h62c18 0 18 20-17-5L31 45"></path>
+                </svg>
+              </label>
+            </div>
+            <ul class="navbar-nav navbar-top site-menu mr-4" id="topMenu"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="placeholder"></div>
+  </div>
+  <div class="header-big no-bg mb-4">
+    <div class="s-search">
+      <div id="search" class="s-search mx-auto">
+        <div class="text-center mb-3">
+          <img src="assets/logo-big.svg" height="100px" alt="AI工具大全">
+        </div>
+        <form action="javascript:void(0)" method="get" class="super-search-fm">
+          <input type="text" id="search-text" class="form-control smart-tips search-key" placeholder="搜索AI工具名称或描述…" style="outline:0" autocomplete="off">
+          <button type="submit" id="btn_search" onclick="doSearch()"><i class="iconfont icon-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container container-lg" id="catBarContainer" style="display:none">
+    <div class="row" style="margin:0">
+      <div class="col-12" style="padding:0">
+        <h4 class="text-gray text-lg mb-4" id="catTitle">
+          <i class="site-tag iconfont icon-tag icon-lg mr-1"></i>
+          <span id="catNameSpan">全部工具</span>
+          <small class="text-muted" id="catCountSpan"></small>
+        </h4>
+      </div>
+    </div>
+  </div>
+  <div id="homeContent">
+    <div class="container container-lg" id="categorySections"></div>
+  </div>
+  <div id="toolContent" class="container container-lg" style="display:none">
+    <div class="content-wrap">
+      <div class="content-layout">
+        <div class="row" id="toolGrid"></div>
+      </div>
+    </div>
+  </div>
+</div>
 <script src="data.js"></script>
 <script src="app.js"></script>
-</body></html>
+</body>
+</html>
