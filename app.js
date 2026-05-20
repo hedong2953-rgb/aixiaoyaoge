@@ -76,6 +76,7 @@ function renderSidebar() {
 
     html += `<li class="sidebar-item${isActive ? ' active' : ''}">`;
     html += `<a href="javascript:" onclick="switchCategory('${cat}')">
+      <i class="fas ${icon} icon-fw icon-lg"></i>
       <span>${name}</span>
     </a>`;
     if (hasSub) {
