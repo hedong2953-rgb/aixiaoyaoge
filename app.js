@@ -1,221 +1,24 @@
-// ===== AI工具大全 - 完全 ai-bot.cn 风格 =====
-
-let currentCategory = 'all';
-let currentSearch = '';
-
-// Font Awesome 图标映射
-const catIconsFA = {
-  conversation: 'fa-comments',
-  chatbot: 'fa-robot',
-  writing: 'fa-feather',
-  image: 'fa-images',
-  video: 'fa-video',
-  audio: 'fa-music',
-  design: 'fa-palette',
-  office: 'fa-folder-open',
-  programming: 'fa-code',
-  coding: 'fa-laptop-code',
-  agent: 'fa-brain',
-  search: 'fa-search',
-  framework: 'fa-cubes',
-  models: 'fa-microchip',
-  detection: 'fa-shield-alt',
-  learning: 'fa-graduation-cap',
-  prompt: 'fa-lightbulb',
-  resource: 'fa-hubspot',
-  productivity: 'fa-bolt',
-};
-
-// 分类显示名
-const catNames = {
-  all: '全部工具', conversation: 'AI对话助手', chatbot: 'AI聊天机器人',
-  writing: 'AI写作工具', image: 'AI图像工具', video: 'AI视频工具',
-  audio: 'AI音频工具', design: 'AI设计工具', office: 'AI办公工具',
-  programming: 'AI编程工具', coding: 'AI编程IDE', agent: 'AI智能体',
-  search: 'AI搜索引擎', framework: 'AI开发平台', models: 'AI训练模型',
-  detection: 'AI内容检测', learning: 'AI学习网站', prompt: 'AI提示指令',
-  resource: 'AI资源社区', productivity: 'AI效率工具',
-};
-
-// 分类显示顺序 (侧边栏 + 顶部菜单)
-const catOrder = [
-  'all', 'conversation', 'chatbot', 'writing', 'image', 'video',
-  'audio', 'design', 'office', 'programming', 'coding', 'agent',
-  'search', 'framework', 'models', 'detection', 'learning', 'prompt',
-  'resource', 'productivity'
-];
-
-// 有子分类的
-const catSubItems = {
-  image: ['常用AI图像工具','AI图片插画生成','AI图片背景移除','AI图片物体抹除','AI图片无损放大','AI图片优化修复','AI商品图生成','AI 3D模型生成'],
-  office: ['AI幻灯片和演示','AI表格数据处理','AI思维导图','AI文档工具','AI会议工具','AI招聘求职','AI法律助手','AI语言翻译','AI效率提升'],
-  agent: ['AI智能体','插件与Skills'],
-  detection: ['内容检测','降AI/AIGC率'],
-};
-
-function getCategoryCounts() {
-  const counts = { all: toolsData.length };
-  for (const t of toolsData) {
-    counts[t.category] = (counts[t.category] || 0) + 1;
-  }
-  return counts;
-}
-
-// ===== 侧边栏渲染 =====
-function renderSidebar() {
-  const ul = document.getElementById('sidebarUl');
-  const counts = getCategoryCounts();
-  let html = '';
-
-  for (const cat of catOrder) {
-    if (!counts[cat] || counts[cat] === 0) continue;
-    const name = catNames[cat] || cat;
-    const icon = catIconsFA[cat] || 'fa-circle';
-    const hasSub = catSubItems[cat] !== undefined;
-    const isActive = cat === currentCategory;
-
-    html += `<li class="sidebar-item${isActive ? ' active' : ''}">`;
-    html += `<a href="javascript:" onclick="switchCategory('${cat}')">
-      <i class="fas ${icon} icon-fw icon-lg"></i>
-      <span>${name}</span>
-    </a>`;
-    if (hasSub) {
-      html += `<i class="iconfont icon-arrow-r-m sidebar-more text-sm" onclick="toggleSub(this)"></i>`;
-      html += `<ul>`;
-      for (const sub of catSubItems[cat]) {
-        html += `<li><a href="javascript:"><span>${sub}</span></a></li>`;
-      }
-      html += `</ul>`;
-    }
-    html += `</li>`;
-  }
-
-  ul.innerHTML = html;
-}
-
-function toggleSub(el) {
-  el.classList.toggle('open');
-  const ul = el.parentElement.querySelector('ul');
-  if (ul) ul.classList.toggle('show');
-}
-
-// ===== 顶部菜单 =====
-function renderTopMenu() {
-  const ul = document.getElementById('topMenuSub');
-  if (!ul) return;
-  const counts = getCategoryCounts();
-  let html = '';
-  for (const cat of catOrder) {
-    if (cat === 'all' || !counts[cat] || counts[cat] === 0) continue;
-    const name = catNames[cat] || cat;
-    const isActive = cat === currentCategory;
-    html += `<li${isActive ? ' class="current-menu-item"' : ''}>
-      <a href="javascript:" onclick="switchCategory('${cat}')">${name}</a>
-    </li>`;
-  }
-  ul.innerHTML = html;
-}
-
-// ===== 工具卡片渲染 =====
-function renderTools() {
-  const grid = document.getElementById('toolGrid');
-  let filtered = toolsData;
-
-  if (currentCategory !== 'all') {
-    filtered = filtered.filter(t => t.category === currentCategory);
-  }
-
-  if (currentSearch) {
-    const term = currentSearch.toLowerCase();
-    filtered = filtered.filter(t =>
-      t.name.toLowerCase().includes(term) ||
-      t.desc.toLowerCase().includes(term)
-    );
-  }
-
-  if (filtered.length === 0) {
-    grid.innerHTML = '<div class="empty-state">🤔 没有找到相关工具</div>';
-    return;
-  }
-
-  // 构建卡片（完全 ai-bot.cn url-card 结构）
-  grid.innerHTML = filtered.map(tool => `
-    <div class="url-card col-6 col-sm-6 col-md-4 col-xl-3">
-      <div class="url-body default">
-        <a href="detail.html?id=${tool.id}" class="card no-c mb-4">
-          <div class="card-body url-content d-flex align-items-center">
-            <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center">
-              ${tool.icon || '🤖'}
-            </div>
-            <div class="url-info flex-fill">
-              <div class="text-sm overflowClip_1">
-                <strong>${tool.name}</strong>
-              </div>
-              <p class="overflowClip_1 m-0 text-muted text-xs">${tool.desc}</p>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  `).join('');
-}
-
-// ===== 分类切换 =====
-function switchCategory(category) {
-  currentCategory = category;
-  currentSearch = '';
-
-  // 同步搜索框
-  const searchInput = document.getElementById('search-text');
-  if (searchInput) searchInput.value = '';
-
-  // 更新分类标题
-  const catBar = document.getElementById('catBarContainer');
-  const catNameSpan = document.getElementById('catNameSpan');
-  const catCountSpan = document.getElementById('catCountSpan');
-
-  if (category === 'all') {
-    catBar.style.display = 'none';
-    document.querySelector('.header-big').style.display = 'block';
-  } else {
-    catBar.style.display = 'block';
-    document.querySelector('.header-big').style.display = 'none';
-    const counts = getCategoryCounts();
-    const name = catNames[category] || category;
-    catNameSpan.textContent = name;
-    catCountSpan.textContent = `(收录 ${counts[category] || 0} 个工具)`;
-  }
-
-  renderSidebar();
-  renderTopMenu();
-  renderTools();
-}
-
-// ===== 搜索 =====
-function doSearch() {
-  const q = document.getElementById('search-text').value.trim();
-  if (!q) return;
-  currentSearch = q;
-  currentCategory = 'all';
-
-  document.querySelector('.header-big').style.display = 'none';
-  document.getElementById('catBarContainer').style.display = 'block';
-  document.getElementById('catNameSpan').textContent = `搜索: ${q}`;
-  document.getElementById('catCountSpan').textContent = '';
-
-  renderSidebar();
-  renderTopMenu();
-  renderTools();
-}
-
-// ===== 初始化 =====
-document.addEventListener('DOMContentLoaded', () => {
-  renderSidebar();
-  renderTopMenu();
-  renderTools();
-
-  // 回车搜索
-  document.getElementById('search-text').addEventListener('keydown', e => {
-    if (e.key === 'Enter') doSearch();
-  });
-});
+// ===== AI工具大全 =====
+let C="all",S="";
+const I={conversation:"fa-comments",chatbot:"fa-robot",writing:"fa-feather",image:"fa-images",video:"fa-video",audio:"fa-music",design:"fa-palette",office:"fa-folder-open",programming:"fa-code",coding:"fa-laptop-code",agent:"fa-brain",search:"fa-search",framework:"fa-cubes",models:"fa-microchip",detection:"fa-shield-alt",learning:"fa-graduation-cap",prompt:"fa-lightbulb",resource:"fa-hubspot",productivity:"fa-bolt"};
+const N={all:"全部工具",conversation:"AI对话助手",chatbot:"AI聊天机器人",writing:"AI写作工具",image:"AI图像工具",video:"AI视频工具",audio:"AI音频工具",design:"AI设计工具",office:"AI办公工具",programming:"AI编程工具",coding:"AI编程IDE",agent:"AI智能体",search:"AI搜索引擎",framework:"AI开发平台",models:"AI训练模型",detection:"AI内容检测",learning:"AI学习网站",prompt:"AI提示指令",resource:"AI资源社区",productivity:"AI效率工具"};
+const O=["conversation","chatbot","writing","image","video","audio","design","office","programming","coding","agent","search","framework","models","detection","learning","prompt","resource","productivity"];
+const Sub={image:["常用AI图像工具","AI图片插画生成","AI图片背景移除","AI图片物体抹除","AI图片无损放大","AI图片优化修复","AI商品图生成","AI 3D模型生成"],office:["AI幻灯片和演示","AI表格数据处理","AI思维导图","AI文档工具","AI会议工具","AI招聘求职","AI法律助手","AI语言翻译","AI效率提升"],agent:["AI智能体","插件与Skills"],detection:["内容检测","降AI/AIGC率"]};
+const MAX=12;
+function Cnt(){const c={all:toolsData.length};for(const t of toolsData)c[t.category]=(c[t.category]||0)+1;return c}
+function Hot(){return[...toolsData].sort(()=>Math.random()-0.5).slice(0,6)}
+function ByCat(cat,limit){const f=toolsData.filter(t=>t.category===cat);return limit?f.slice(0,limit):f}
+function side(){const ul=document.getElementById("sidebarUl"),c=Cnt();let h='<li class="sidebar-item'+(C==="all"?" active":"")+'"><a href="javascript:" onclick="sw(\'all\')"><i class="fas fa-th-large icon-fw icon-lg"></i><span>全部工具</span><span class="ml-auto badge badge-light">'+c.all+'</span></a></li>';
+for(const cat of O){if(!c[cat]||c[cat]===0)continue;const n=N[cat]||cat,i=I[cat]||"fa-circle",has=Sub[cat]!==undefined;h+='<li class="sidebar-item'+(cat===C?" active":"")+'"><a href="javascript:" onclick="sw(\''+cat+'\')"><i class="fas '+i+' icon-fw icon-lg"></i><span>'+n+'</span><span class="ml-auto badge badge-light">'+c[cat]+'</span></a>';if(has){h+='<i class="iconfont icon-arrow-r-m sidebar-more text-sm" onclick="tog(this)"></i><ul>';for(const s of Sub[cat])h+='<li><a href="javascript:"><span>'+s+'</span></a></li>';h+='</ul>'}h+='</li>'}
+ul.innerHTML=h}
+function tog(e){e.classList.toggle("open");const u=e.parentElement.querySelector("ul");if(u)u.classList.toggle("show")}
+function home(){const c=document.getElementById("categorySections");if(!c)return;const cnt=Cnt();let h='<div class="hot-tools-grid">';for(const t of Hot()){const cn=N[t.category]||t.category;h+='<a href="detail.html?id='+t.id+'" class="hot-card"><div class="hc-icon">'+(t.icon||"🤖")+'</div><div class="hc-name">'+t.name+'</div><div class="hc-desc">'+(t.desc||"")+'</div><div class="hc-cat">'+cn+'</div></a>'}
+h+='</div>';for(const cat of O){if(!cnt[cat]||cnt[cat]===0)continue;const tks=ByCat(cat,MAX),cn=N[cat]||cat,ic=I[cat]||"fa-circle";h+='<div class="category-section"><div class="section-header"><h2><i class="fas '+ic+'"></i> '+cn+'</h2><a href="javascript:" onclick="sw(\''+cat+'\')">查看更多 &rsaquo;</a></div><div class="category-grid">';for(const tk of tks)h+='<a href="detail.html?id='+tk.id+'" class="cat-tool-card"><div class="tool-icon">'+(tk.icon||"🤖")+'</div><div class="tool-info"><div class="tool-name">'+tk.name+'</div><div class="tool-desc">'+(tk.desc||"")+'</div></div></a>';h+='</div></div>'}
+c.innerHTML=h}
+function grid(){const g=document.getElementById("toolGrid");let f=toolsData;if(C!=="all")f=f.filter(t=>t.category===C);if(S){const q=S.toLowerCase();f=f.filter(t=>t.name.toLowerCase().includes(q)||t.desc.toLowerCase().includes(q))}
+if(f.length===0){g.innerHTML='<div class="empty-state">🤔 没有找到相关工具</div>';return}
+g.innerHTML=f.map(t=>'<div class="url-card col-6 col-sm-6 col-md-4 col-xl-3"><div class="url-body default"><a href="detail.html?id='+t.id+'" class="card no-c mb-4"><div class="card-body url-content d-flex align-items-center"><div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center">'+(t.icon||"🤖")+'</div><div class="url-info flex-fill"><div class="text-sm overflowClip_1"><strong>'+t.name+'</strong></div><p class="overflowClip_1 m-0 text-muted text-xs">'+t.desc+'</p></div></div></a></div></div>').join("")}
+function sw(cat){C=cat;S="";const si=document.getElementById("search-text");if(si)si.value="";const cb=document.getElementById("catBarContainer"),hc=document.getElementById("homeContent"),tc=document.getElementById("toolContent");if(cat==="all"){cb.style.display="none";document.querySelector(".header-big").style.display="block";hc.style.display="block";tc.style.display="none"}else{document.querySelector(".header-big").style.display="none";hc.style.display="none";tc.style.display="block";cb.style.display="block";const cnt=Cnt();document.getElementById("catNameSpan").textContent=N[cat]||cat;document.getElementById("catCountSpan").textContent="(收录 "+(cnt[cat]||0)+" 个工具)";grid()}
+side()}
+function srch(){const q=document.getElementById("search-text").value.trim();if(!q)return;S=q;C="all";document.querySelector(".header-big").style.display="none";document.getElementById("homeContent").style.display="none";document.getElementById("toolContent").style.display="block";document.getElementById("catBarContainer").style.display="block";document.getElementById("catNameSpan").textContent="搜索: "+q;document.getElementById("catCountSpan").textContent="";side();grid()}
+document.addEventListener("DOMContentLoaded",()=>{side();home();document.getElementById("search-text").addEventListener("keydown",e=>{if(e.key==="Enter")srch()})});
