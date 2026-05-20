@@ -78,7 +78,6 @@ function renderSidebar() {
     html += `<a href="javascript:" onclick="switchCategory('${cat}')">
       <i class="fas ${icon} icon-fw icon-lg"></i>
       <span>${name}</span>
-      <span class="badge">${counts[cat]}</span>
     </a>`;
     if (hasSub) {
       html += `<i class="iconfont icon-arrow-r-m sidebar-more text-sm" onclick="toggleSub(this)"></i>`;
