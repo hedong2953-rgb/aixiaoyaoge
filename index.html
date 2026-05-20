@@ -20,8 +20,7 @@
   <div id="sidebar" class="sticky sidebar-nav fade">
     <div class="modal-dialog h-100 sidebar-nav-inner">
       <div class="sidebar-logo border-bottom border-color">
-        <div class="logo overflow-hidden" style="display:flex;align-items:center;justify-content:center;gap:8px;">
-          <img src="assets/favicon.png" height="28" alt="">
+        <div class="logo overflow-hidden">
           <img src="assets/logo.svg" height="32" alt="AI工具大全">
         </div>
       </div>
@@ -52,7 +51,6 @@
                 </label>
               </div>
               <ul class="navbar-nav navbar-top site-menu mr-4" id="topMenu">
-                <li class="menu-item menu-item-has-children">
               </ul>
             </div>
           </div>
@@ -67,18 +65,7 @@
           <div class="text-center mb-3">
             <img src="assets/logo-big.svg" height="100px" alt="AI工具大全">
           </div>
-          <div id="search-list-menu">
-            <div class="s-type text-center">
-              <div class="s-type-list big tab-auto-scrollbar overflow-x-auto">
-                <div class="anchor" style="position:absolute;left:50%;opacity:0"></div>
-                <label class="active" data-page="home" data-id="group-a"><span>常用</span></label>
-                <label data-page="home" data-id="group-b"><span>搜索</span></label>
-                <label data-page="home" data-id="group-d"><span>社区</span></label>
-                <label data-page="home" data-id="group-f"><span>图片</span></label>
-                <label data-page="home" data-id="group-e"><span>生活</span></label>
-              </div>
-            </div>
-          </div>
+
           <form action="javascript:void(0)" method="get" class="super-search-fm">
             <input type="text" id="search-text" class="form-control smart-tips search-key" placeholder="输入关键词搜索AI工具" style="outline:0" autocomplete="off">
             <button type="submit" id="btn_search" onclick="doSearch()"><i class="iconfont icon-search"></i></button>
