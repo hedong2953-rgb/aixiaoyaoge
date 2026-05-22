@@ -1,55 +1,91 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="io-grey-mode">
 <head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4192236532369703" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>联系我们 - AI逍遥阁</title>
+<meta name="renderer" content="webkit"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>联系我们 - AI工具大全</title>
+<meta name="theme-color" content="#f9f9f9" />
+<link rel="shortcut icon" href="assets/favicon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4016659_bcqo253fh2d.css">
+<link rel="stylesheet" href="style.css">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Color Emoji","Apple Color Emoji",sans-serif;background:#f2f4f7;color:#1e293b;font-size:14px;line-height:1.8}
-.container{max-width:800px;margin:0 auto;padding:20px}
-h1{font-size:24px;margin:20px 0 10px}
-p{margin-bottom:12px}
-.back{display:inline-block;margin-bottom:20px;color:#2563eb;text-decoration:none}
-.back:hover{text-decoration:underline}
-.info{margin:20px 0}
-.info-item{margin-bottom:15px;padding:15px;background:#fff;border-radius:8px;border:1px solid #e2e8f0}
-.info-item h3{margin-bottom:5px;color:#2563eb}
-.footer{text-align:center;padding:20px;color:#64748b;font-size:12px}
+.contact-cont{max-width:700px;margin:0 auto}
+.contact-item{padding:16px 20px;margin-bottom:12px;background:#fff;border:1px solid #eef2f6;border-radius:10px}
+.contact-item h3{font-size:15px;color:#6366f1;margin-bottom:4px}
+.contact-item p{font-size:13px;color:#475569;line-height:1.6}
 </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4192236532369703" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="container">
-<a href="/" class="back">← 返回首页</a>
-<h1>联系我们</h1>
-<p>感谢您对AI逍遥阁的关注！如果您有任何问题、建议或工具推荐，欢迎通过以下方式联系我们。</p>
-
-<div class="info">
-<div class="info-item">
-<h3>📧 电子邮件</h3>
-<p>hedong2953@gmail.com</p>
+<div id="sidebar" class="sticky sidebar-nav fade">
+  <div class="modal-dialog h-100 sidebar-nav-inner">
+    <div class="sidebar-logo border-bottom border-color">
+      <div class="logo overflow-hidden">
+        <a href="index.html"><img src="assets/logo-big.svg" height="40" alt="AI工具大全"></a>
+      </div>
+    </div>
+    <div class="sidebar-menu flex-fill">
+      <div class="sidebar-scroll">
+        <div class="sidebar-menu-inner">
+          <ul id="sidebarUl"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="info-item">
-<h3>💡 工具推荐</h3>
-<p>如果您发现好用的AI工具未被收录，欢迎发送邮件告知我们工具名称和网址，我们会尽快收录。</p>
+<div class="main-content flex-fill">
+  <div class="page-header"><div class="navbar"><div class="container-fluid p-0 position-relative">
+    <div class="header-mini-btn"><label><input id="mini-button" type="checkbox" checked><svg viewBox="0 0 100 100"><path class="line--1" d="M0 40h62c18 0 18-20-17 5L31 55"></path><path class="line--2" d="M0 50h80"></path><path class="line--3" d="M0 60h62c18 0 18 20-17-5L31 45"></path></svg></label></div>
+    <ul class="navbar-nav" id="topMenu">
+      <li><a href="javascript:"><i class="fas fa-fire"></i>热搜</a><ul class="sub-menu" style="display:none"></ul></li>
+      <li class="menu-item-has-children"><a href="javascript:">AI应用集 <i class="fas fa-chevron-down" style="font-size:10px;margin-left:4px"></i></a>
+        <ul class="sub-menu">
+          <li><a href="javascript:" onclick="sw('all')">全部工具</a></li>
+          <li><a href="javascript:" onclick="sw('conversation')">AI对话</a></li>
+          <li><a href="javascript:" onclick="sw('image')">AI图像</a></li>
+          <li><a href="javascript:" onclick="sw('video')">AI视频</a></li>
+          <li><a href="javascript:" onclick="sw('writing')">AI写作</a></li>
+          <li><a href="javascript:" onclick="sw('programming')">AI编程</a></li>
+          <li><a href="javascript:" onclick="sw('agent')">AI智能体</a></li>
+        </ul>
+      </li>
+      <li><a href="news.html">每日AI资讯</a></li>
+      <li><a href="categories.html">最新AI项目</a></li>
+      <li><a href="prompts.html">AI教程资源</a></li>
+      <li><a href="about.html">关于我们</a></li>
+    </ul>
+  </div></div></div>
+  <div class="header-big"><div class="s-search"><div class="text-center mb-2"><img src="assets/logo-big.svg" alt="AI工具大全" style="height:60px"></div>
+    <div class="s-type-list text-center"><label class="active" data-type="local">站内</label><label data-type="bing">Bing</label><label data-type="baidu">百度</label><label data-type="google">Google</label><label data-type="perplexity">Perplexity</label></div>
+    <form action="javascript:void(0)" method="get" class="super-search-fm d-flex align-items-center">
+      <input type="text" id="search-text" class="form-control smart-tips search-key" placeholder="搜索AI工具名称或描述…" autocomplete="off">
+      <button type="submit" onclick="doSearch()"><i class="iconfont icon-search"></i></button>
+    </form>
+  </div></div>
+  <div class="container container-lg mb-3"><div class="info-cards-row">
+    <a href="submit.html" class="info-card info-card-submit"><div class="info-card-icon">🎯</div><div class="info-card-text"><h3>免费收录AI工具</h3><p>提交你的AI产品</p></div></a>
+    <a href="index.html" class="info-card info-card-brand"><div class="info-card-icon">🏮</div><div class="info-card-text"><h3>AI工具大全</h3><p>收录1328+工具</p></div></a>
+    <a href="news.html" class="info-card info-card-news"><div class="info-card-icon">📡</div><div class="info-card-text"><h3>每日AI资讯</h3><p>最新行业动态</p></div></a>
+  </div></div>
+  <div class="container container-lg">
+    <div style="text-align:center;padding:10px 0"><h1 style="font-size:26px;font-weight:800;background:linear-gradient(135deg,#667eea,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent">✉️ 联系我们</h1><p style="color:#64748b;font-size:13px">有任何问题或建议，欢迎联系我们</p></div>
+    <div class="contact-cont">
+      <div class="contact-item"><h3>📧 电子邮件</h3><p>hedong2953@gmail.com</p></div>
+      <div class="contact-item"><h3>💡 工具推荐</h3><p>如果您发现好用的AI工具未被收录，欢迎告知我们工具名称和网址，我们会尽快收录。</p></div>
+      <div class="contact-item"><h3>🐛 问题反馈</h3><p>如果您发现链接失效、信息错误或有改进建议，请随时告知。</p></div>
+      <div class="contact-item"><h3>🔗 友情链接</h3><p>如果您有优质的AI相关网站，欢迎交换友情链接。</p></div>
+    </div>
+  </div>
+  <footer class="site-footer"><div class="container container-lg">
+    <div class="footer-links"><span>友情链接：</span><a href="https://ai-bot.cn" target="_blank">AI工具大全</a><a href="https://www.aixiaoyaoge.top" target="_blank">逍遥哥AI导航</a></div>
+    <div class="footer-copyright"><p>© 2024-2026 AI工具大全 · 逍遥出品</p></div>
+  </div></footer>
 </div>
-
-<div class="info-item">
-<h3>🐛 问题反馈</h3>
-<p>如果您发现链接失效、信息错误或有改进建议，请随时告知，帮助我们做得更好。</p>
-</div>
-
-<div class="info-item">
-<h3>🔗 友情链接</h3>
-<p>如果您有优质的AI相关网站，欢迎交换友情链接。</p>
-</div>
-</div>
-</div>
-<div class="footer">
-<p>&copy; 2026 AI逍遥阁</p>
-</div>
+<script src="data.js"></script><script src="app.js"></script>
+<script>
+(function(){var cl=[{k:'all',n:'全部工具',i:'fa-th-large'},{k:'conversation',n:'AI对话',i:'fa-comments'},{k:'chatbot',n:'聊天机器人',i:'fa-robot'},{k:'writing',n:'AI写作',i:'fa-feather'},{k:'image',n:'AI图像',i:'fa-images'},{k:'video',n:'AI视频',i:'fa-video'},{k:'audio',n:'AI音频',i:'fa-music'},{k:'design',n:'AI设计',i:'fa-palette'},{k:'office',n:'AI办公',i:'fa-folder-open'},{k:'programming',n:'AI编程',i:'fa-code'},{k:'coding',n:'编程IDE',i:'fa-laptop-code'},{k:'agent',n:'AI智能体',i:'fa-brain'},{k:'search',n:'AI搜索',i:'fa-search'},{k:'framework',n:'开发平台',i:'fa-cubes'},{k:'models',n:'训练模型',i:'fa-microchip'},{k:'detection',n:'内容检测',i:'fa-shield-alt'},{k:'learning',n:'AI学习',i:'fa-graduation-cap'},{k:'prompt',n:'提示指令',i:'fa-lightbulb'},{k:'resource',n:'资源社区',i:'fa-hubspot'}];var h='';for(var i=0;i<cl.length;i++){h+='<li><a href="javascript:" onclick="sw(\''+cl[i].k+'\')"><i class="fas '+cl[i].i+'"></i><span>'+cl[i].n+'</span></a></li>'}document.getElementById('sidebarUl').innerHTML=h})();
+</script>
 </body>
 </html>
