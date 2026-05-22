@@ -1,69 +1,97 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="io-grey-mode">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>提交收录 - AI工具导航</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏮</text></svg>">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .submit-page { max-width: 600px; margin: 40px auto; padding: 0; }
-    .submit-page h1 { font-size: 24px; margin-bottom: 8px; }
-    .submit-page .sub { color: #64748b; margin-bottom: 32px; }
-    .form-group { margin-bottom: 20px; }
-    .form-group label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
-    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 14px; border: 1.5px solid #e2e8f0; border-radius: 10px; font-size: 14px; outline: none; font-family: inherit; }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #6366f1; }
-    .form-group textarea { min-height: 100px; resize: vertical; }
-    .submit-btn { width: 100%; padding: 14px; background: #6366f1; color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; }
-    .submit-btn:hover { background: #4f46e5; }
-    .success-msg { display: none; padding: 20px; background: #f0fdf4; border: 1px solid #86efac; border-radius: 16px; text-align: center; color: #166534; margin-top: 20px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>免费收录AI工具 - AI工具大全</title>
+<meta name="theme-color" content="#f9f9f9" />
+<link rel="shortcut icon" href="assets/favicon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4016659_bcqo253fh2d.css">
+<link rel="stylesheet" href="style.css">
+<style>
+.submit-page{max-width:600px;margin:0 auto;padding:10px 0}
+.submit-page h1{font-size:26px;font-weight:800;background:linear-gradient(135deg,#667eea,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px;text-align:center}
+.submit-page .sub{text-align:center;color:#64748b;font-size:13px;margin-bottom:24px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:13px;font-weight:600;margin-bottom:4px;color:#334155}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:10px 12px;border:1.5px solid #e2e8f0;border-radius:8px;font-size:14px;outline:none;font-family:inherit;background:#fff}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#6366f1;box-shadow:0 0 0 3px rgba(99,102,241,.1)}
+.form-group textarea{min-height:80px;resize:vertical}
+.submit-btn{width:100%;padding:12px;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer}
+.submit-btn:hover{opacity:.9}
+.success-msg{display:none;padding:20px;background:#f0fdf4;border:1px solid #86efac;border-radius:12px;text-align:center;color:#166534;margin-top:20px;font-size:15px}
+</style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="logo">
-        <span class="logo-icon">🏮</span>
-        <span class="logo-text">AI工具导航</span>
-      </div>
-      <nav><a href="index.html">首页</a>
-        <a href="#categories">分类</a>
-        <a href="submit.html" class="active">提交收录</a></nav>
-    </div>
-  </header>
-
-  <section>
-    <div class="container">
-      <div class="submit-page">
-        <h1>提交AI工具收录</h1>
-        <p class="sub">推荐好用的AI工具，一起丰富AI工具导航</p>
-        <form id="submitForm">
-          <div class="form-group"><label>工具名称 *</label><input type="text" name="name" required placeholder="例如：ChatGPT"></div>
-          <div class="form-group"><label>网站地址 *</label><input type="url" name="url" required placeholder="https://example.com"></div>
-          <div class="form-group"><label>分类 *</label><select name="category" required><option value="">请选择分类</option><option value="conversation">对话大模型</option><option value="image">AI绘图</option><option value="video">AI视频</option><option value="audio">AI音乐/音频</option><option value="coding">AI编程</option><option value="productivity">AI办公</option><option value="resource">资源与社区</option></select></div>
-          <div class="form-group"><label>一句话简介 *</label><input type="text" name="desc" required placeholder="用一句话描述这个工具"></div>
-          <div class="form-group"><label>详细介绍</label><textarea name="intro" placeholder="详细介绍一下这个工具的功能和特点"></textarea></div>
-          <button type="submit" class="submit-btn">提交 →</button>
-        </form>
-        <div class="success-msg" id="successMsg">✅ 提交成功！感谢你的推荐 🏮<br><small>我们会尽快审核收录</small></div>
+<div id="sidebar" class="sticky sidebar-nav fade">
+  <div class="modal-dialog h-100 sidebar-nav-inner">
+    <div class="sidebar-logo border-bottom border-color">
+      <div class="logo overflow-hidden">
+        <a href="index.html"><img src="assets/logo-big.svg" height="40" alt="AI工具大全"></a>
       </div>
     </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>🏮 AI工具导航 · 发现好用的AI工具</p>
-      <p class="footer-sub">© 2026 aixiaoyaoge.top</p>
+    <div class="sidebar-menu flex-fill">
+      <div class="sidebar-scroll">
+        <div class="sidebar-menu-inner">
+          <ul id="sidebarUl"></ul>
+        </div>
+      </div>
     </div>
-  </footer>
+  </div>
+</div>
 
-  <script>
-    document.getElementById('submitForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      document.getElementById('submitForm').style.display = 'none';
-      document.getElementById('successMsg').style.display = 'block';
-    });
-  </script>
+<div class="main-content flex-fill">
+  <div class="page-header"><div class="navbar"><div class="container-fluid p-0 position-relative">
+    <div class="header-mini-btn"><label><input id="mini-button" type="checkbox" checked><svg viewBox="0 0 100 100"><path class="line--1" d="M0 40h62c18 0 18-20-17 5L31 55"></path><path class="line--2" d="M0 50h80"></path><path class="line--3" d="M0 60h62c18 0 18 20-17-5L31 45"></path></svg></label></div>
+    <ul class="navbar-nav" id="topMenu">
+      <li><a href="javascript:"><i class="fas fa-fire"></i>热搜</a><ul class="sub-menu" style="display:none"></ul></li>
+      <li class="menu-item-has-children"><a href="javascript:">AI应用集 <i class="fas fa-chevron-down" style="font-size:10px;margin-left:4px"></i></a>
+        <ul class="sub-menu"><li><a href="javascript:" onclick="sw('all')">全部工具</a></li><li><a href="javascript:" onclick="sw('conversation')">AI对话</a></li><li><a href="javascript:" onclick="sw('image')">AI图像</a></li><li><a href="javascript:" onclick="sw('video')">AI视频</a></li><li><a href="javascript:" onclick="sw('writing')">AI写作</a></li><li><a href="javascript:" onclick="sw('programming')">AI编程</a></li><li><a href="javascript:" onclick="sw('agent')">AI智能体</a></li></ul>
+      </li>
+      <li><a href="news.html">每日AI资讯</a></li>
+      <li><a href="categories.html">最新AI项目</a></li>
+      <li><a href="prompts.html">AI教程资源</a></li>
+      <li><a href="about.html">关于我们</a></li>
+    </ul>
+  </div></div></div>
+  <div class="header-big"><div class="s-search"><div class="text-center mb-2"><img src="assets/logo-big.svg" alt="AI工具大全" style="height:60px"></div>
+    <div class="s-type-list text-center"><label class="active" data-type="local">站内</label><label data-type="bing">Bing</label><label data-type="baidu">百度</label><label data-type="google">Google</label><label data-type="perplexity">Perplexity</label></div>
+    <form action="javascript:void(0)" method="get" class="super-search-fm d-flex align-items-center">
+      <input type="text" id="search-text" class="form-control smart-tips search-key" placeholder="搜索AI工具名称或描述…" autocomplete="off">
+      <button type="submit" onclick="doSearch()"><i class="iconfont icon-search"></i></button>
+    </form>
+  </div></div>
+  <div class="container container-lg mb-3"><div class="info-cards-row">
+    <a href="submit.html" class="info-card info-card-submit"><div class="info-card-icon">🎯</div><div class="info-card-text"><h3>免费收录AI工具</h3><p>提交你的AI产品</p></div></a>
+    <a href="index.html" class="info-card info-card-brand"><div class="info-card-icon">🏮</div><div class="info-card-text"><h3>AI工具大全</h3><p>收录1328+工具</p></div></a>
+    <a href="news.html" class="info-card info-card-news"><div class="info-card-icon">📡</div><div class="info-card-text"><h3>每日AI资讯</h3><p>最新行业动态</p></div></a>
+  </div></div>
+  <div class="container container-lg">
+    <div class="submit-page">
+      <h1>🎯 免费收录AI工具</h1>
+      <p class="sub">推荐好用的AI工具，一起丰富AI工具大全</p>
+      <form id="submitForm">
+        <div class="form-group"><label>工具名称 *</label><input type="text" name="name" required placeholder="例如：ChatGPT"></div>
+        <div class="form-group"><label>网站地址 *</label><input type="url" name="url" required placeholder="https://example.com"></div>
+        <div class="form-group"><label>分类 *</label><select name="category" required><option value="">请选择分类</option><option value="conversation">AI对话</option><option value="image">AI图像</option><option value="video">AI视频</option><option value="audio">AI音频</option><option value="coding">AI编程</option><option value="office">AI办公</option><option value="resource">资源社区</option></select></div>
+        <div class="form-group"><label>一句话简介 *</label><input type="text" name="desc" required placeholder="用一句话描述这个工具"></div>
+        <div class="form-group"><label>详细介绍</label><textarea name="intro" placeholder="详细介绍一下这个工具的功能和特点"></textarea></div>
+        <button type="submit" class="submit-btn">提交 →</button>
+      </form>
+      <div class="success-msg" id="successMsg">✅ 提交成功！感谢你的推荐 🏮<br><small>我们会尽快审核收录</small></div>
+    </div>
+  </div>
+  <footer class="site-footer"><div class="container container-lg">
+    <div class="footer-links"><span>友情链接：</span><a href="https://ai-bot.cn" target="_blank">AI工具大全</a><a href="https://www.aixiaoyaoge.top" target="_blank">逍遥哥AI导航</a></div>
+    <div class="footer-copyright"><p>© 2024-2026 AI工具大全 · 逍遥出品</p></div>
+  </div></footer>
+</div>
+<script src="data.js"></script><script src="app.js"></script>
+<script>
+(function(){var cl=[{k:'all',n:'全部工具',i:'fa-th-large'},{k:'conversation',n:'AI对话',i:'fa-comments'},{k:'chatbot',n:'聊天机器人',i:'fa-robot'},{k:'writing',n:'AI写作',i:'fa-feather'},{k:'image',n:'AI图像',i:'fa-images'},{k:'video',n:'AI视频',i:'fa-video'},{k:'audio',n:'AI音频',i:'fa-music'},{k:'design',n:'AI设计',i:'fa-palette'},{k:'office',n:'AI办公',i:'fa-folder-open'},{k:'programming',n:'AI编程',i:'fa-code'},{k:'coding',n:'编程IDE',i:'fa-laptop-code'},{k:'agent',n:'AI智能体',i:'fa-brain'},{k:'search',n:'AI搜索',i:'fa-search'},{k:'framework',n:'开发平台',i:'fa-cubes'},{k:'models',n:'训练模型',i:'fa-microchip'},{k:'detection',n:'内容检测',i:'fa-shield-alt'},{k:'learning',n:'AI学习',i:'fa-graduation-cap'},{k:'prompt',n:'提示指令',i:'fa-lightbulb'},{k:'resource',n:'资源社区',i:'fa-hubspot'}];var h='';for(var i=0;i<cl.length;i++){h+='<li><a href="javascript:" onclick="sw(\''+cl[i].k+'\')"><i class="fas '+cl[i].i+'"></i><span>'+cl[i].n+'</span></a></li>'}document.getElementById('sidebarUl').innerHTML=h})();
+document.getElementById('submitForm').addEventListener('submit',function(e){e.preventDefault();document.getElementById('submitForm').style.display='none';document.getElementById('successMsg').style.display='block'});
+</script>
 </body>
 </html>
