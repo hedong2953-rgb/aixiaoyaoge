@@ -9,7 +9,7 @@
 <title>AI工具大全 - 1000+AI工具导航</title>
 <meta name="theme-color" content="#f9f9f9" />
 <meta name="keywords" content="AI工具,AI导航,AI写作,AI绘画,AI视频,AI编程,AI聊天,AI工具集" />
-<meta name="description" content="AI工具大全官网收录了国内外数百个AI工具，包含AI写作、图像生成、视频制作、音频转录、编程辅助、音乐生成、绘画设计、对话聊天等AI工具集合大全，以及AI学习开发的常用网站、框架和模型，帮助你加入人工智能浪潮，自动化高效完成任务！" />
+<meta name="description" content="AI工具大全官网收录了国内外数百个AI工具，该导航网站包括AI写作工具、AI图像生成和背景移除、AI视频制作、AI音频转录、AI辅助编程、AI音乐生成、AI绘画设计、AI对话聊天等AI工具集合大全，以及AI学习开发的常用网站、框架和模型，帮助你加入人工智能浪潮，自动化高效完成任务！" />
 <link rel="shortcut icon" href="assets/favicon.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4016659_bcqo253fh2d.css">
@@ -32,7 +32,9 @@
     </div>
   </div>
 </div>
+
 <div class="main-content flex-fill">
+  <!-- 顶栏导航 -->
   <div class="page-header">
     <div class="navbar">
       <div class="container-fluid p-0 position-relative">
@@ -68,6 +70,8 @@
       </div>
     </div>
   </div>
+
+  <!-- 大搜索区 -->
   <div class="header-big">
     <div class="s-search">
       <div class="text-center mb-2">
@@ -88,51 +92,68 @@
         <div class="search-group s-current" data-type="local">
           <ul id="searchTags"></ul>
         </div>
-        <div class="search-group" data-type="bing"><ul><li><label>使用 Bing 搜索</label></li></ul></div>
-        <div class="search-group" data-type="baidu"><ul><li><label>使用 百度 搜索</label></li></ul></div>
-        <div class="search-group" data-type="google"><ul><li><label>使用 Google 搜索</label></li></ul></div>
-        <div class="search-group" data-type="perplexity"><ul><li><label>使用 Perplexity 搜索</label></li></ul></div>
+        <div class="search-group" data-type="bing">
+          <ul><li><label>使用 Bing 搜索</label></li></ul>
+        </div>
+        <div class="search-group" data-type="baidu">
+          <ul><li><label>使用 百度 搜索</label></li></ul>
+        </div>
+        <div class="search-group" data-type="google">
+          <ul><li><label>使用 Google 搜索</label></li></ul>
+        </div>
+        <div class="search-group" data-type="perplexity">
+          <ul><li><label>使用 Perplexity 搜索</label></li></ul>
+        </div>
       </div>
     </div>
   </div>
-  <div id="featureZone" class="container container-lg mb-4">
-    <div class="feature-layout">
-      <div class="feature-banner">
-        <div class="banner-carousel" id="bannerCarousel">
-          <a href="https://www.aixiaoyaoge.top" target="_blank" class="banner-slide active">
-            <div class="banner-inner" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:30px">
-              <div style="text-align:center;color:#fff">
-                <div style="font-size:36px;margin-bottom:8px">🏮</div>
-                <h3 style="font-size:22px;font-weight:700;margin-bottom:6px">AI工具大全</h3>
-                <p style="font-size:13px;opacity:.85">收录1000+优质AI工具</p>
-              </div>
-            </div>
-          </a>
-          <a href="https://www.aixiaoyaoge.top" target="_blank" class="banner-slide">
-            <div class="banner-inner" style="background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:30px">
-              <div style="text-align:center;color:#fff">
-                <div style="font-size:36px;margin-bottom:8px">🎯</div>
-                <h3 style="font-size:22px;font-weight:700;margin-bottom:6px">免费收录AI工具</h3>
-                <p style="font-size:13px;opacity:.85">提交你的AI产品，获得曝光机会</p>
-              </div>
-            </div>
-          </a>
+
+  <!-- 三张并排彩色卡片：免费收录 + AI工具大全 + 每日资讯 -->
+  <div id="infoCards" class="container container-lg mb-3">
+    <div class="info-cards-row">
+      <a href="javascript:" class="info-card info-card-submit">
+        <div class="info-card-icon">🎯</div>
+        <div class="info-card-text">
+          <h3>免费收录AI工具</h3>
+          <p>提交你的AI产品，获得曝光机会</p>
         </div>
-        <div class="banner-dots" id="bannerDots">
-          <span class="dot active"></span>
-          <span class="dot"></span>
+      </a>
+      <a href="javascript:" class="info-card info-card-brand">
+        <div class="info-card-icon">🏮</div>
+        <div class="info-card-text">
+          <h3>AI工具大全</h3>
+          <p>收录1280+优质AI工具，持续更新</p>
         </div>
-      </div>
-      <div class="feature-tools">
-        <div class="feature-tabs">
-          <span class="ftab active" data-tab="hot">🔥 热门工具</span>
-          <span class="ftab" data-tab="new">✨ 最新收录</span>
+      </a>
+      <a href="javascript:" class="info-card info-card-news">
+        <div class="info-card-icon">📡</div>
+        <div class="info-card-text">
+          <h3>每日AI资讯</h3>
+          <p>最新AI行业动态与产品发布</p>
         </div>
-        <div class="feature-tools-grid" id="featureToolsGrid"></div>
-        <a href="javascript:" class="feature-more" onclick="sw('all')">查看全部工具 ›</a>
-      </div>
+      </a>
     </div>
   </div>
+
+  <!-- 热门工具 -->
+  <div id="hotZone" class="container container-lg mb-4">
+    <div class="section-header">
+      <h2><i class="fas fa-fire"></i> 热门工具</h2>
+      <a href="javascript:" onclick="sw('all')">查看全部工具 ›</a>
+    </div>
+    <div class="feature-tools-grid" id="featureToolsGrid"></div>
+  </div>
+
+  <!-- 最新收录 -->
+  <div id="newZone" class="container container-lg mb-4">
+    <div class="section-header">
+      <h2><i class="fas fa-star"></i> 最新收录</h2>
+      <a href="javascript:" onclick="sw('all')">查看全部工具 ›</a>
+    </div>
+    <div class="feature-tools-grid" id="newToolsGrid"></div>
+  </div>
+
+  <!-- 分类标题 (只在非all时显示) -->
   <div class="container container-lg" id="catBarContainer" style="display:none">
     <div class="row" style="margin:0">
       <div class="col-12" style="padding:0">
@@ -144,9 +165,13 @@
       </div>
     </div>
   </div>
+
+  <!-- 首页内容 -->
   <div id="homeContent">
     <div class="container container-lg" id="categorySections"></div>
   </div>
+
+  <!-- 分类视图 -->
   <div id="toolContent" class="container container-lg" style="display:none">
     <div class="content-wrap">
       <div class="content-layout">
@@ -154,6 +179,8 @@
       </div>
     </div>
   </div>
+
+  <!-- 页脚 -->
   <footer class="site-footer">
     <div class="container container-lg">
       <div class="footer-links">
@@ -162,11 +189,12 @@
         <a href="https://www.aixiaoyaoge.top" target="_blank">逍遥哥AI导航</a>
       </div>
       <div class="footer-copyright">
-        <p>&copy; 2024-2026 AI工具大全 &middot; 逍遥出品 | <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备xxxxxxxx号</a></p>
+        <p>© 2024-2026 AI工具大全 · 逍遥出品 | <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备xxxxxxxx号</a></p>
       </div>
     </div>
   </footer>
 </div>
+
 <script src="data.js"></script>
 <script src="app.js"></script>
 </body>
