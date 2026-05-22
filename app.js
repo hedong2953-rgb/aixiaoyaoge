@@ -270,6 +270,12 @@ const hb = { style: {} }, cc = { style: {} }, hc = { style: {} }, tc = { style: 
 let cs = {}, ct = {}, cg = {};
 
 function sw(cat) {
+  // 如果不在首页，直接跳转到 index.html?cat=xxx
+  var isHome = document.getElementById("homeContent") !== null;
+  if (!isHome) {
+    window.location.href = 'index.html?cat=' + cat;
+    return;
+  }
   C = cat;
   S = "";
   document.getElementById("search-text").value = "";
