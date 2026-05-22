@@ -223,7 +223,7 @@ function renderPage() {
   const urlEl = document.getElementById('toolUrl');
   if (tool.url) {
     urlEl.href = tool.url;
-    urlEl.innerHTML = `<span>访问官网 <i class="iconfont icon-arrow-r-m"></i></span>`;
+    urlEl.innerHTML = `<span>访问官网下载 <i class="iconfont icon-arrow-r-m"></i></span>`;
   } else {
     urlEl.innerHTML = `<span>暂无官网链接</span>`;
   }
