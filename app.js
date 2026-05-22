@@ -61,13 +61,13 @@ function ByCat(cat, limit, subcat) {
 function side() {
   const ul = document.getElementById("sidebarUl");
   if (!ul) return;
-  let h = '<li class="sidebar-item' + (C === "all" ? " active" : "") + '"><a href="javascript:" onclick="sw(\'all\')"><i class="fas fa-th-large icon-fw icon-lg"></i><span>全部工具</span><span class="badge">' + toolsData.length + '</span></a></li>';
+  let h = '<li class="sidebar-item' + (C === "all" ? " active" : "") + '"><a href="javascript:" onclick="sw(\'all\')"><i class="fas fa-th-large icon-fw icon-lg"></i><span>全部工具</span></a></li>';
   const cnt = Cnt();
   for (const cat of O) {
     if (!cnt[cat] || cnt[cat] === 0) continue;
     const n = N[cat] || cat, icon = I[cat] || "fa-circle";
     const has = Sub[cat] !== undefined;
-    h += '<li class="sidebar-item' + (cat === C ? " active" : "") + '"><a href="javascript:" onclick="sw(\'' + cat + '\')"><i class="fas ' + icon + ' icon-fw icon-lg"></i><span>' + n + '</span><span class="badge">' + cnt[cat] + '</span></a>';
+    h += '<li class="sidebar-item' + (cat === C ? " active" : "") + '"><a href="javascript:" onclick="sw(\'' + cat + '\')"><i class="fas ' + icon + ' icon-fw icon-lg"></i><span>' + n + '</span></a>';
     if (has) {
       h += '<i class="iconfont icon-arrow-r-m sidebar-more text-sm" onclick="tog(this)"></i><ul>';
       for (const s of Sub[cat]) h += '<li><a href="javascript:" onclick="swSub(\'' + cat + '\',\'' + s + '\')"><span>' + s + '</span></a></li>';
