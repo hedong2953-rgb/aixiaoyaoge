@@ -6,6 +6,7 @@ function generateFeatures(tool, categoryLabel) {
   const cat = categoryLabel || '';
   const desc = tool.desc || '';
   
+  // 基于分类生成通用feature
   const templates = {
     'AI聊天助手': [
       `${name}支持多轮自然语言对话，上下文理解能力强`,
@@ -102,11 +103,13 @@ function generateFeatures(tool, categoryLabel) {
   ];
 }
 
+// 获取URL参数
 function getQueryParam(name) {
   const params = new URLSearchParams(window.location.search);
   return params.get(name);
 }
 
+// 分类信息映射（从 app.js 同步）
 const catInfo = {
   'chatbot': { label: 'AI聊天助手', icon: 'fa-comments' },
   'writing': { label: 'AI写作工具', icon: 'fa-feather' },
@@ -128,28 +131,53 @@ const catInfo = {
   'benchmark': { label: 'AI模型评测', icon: 'fa-chart-bar' }
 };
 
+// 获取分类标签颜色
 function getCatColor(category) {
   const colors = {
-    'chatbot': '#5961f9', 'writing': '#f95959', 'image': '#f9a859',
-    'video': '#59c7f9', 'audio': '#a859f9', 'design': '#f959b8',
-    'office': '#59f9a8', 'programming': '#5961f9', 'agent': '#f9d959',
+    'chatbot': '#5961f9',
+    'writing': '#f95959',
+    'image': '#f9a859',
+    'video': '#59c7f9',
+    'audio': '#a859f9',
+    'design': '#f959b8',
+    'office': '#59f9a8',
+    'programming': '#5961f9',
+    'agent': '#f9d959',
     'search': '#59f9f9',
   };
   return colors[category] || '#5961f9';
 }
 
+// 渲染侧边栏
 function renderSidebar() {
   const ul = document.getElementById('sidebarUl');
   if (!ul) return;
-  const keys = ['writing','image','video','audio','design','office','chatbot','agent','programming','developer','search','framework','models','detection','learning','prompt','sideline','benchmark'];
-  ul.innerHTML = keys.map(k => {
-    const info = catInfo[k];
-    return info ? `<li class="sidebar-item"><a href="index.html?cat=${k}"><i class="fas ${info.icon} icon-fw icon-lg"></i><span>${info.label}</span></a></li>` : '';
+  
+  const catKeys = [
+    'writing', 'image', 'video', 'audio', 'design', 'office',
+    'chatbot', 'agent', 'programming', 'developer', 'search',
+    'framework', 'models', 'detection', 'learning', 'prompt',
+    'sideline', 'benchmark'
+  ];
+  
+  ul.innerHTML = catKeys.map(key => {
+    const info = catInfo[key];
+    if (!info) return '';
+    return `
+      <li class="sidebar-item">
+        <a href="index.html?cat=${key}">
+          <i class="fas ${info.icon} icon-fw icon-lg"></i>
+          <span>${info.label}</span>
+        </a>
+      </li>
+    `;
   }).join('');
 }
 
+// 渲染详情页面
 function renderPage() {
   const id = getQueryParam('id');
+  
   renderSidebar();
   
   if (!id || !toolsData) {
@@ -158,7 +186,9 @@ function renderPage() {
     return;
   }
   
-  const tool = toolsData.find(t => t.id === id);
+  const tool = typeof id === 'string'
+    ? toolsData.find(t => String(t.id) === id || t.id === parseInt(id))
+    : toolsData.find(t => t.id === id);
   if (!tool) {
     document.getElementById('toolName').textContent = '工具未找到';
     document.getElementById('toolDetail').innerHTML = '<div class="text-center py-5 text-muted"><p>未找到该工具</p><a href="index.html" class="btn btn-arrow mt-3">返回首页</a></div>';
@@ -169,27 +199,36 @@ function renderPage() {
   const catLabel = tool.categoryLabel || catInfo[cat]?.label || 'AI工具';
   const color = getCatColor(cat);
   
+  // 更新页面标题和描述
   document.title = `${tool.name} - ${catLabel} | AI工具大全`;
+  document.getElementById('pageDesc').content = `${tool.name} - ${tool.desc}。AI工具大全收录的${catLabel}工具。`;
   
+  // 工具基本信息
   document.getElementById('toolName').textContent = tool.name;
   document.getElementById('toolIcon').textContent = tool.icon || '🤖';
   document.getElementById('toolCategory').textContent = catLabel;
   document.getElementById('toolCategory').style.background = color;
   document.getElementById('toolDesc').textContent = tool.desc;
   
+  // 价格
   const pricing = tool.detail?.pricing || (['chatbot','search','learning'].includes(cat) ? '免费' : '免费 / 付费');
   document.getElementById('toolPricing').textContent = pricing;
   document.getElementById('toolPricing').style.background = color;
   
+  // 标签
   const tags = tool.detail?.tags || [catLabel];
   document.getElementById('toolTags').innerHTML = tags.map(t => `<span class="tag-item">${t}</span>`).join('');
   
+  // 链接
   const urlEl = document.getElementById('toolUrl');
   if (tool.url) {
     urlEl.href = tool.url;
     urlEl.innerHTML = `<span>访问官网 <i class="iconfont icon-arrow-r-m"></i></span>`;
+  } else {
+    urlEl.innerHTML = `<span>暂无官网链接</span>`;
   }
   
+  // 详细内容
   const features = tool.detail?.features?.length ? tool.detail.features : generateFeatures(tool, catLabel);
   const introText = tool.detail?.intro || tool.desc || `${tool.name}是一款优秀的${catLabel}工具`;
   
@@ -202,12 +241,7 @@ function renderPage() {
       ${features.map(f => `<span class="feature-badge"><i class="fas fa-check-circle mr-1"></i>${f}</span>`).join('')}
     </div>
     <ul class="text-md">
-      ${features.map(f => {
-        const parts = f.split('，');
-        const first = parts[0];
-        const rest = parts.slice(1).join('，') || '提供专业高效的服务，满足用户多样化的需求';
-        return `<li><strong>${first}</strong>：${rest}</li>`;
-      }).join('')}
+      ${features.map(f => `<li><strong>${f.split('，')[0]}</strong>：${f.split('，').slice(1).join('，') || '提供专业高效的服务，满足用户多样化的需求'}</li>`).join('')}
     </ul>
     
     <h2>如何使用${tool.name}</h2>
@@ -227,15 +261,19 @@ function renderPage() {
     </ul>
   `;
   
+  // 类似工具推荐（同分类）
   const similar = toolsData.filter(t => t.id !== id && t.category === cat).slice(0, 8);
   const similarContainer = document.getElementById('similarTools');
+  
   if (similar.length > 0) {
     similarContainer.innerHTML = similar.map(t => `
       <div class="url-card col-6 col-sm-6 col-md-4 col-lg-3">
         <div class="url-body default">
           <a href="detail.html?id=${t.id}" class="card no-c mb-4">
             <div class="card-body url-content d-flex align-items-center">
-              <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center" style="font-size:24px">${t.icon || '🤖'}</div>
+              <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center" style="font-size:24px">
+                ${t.icon || '🤖'}
+              </div>
               <div class="url-info flex-fill">
                 <div class="text-sm overflowClip_1"><strong>${t.name}</strong></div>
                 <p class="overflowClip_1 m-0 text-muted text-xs">${t.desc}</p>
@@ -250,4 +288,5 @@ function renderPage() {
   }
 }
 
+// 页面加载
 document.addEventListener('DOMContentLoaded', renderPage);
