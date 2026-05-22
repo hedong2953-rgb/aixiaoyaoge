@@ -148,7 +148,7 @@ img { max-width:100%; }
 .sidebar-item ul li a:hover { color:var(--primary); background:#f0f1ff; }
 
 /* ===== 主内容区 ===== */
-.main-content { margin-left:var(--sidebar-width); min-height:100vh; position:relative; }
+.main-content { margin-left:var(--sidebar-width); min-height:100vh; position:relative; overflow-x:hidden; }
 
 /* ===== 顶部导航 ===== */
 .page-header {
@@ -423,6 +423,12 @@ img { max-width:100%; }
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
+@media (max-width: 1200px) {
+  .feature-tools-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 992px) {
+  .feature-tools-grid { grid-template-columns: repeat(2, 1fr); }
+}
 .feature-tool-card {
   display: flex;
   align-items: center;
@@ -542,6 +548,12 @@ img { max-width:100%; }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
+}
+@media (max-width: 1400px) {
+  .category-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 992px) {
+  .category-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* 工具卡片 (分类视图) */
