@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="renderer" content="webkit"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>全部分类 - AI工具大全</title>
+<title>鍏ㄩ儴鍒嗙被 - AI宸ュ叿澶у叏</title>
 <meta name="theme-color" content="#f9f9f9" />
-<meta name="keywords" content="AI工具,AI导航,AI分类,AI应用" />
-<meta name="description" content="AI工具大全全部分类，浏览所有AI工具分类" />
+<meta name="keywords" content="AI宸ュ叿,AI瀵艰埅,AI鍒嗙被,AI搴旂敤" />
+<meta name="description" content="AI宸ュ叿澶у叏鍏ㄩ儴鍒嗙被锛屾祻瑙堟墍鏈堿I宸ュ叿鍒嗙被" />
 <link rel="shortcut icon" href="assets/favicon.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4016659_bcqo253fh2d.css">
 <link rel="stylesheet" href="style.css">
 <style>
-/* 分类页专用 */
+/* 鍒嗙被椤典笓鐢?*/
 .page-hero{padding:20px 0 10px;text-align:center}
 .page-hero h1{font-size:26px;font-weight:800;background:linear-gradient(135deg,#667eea,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px}
 .page-hero p{color:#64748b;font-size:13px}
@@ -31,7 +31,7 @@
   <div class="modal-dialog h-100 sidebar-nav-inner">
     <div class="sidebar-logo border-bottom border-color">
       <div class="logo overflow-hidden">
-        <a href="index.html"><img src="assets/logo-big.svg" height="40" alt="AI工具大全"></a>
+        <a href="index.html"><img src="assets/logo-big.svg" height="40" alt="AI宸ュ叿澶у叏"></a>
       </div>
     </div>
     <div class="sidebar-menu flex-fill">
@@ -45,7 +45,7 @@
 </div>
 
 <div class="main-content flex-fill">
-  <!-- 顶栏导航 -->
+  <!-- 椤舵爮瀵艰埅 -->
   <div class="page-header">
     <div class="navbar">
       <div class="container-fluid p-0 position-relative">
@@ -59,95 +59,95 @@
           </label>
         </div>
         <ul class="navbar-nav" id="topMenu">
-          <li><a href="javascript:"><i class="fas fa-fire"></i> 热搜</a>
+          <li><a href="javascript:"><i class="fas fa-fire"></i> 鐑悳</a>
             <ul class="sub-menu" id="hotSearchMenu" style="display:none"></ul>
           </li>
-          <li class="menu-item-has-children"><a href="javascript:">AI应用集 <i class="fas fa-chevron-down" style="font-size:10px;margin-left:4px"></i></a>
+          <li class="menu-item-has-children"><a href="javascript:">AI搴旂敤闆?<i class="fas fa-chevron-down" style="font-size:10px;margin-left:4px"></i></a>
             <ul class="sub-menu">
-              <li><a href="javascript:" onclick="sw('all')">全部工具</a></li>
-              <li><a href="javascript:" onclick="sw('conversation')">AI对话</a></li>
-              <li><a href="javascript:" onclick="sw('image')">AI图像</a></li>
-              <li><a href="javascript:" onclick="sw('video')">AI视频</a></li>
-              <li><a href="javascript:" onclick="sw('writing')">AI写作</a></li>
-              <li><a href="javascript:" onclick="sw('programming')">AI编程</a></li>
-              <li><a href="javascript:" onclick="sw('agent')">AI智能体</a></li>
+              <li><a href="javascript:" onclick="sw('all')">鍏ㄩ儴宸ュ叿</a></li>
+              <li><a href="javascript:" onclick="sw('conversation')">AI瀵硅瘽</a></li>
+              <li><a href="javascript:" onclick="sw('image')">AI鍥惧儚</a></li>
+              <li><a href="javascript:" onclick="sw('video')">AI瑙嗛</a></li>
+              <li><a href="javascript:" onclick="sw('writing')">AI鍐欎綔</a></li>
+              <li><a href="javascript:" onclick="sw('programming')">AI缂栫▼</a></li>
+              <li><a href="javascript:" onclick="sw('agent')">AI鏅鸿兘浣?/a></li>
             </ul>
           </li>
-          <li><a href="news.html">每日AI资讯</a></li>
-          <li><a href="categories.html">最新AI项目</a></li>
-          <li><a href="prompts.html">AI教程资源</a></li>
-          <li><a href="about.html">关于我们</a></li>
+          <li><a href="news.html">姣忔棩AI璧勮</a></li>
+          <li><a href="categories.html">鏈€鏂癆I椤圭洰</a></li>
+          <li><a href="prompts.html">AI鏁欑▼璧勬簮</a></li>
+          <li><a href="about.html">鍏充簬鎴戜滑</a></li>
         </ul>
       </div>
     </div>
   </div>
 
-  <!-- 大搜索区 -->
+  <!-- 澶ф悳绱㈠尯 -->
   <div class="header-big">
     <div class="s-search">
       <div class="text-center mb-2">
-        <img src="assets/logo-big.svg" alt="AI工具大全" style="height:60px">
+        <img src="assets/logo-big.svg" alt="AI宸ュ叿澶у叏" style="height:60px">
       </div>
       <div class="s-type-list text-center" id="sTypeList">
-        <label class="active" data-type="local">站内</label>
+        <label class="active" data-type="local">绔欏唴</label>
         <label data-type="bing">Bing</label>
-        <label data-type="baidu">百度</label>
+        <label data-type="baidu">鐧惧害</label>
         <label data-type="google">Google</label>
         <label data-type="perplexity">Perplexity</label>
       </div>
       <form action="javascript:void(0)" method="get" class="super-search-fm d-flex align-items-center">
-        <input type="text" id="search-text" class="form-control smart-tips search-key" placeholder="搜索AI工具名称或描述…" style="outline:0" autocomplete="off">
+        <input type="text" id="search-text" class="form-control smart-tips search-key" placeholder="鎼滅储AI宸ュ叿鍚嶇О鎴栨弿杩扳€? style="outline:0" autocomplete="off">
         <button type="submit" id="btn_search" onclick="doSearch()"><i class="iconfont icon-search"></i></button>
       </form>
     </div>
   </div>
 
-  <!-- 三张并排彩色卡片 -->
+  <!-- 涓夊紶骞舵帓褰╄壊鍗＄墖 -->
   <div class="container container-lg mb-3">
     <div class="info-cards-row">
       <a href="submit.html" class="info-card info-card-submit">
-        <div class="info-card-icon">🎯</div>
+        <div class="info-card-icon">馃幆</div>
         <div class="info-card-text">
-          <h3>免费收录AI工具</h3>
-          <p>提交你的AI产品，获得曝光机会</p>
+          <h3>鍏嶈垂鏀跺綍AI宸ュ叿</h3>
+          <p>鎻愪氦浣犵殑AI浜у搧锛岃幏寰楁洕鍏夋満浼?/p>
         </div>
       </a>
       <a href="index.html" class="info-card info-card-brand">
-        <div class="info-card-icon">🏮</div>
+        <div class="info-card-icon">馃彯</div>
         <div class="info-card-text">
-          <h3>AI工具大全</h3>
-          <p>收录1328+优质AI工具，持续更新</p>
+          <h3>AI宸ュ叿澶у叏</h3>
+          <p>鏀跺綍1328+浼樿川AI宸ュ叿锛屾寔缁洿鏂?/p>
         </div>
       </a>
       <a href="news.html" class="info-card info-card-news">
-        <div class="info-card-icon">📡</div>
+        <div class="info-card-icon">馃摗</div>
         <div class="info-card-text">
-          <h3>每日AI资讯</h3>
-          <p>最新AI行业动态与产品发布</p>
+          <h3>姣忔棩AI璧勮</h3>
+          <p>鏈€鏂癆I琛屼笟鍔ㄦ€佷笌浜у搧鍙戝竷</p>
         </div>
       </a>
     </div>
   </div>
 
-  <!-- 页面内容 -->
+  <!-- 椤甸潰鍐呭 -->
   <div class="container container-lg">
     <div class="page-hero">
-      <h1>📂 全部分类</h1>
-      <p>浏览全部AI工具分类，共收录 <strong id="totalCount"></strong> 款AI工具</p>
+      <h1>馃搨 鍏ㄩ儴鍒嗙被</h1>
+      <p>娴忚鍏ㄩ儴AI宸ュ叿鍒嗙被锛屽叡鏀跺綍 <strong id="totalCount"></strong> 娆続I宸ュ叿</p>
     </div>
     <div id="categoryGrid" class="cat-grid"></div>
   </div>
 
-  <!-- 页脚 -->
+  <!-- 椤佃剼 -->
   <footer class="site-footer">
     <div class="container container-lg">
       <div class="footer-links">
-        <span>友情链接：</span>
-        <a href="https://ai-bot.cn" target="_blank">AI工具大全</a>
-        <a href="https://www.aixiaoyaoge.top" target="_blank">逍遥哥AI导航</a>
+        <span>鍙嬫儏閾炬帴锛?/span>
+        <a href="https://ai-bot.cn" target="_blank">AI宸ュ叿澶у叏</a>
+        <a href="https://www.aixiaoyaoge.top" target="_blank">閫嶉仴鍝I瀵艰埅</a>
       </div>
       <div class="footer-copyright">
-        <p>© 2024-2026 AI工具大全 · 逍遥出品 | <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备xxxxxxxx号</a></p>
+        <p>漏 2024-2026 AI宸ュ叿澶у叏 路 閫嶉仴鍑哄搧 | <a href="https://beian.miit.gov.cn" target="_blank">绮CP澶噚xxxxxxx鍙?/a></p>
       </div>
     </div>
   </footer>
@@ -157,19 +157,18 @@
 <script src="app.js"></script>
 <script>
 (function() {
-  // 渲染侧边栏
-  var cats = {};
+  // 娓叉煋渚ц竟鏍?  var cats = {};
   var catList = [
-    {k:'all',n:'全部工具',i:'fa-th-large'},{k:'conversation',n:'AI对话',i:'fa-comments'},
-    {k:'chatbot',n:'聊天机器人',i:'fa-robot'},{k:'writing',n:'AI写作',i:'fa-feather'},
-    {k:'image',n:'AI图像',i:'fa-images'},{k:'video',n:'AI视频',i:'fa-video'},
-    {k:'audio',n:'AI音频',i:'fa-music'},{k:'design',n:'AI设计',i:'fa-palette'},
-    {k:'office',n:'AI办公',i:'fa-folder-open'},{k:'programming',n:'AI编程',i:'fa-code'},
-    {k:'coding',n:'编程IDE',i:'fa-laptop-code'},{k:'agent',n:'AI智能体',i:'fa-brain'},
-    {k:'search',n:'AI搜索',i:'fa-search'},{k:'framework',n:'开发平台',i:'fa-cubes'},
-    {k:'models',n:'训练模型',i:'fa-microchip'},{k:'detection',n:'内容检测',i:'fa-shield-alt'},
-    {k:'learning',n:'AI学习',i:'fa-graduation-cap'},{k:'prompt',n:'提示指令',i:'fa-lightbulb'},
-    {k:'resource',n:'资源社区',i:'fa-hubspot'}
+    {k:'all',n:'鍏ㄩ儴宸ュ叿',i:'fa-th-large'},{k:'conversation',n:'AI瀵硅瘽',i:'fa-comments'},
+    {k:'chatbot',n:'鑱婂ぉ鏈哄櫒浜?,i:'fa-robot'},{k:'writing',n:'AI鍐欎綔',i:'fa-feather'},
+    {k:'image',n:'AI鍥惧儚',i:'fa-images'},{k:'video',n:'AI瑙嗛',i:'fa-video'},
+    {k:'audio',n:'AI闊抽',i:'fa-music'},{k:'design',n:'AI璁捐',i:'fa-palette'},
+    {k:'office',n:'AI鍔炲叕',i:'fa-folder-open'},{k:'programming',n:'AI缂栫▼',i:'fa-code'},
+    {k:'coding',n:'缂栫▼IDE',i:'fa-laptop-code'},{k:'agent',n:'AI鏅鸿兘浣?,i:'fa-brain'},
+    {k:'search',n:'AI鎼滅储',i:'fa-search'},{k:'framework',n:'寮€鍙戝钩鍙?,i:'fa-cubes'},
+    {k:'models',n:'璁粌妯″瀷',i:'fa-microchip'},{k:'detection',n:'鍐呭妫€娴?,i:'fa-shield-alt'},
+    {k:'learning',n:'AI瀛︿範',i:'fa-graduation-cap'},{k:'prompt',n:'鎻愮ず鎸囦护',i:'fa-lightbulb'},
+    {k:'resource',n:'璧勬簮绀惧尯',i:'fa-hubspot'}
   ];
   var sidebarHtml = '';
   for (var i = 0; i < catList.length; i++) {
@@ -177,21 +176,21 @@
   }
   document.getElementById('sidebarUl').innerHTML = sidebarHtml;
 
-  // 分类网格
+  // 鍒嗙被缃戞牸
   var catGrid = document.getElementById('categoryGrid');
   var catIcons = {
-    'AI对话助手':'💬','AI聊天机器人':'🤖','AI写作工具':'✍️','AI图像工具':'🎨','AI视频工具':'🎬',
-    'AI音频工具':'🎵','AI设计工具':'🎯','AI办公工具':'📊','AI编程工具':'💻','AI编程IDE':'💻',
-    'AI智能体':'🧠','AI搜索引擎':'🔍','AI开发平台':'⚙️','AI训练模型':'🧬','AI内容检测':'🛡️',
-    'AI学习网站':'📚','AI提示指令':'📝','AI资源社区':'🌐'
+    'AI瀵硅瘽鍔╂墜':'馃挰','AI鑱婂ぉ鏈哄櫒浜?:'馃','AI鍐欎綔宸ュ叿':'鉁嶏笍','AI鍥惧儚宸ュ叿':'馃帹','AI瑙嗛宸ュ叿':'馃幀',
+    'AI闊抽宸ュ叿':'馃幍','AI璁捐宸ュ叿':'馃幆','AI鍔炲叕宸ュ叿':'馃搳','AI缂栫▼宸ュ叿':'馃捇','AI缂栫▼IDE':'馃捇',
+    'AI鏅鸿兘浣?:'馃','AI鎼滅储寮曟搸':'馃攳','AI寮€鍙戝钩鍙?:'鈿欙笍','AI璁粌妯″瀷':'馃К','AI鍐呭妫€娴?:'馃洝锔?,
+    'AI瀛︿範缃戠珯':'馃摎','AI鎻愮ず鎸囦护':'馃摑','AI璧勬簮绀惧尯':'馃寪'
   };
   var catDesc = {
-    'AI对话助手':'智能对话、问答助手','AI聊天机器人':'虚拟角色聊天互动','AI写作工具':'文章、文案、论文写作',
-    'AI图像工具':'AI绘画、图片编辑','AI视频工具':'视频生成、数字人','AI音频工具':'音乐、配音、语音合成',
-    'AI设计工具':'UI设计、平面设计','AI办公工具':'PPT、文档、表格','AI编程工具':'代码生成、IDE工具',
-    'AI编程IDE':'AI编程环境','AI智能体':'AI Agent平台','AI搜索引擎':'AI驱动的搜索',
-    'AI开发平台':'MaaS、低代码平台','AI训练模型':'大模型、训练框架','AI内容检测':'AI文本检测',
-    'AI学习网站':'AI教程、课程','AI提示指令':'Prompt工程','AI资源社区':'模型社区、数据集'
+    'AI瀵硅瘽鍔╂墜':'鏅鸿兘瀵硅瘽銆侀棶绛斿姪鎵?,'AI鑱婂ぉ鏈哄櫒浜?:'铏氭嫙瑙掕壊鑱婂ぉ浜掑姩','AI鍐欎綔宸ュ叿':'鏂囩珷銆佹枃妗堛€佽鏂囧啓浣?,
+    'AI鍥惧儚宸ュ叿':'AI缁樼敾銆佸浘鐗囩紪杈?,'AI瑙嗛宸ュ叿':'瑙嗛鐢熸垚銆佹暟瀛椾汉','AI闊抽宸ュ叿':'闊充箰銆侀厤闊炽€佽闊冲悎鎴?,
+    'AI璁捐宸ュ叿':'UI璁捐銆佸钩闈㈣璁?,'AI鍔炲叕宸ュ叿':'PPT銆佹枃妗ｃ€佽〃鏍?,'AI缂栫▼宸ュ叿':'浠ｇ爜鐢熸垚銆両DE宸ュ叿',
+    'AI缂栫▼IDE':'AI缂栫▼鐜','AI鏅鸿兘浣?:'AI Agent骞冲彴','AI鎼滅储寮曟搸':'AI椹卞姩鐨勬悳绱?,
+    'AI寮€鍙戝钩鍙?:'MaaS銆佷綆浠ｇ爜骞冲彴','AI璁粌妯″瀷':'澶фā鍨嬨€佽缁冩鏋?,'AI鍐呭妫€娴?:'AI鏂囨湰妫€娴?,
+    'AI瀛︿範缃戠珯':'AI鏁欑▼銆佽绋?,'AI鎻愮ず鎸囦护':'Prompt宸ョ▼','AI璧勬簮绀惧尯':'妯″瀷绀惧尯銆佹暟鎹泦'
   };
   var catCounts = {};
   for (var i = 0; i < toolsData.length; i++) {
@@ -207,17 +206,16 @@
       if (toolsData[j].categoryLabel === cl) { catKey = toolsData[j].category; break; }
     }
     html += '<a href="index.html?cat=' + catKey + '" class="cat-card">';
-    html += '<div class="cat-icon">' + (catIcons[cl] || '🧩') + '</div>';
+    html += '<div class="cat-icon">' + (catIcons[cl] || '馃З') + '</div>';
     html += '<div class="cat-name">' + cl + '</div>';
     html += '<div class="cat-desc">' + (catDesc[cl] || '') + '</div>';
-    html += '<div class="cat-count">共' + catCounts[cl] + '款工具</div>';
+    html += '<div class="cat-count">鍏? + catCounts[cl] + '娆惧伐鍏?/div>';
     html += '</a>';
   }
   catGrid.innerHTML = html;
   document.getElementById('totalCount').textContent = toolsData.length;
 
-  // 搜索功能（复用app.js）
-  document.getElementById('btn_search').onclick = function() { doSearch(); };
+  // 鎼滅储鍔熻兘锛堝鐢╝pp.js锛?  document.getElementById('btn_search').onclick = function() { doSearch(); };
   document.getElementById('search-text').onkeydown = function(e) { if(e.key==='Enter') doSearch(); };
 })();
 </script>
