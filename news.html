@@ -1,97 +1,178 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-CN" class="io-grey-mode">
 <head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4192236532369703" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI资讯 - 逍遥搜AI</title>
-<link rel="stylesheet" href="style.css?v10">
+<meta name="renderer" content="webkit"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>每日AI资讯 - AI工具大全</title>
+<meta name="theme-color" content="#f9f9f9" />
+<meta name="description" content="AI行业最新动态与资讯汇总" />
+<link rel="shortcut icon" href="assets/favicon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4016659_bcqo253fh2d.css">
+<link rel="stylesheet" href="style.css">
 <style>
 .news-list{max-width:800px;margin:0 auto!important;padding-top:10px}
 .news-date{font-size:14px;font-weight:700;color:#6366f1;margin:24px 0 12px;padding:8px 14px;background:linear-gradient(135deg,#eef2ff,#f5f3ff);border-radius:6px;display:flex;align-items:center;gap:6px}
 .news-date::before{content:"📅"}
 .news-item{padding:14px 16px;margin-bottom:10px;background:#fff;border:1px solid #e2e8f0;border-radius:10px;text-decoration:none;display:block;transition:all .15s}
 .news-item:hover{border-color:#c7d2fe;box-shadow:0 3px 12px rgba(99,102,241,.1);transform:translateY(-1px)}
-.news-title{font-size:15px;font-weight:600;color:#1e293b;margin-bottom:6px;display:flex;align-items:center;gap:6px}
-.news-title::before{content:"📌";font-size:13px}
-.news-summary{font-size:13px;color:#475569;line-height:1.6;padding-left:0}
-.news-source{font-size:11px;color:#94a3b8;margin-top:6px;display:flex;align-items:center;gap:4px}
-.news-source::before{content:"🏷️";font-size:10px}
+.news-title{font-size:15px;font-weight:600;color:#1e293b;margin-bottom:6px}
+.news-title::before{content:"📌";margin-right:4px}
+.news-summary{font-size:13px;color:#475569;line-height:1.6;padding-left:20px}
+.news-source{font-size:11px;color:#94a3b8;margin-top:6px;margin-left:20px}
+.news-source::before{content:"🏷️";margin-right:4px}
 </style>
 </head>
 <body>
-<div class="page-wrap">
-  <aside class="sidebar" id="sidebar">
-    <a href="/" class="sidebar-logo">🏮 逍遥搜AI</a>
-    <nav class="sidebar-nav" id="sidebarNav">
-      <a href="/">🔥 全部热门</a>
-      <a href="/">💬 AI聊天</a>
-      <a href="/">🎨 AI绘图</a>
-      <a href="/">✍️ AI写作</a>
-      <a href="/">🎬 AI视频</a>
-      <a href="/">📊 AI办公</a>
-      <a href="/">💻 AI编程</a>
-      <a href="/">🎯 AI设计</a>
-      <a href="/">📚 AI教程</a>
-      <a href="/">🌐 AI社区</a>
-      <a href="/news.html">📰 AI资讯</a>
-      <a href="/prompts.html">💬 AI提示词大全</a>
-      <div class="sidebar-ext">
-        <a href="/about.html">ℹ️ 关于我们</a>
-      </div>
-    </nav>
-  </aside>
-  <div class="main-content">
-    <div class="main-topbar">
-      <a href="/" class="topbar-logo-mobile">🏮 逍遥搜AI</a>
-      <div class="topbar-search">
-        <input id="searchInput" type="text" placeholder="搜索AI工具名称...">
-      </div>
-      <div class="topbar-links">
-        <a href="/categories.html">全部分类</a>
-        <a href="/news.html">AI资讯</a>
-        <a href="/about.html">关于</a>
+<div id="sidebar" class="sticky sidebar-nav fade">
+  <div class="modal-dialog h-100 sidebar-nav-inner">
+    <div class="sidebar-logo border-bottom border-color">
+      <div class="logo overflow-hidden">
+        <a href="index.html"><img src="assets/logo-big.svg" height="40" alt="AI工具大全"></a>
       </div>
     </div>
-    <main class="container">
-      <div class="hero-area">
-        <h1>📰 <span class="gradient-text">AI 资讯</span></h1>
-        <p>AI行业最新动态与资讯汇总</p>
-      </div>
-      <div class="news-list">
-        <div id="newsList">
-          <!-- 由JS动态生成 -->
-        </div>
-        <p style="text-align:center;font-size:11px;color:#94a3b8;margin:20px 0">数据来源：AI工具集 (ai-bot.cn) | 持续更新中</p>
-      </div>
-    </main>
-    <footer>
-      <div class="footer-inner">
-        <div class="footer-col">
-          <div class="footer-logo">🏮 逍遥搜AI</div>
-          <div class="footer-desc">一站式AI工具大全，收录1500+优质AI工具，持续更新中。</div>
-        </div>
-        <div class="footer-col">
-          <h4>关于</h4>
-          <a href="/about.html">关于我们</a>
-          <a href="/privacy.html">隐私政策</a>
-          <a href="/contact.html">联系我们</a>
-        </div>
-        <div class="footer-col">
-          <h4>热门推荐</h4>
-          <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
-          <a href="https://claude.ai" target="_blank">Claude</a>
-          <a href="https://www.doubao.com" target="_blank">豆包</a>
-          <a href="https://metaso.cn" target="_blank">秘塔AI</a>
-          <a href="https://kimi.moonshot.cn" target="_blank">Kimi</a>
+    <div class="sidebar-menu flex-fill">
+      <div class="sidebar-scroll">
+        <div class="sidebar-menu-inner">
+          <ul id="sidebarUl"></ul>
         </div>
       </div>
-      <div class="footer-copy">&copy; 2026 逍遥搜AI · 数据参考自 ai-bot.cn</div>
-    </footer>
+    </div>
   </div>
 </div>
+
+<div class="main-content flex-fill">
+  <div class="page-header">
+    <div class="navbar">
+      <div class="container-fluid p-0 position-relative">
+        <div class="header-mini-btn">
+          <label><input id="mini-button" type="checkbox" checked="checked">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <path class="line--1" d="M0 40h62c18 0 18-20-17 5L31 55"></path>
+              <path class="line--2" d="M0 50h80"></path>
+              <path class="line--3" d="M0 60h62c18 0 18 20-17-5L31 45"></path>
+            </svg>
+          </label>
+        </div>
+        <ul class="navbar-nav" id="topMenu">
+          <li><a href="javascript:"><i class="fas fa-fire"></i> 热搜</a>
+            <ul class="sub-menu" id="hotSearchMenu" style="display:none"></ul>
+          </li>
+          <li class="menu-item-has-children"><a href="javascript:">AI应用集 <i class="fas fa-chevron-down"></i></a>
+            <ul class="sub-menu">
+              <li><a href="javascript:" onclick="sw('all')">全部工具</a></li>
+              <li><a href="javascript:" onclick="sw('conversation')">AI对话</a></li>
+              <li><a href="javascript:" onclick="sw('image')">AI图像</a></li>
+              <li><a href="javascript:" onclick="sw('video')">AI视频</a></li>
+              <li><a href="javascript:" onclick="sw('writing')">AI写作</a></li>
+              <li><a href="javascript:" onclick="sw('programming')">AI编程</a></li>
+              <li><a href="javascript:" onclick="sw('agent')">AI智能体</a></li>
+            </ul>
+          </li>
+          <li><a href="news.html">每日AI资讯</a></li>
+          <li><a href="categories.html">最新AI项目</a></li>
+          <li><a href="prompts.html">AI教程资源</a></li>
+          <li><a href="about.html">关于我们</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-big">
+    <div class="s-search">
+      <div class="text-center mb-2">
+        <img src="assets/logo-big.svg" alt="AI工具大全" style="height:60px">
+      </div>
+      <div class="s-type-list text-center" id="sTypeList">
+        <label class="active" data-type="local">站内</label>
+        <label data-type="bing">Bing</label>
+        <label data-type="baidu">百度</label>
+        <label data-type="google">Google</label>
+        <label data-type="perplexity">Perplexity</label>
+      </div>
+      <form action="javascript:void(0)" method="get" class="super-search-fm d-flex align-items-center">
+        <input type="text" id="search-text" class="form-control smart-tips search-key" placeholder="搜索AI工具名称或描述…" style="outline:0" autocomplete="off">
+        <button type="submit" id="btn_search" onclick="doSearch()"><i class="iconfont icon-search"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container container-lg mb-3">
+    <div class="info-cards-row">
+      <a href="submit.html" class="info-card info-card-submit">
+        <div class="info-card-icon">🎯</div>
+        <div class="info-card-text">
+          <h3>免费收录AI工具</h3>
+          <p>提交你的AI产品，获得曝光机会</p>
+        </div>
+      </a>
+      <a href="index.html" class="info-card info-card-brand">
+        <div class="info-card-icon">🏮</div>
+        <div class="info-card-text">
+          <h3>AI工具大全</h3>
+          <p>收录1328+优质AI工具，持续更新</p>
+        </div>
+      </a>
+      <a href="news.html" class="info-card info-card-news">
+        <div class="info-card-icon">📡</div>
+        <div class="info-card-text">
+          <h3>每日AI资讯</h3>
+          <p>最新AI行业动态与产品发布</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="container container-lg">
+    <div class="page-hero" style="text-align:center;padding:10px 0">
+      <h1 style="font-size:26px;font-weight:800;background:linear-gradient(135deg,#667eea,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent">📰 AI资讯</h1>
+      <p style="color:#64748b;font-size:13px">AI行业最新动态与资讯汇总</p>
+    </div>
+    <div class="news-list">
+      <div id="newsList"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container container-lg">
+      <div class="footer-links">
+        <span>友情链接：</span>
+        <a href="https://ai-bot.cn" target="_blank">AI工具大全</a>
+        <a href="https://www.aixiaoyaoge.top" target="_blank">逍遥哥AI导航</a>
+      </div>
+      <div class="footer-copyright">
+        <p>© 2024-2026 AI工具大全 · 逍遥出品 | <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备xxxxxxxx号</a></p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
 <script>
-// 预置AI资讯数据
+(function() {
+  // 侧边栏
+  var catList = [
+    {k:'all',n:'全部工具',i:'fa-th-large'},{k:'conversation',n:'AI对话',i:'fa-comments'},
+    {k:'chatbot',n:'聊天机器人',i:'fa-robot'},{k:'writing',n:'AI写作',i:'fa-feather'},
+    {k:'image',n:'AI图像',i:'fa-images'},{k:'video',n:'AI视频',i:'fa-video'},
+    {k:'audio',n:'AI音频',i:'fa-music'},{k:'design',n:'AI设计',i:'fa-palette'},
+    {k:'office',n:'AI办公',i:'fa-folder-open'},{k:'programming',n:'AI编程',i:'fa-code'},
+    {k:'coding',n:'编程IDE',i:'fa-laptop-code'},{k:'agent',n:'AI智能体',i:'fa-brain'},
+    {k:'search',n:'AI搜索',i:'fa-search'},{k:'framework',n:'开发平台',i:'fa-cubes'},
+    {k:'models',n:'训练模型',i:'fa-microchip'},{k:'detection',n:'内容检测',i:'fa-shield-alt'},
+    {k:'learning',n:'AI学习',i:'fa-graduation-cap'},{k:'prompt',n:'提示指令',i:'fa-lightbulb'},
+    {k:'resource',n:'资源社区',i:'fa-hubspot'}
+  ];
+  var html = '';
+  for (var i = 0; i < catList.length; i++) {
+    html += '<li><a href="javascript:" onclick="sw(\'' + catList[i].k + '\')"><i class="fas ' + catList[i].i + '"></i><span>' + catList[i].n + '</span></a></li>';
+  }
+  document.getElementById('sidebarUl').innerHTML = html;
+})();
+
+// 新闻数据
 var newsData = [
   {date:'3月18日·周三',title:'MiniMax推出MiniMax M2.7，开启模型的自我进化',summary:'MiniMax推出M2.7模型，首次实现模型深度参与自我迭代。在SWE-Pro基准测试中得分56.22%接近Opus水平。',source:'MiniMax 稀宇科技'},
   {date:'3月18日·周三',title:'LiblibAI推出专业AI视频创作平台LibTV',summary:'首个同时面向人类创作者与AI Agent的专业视频创作平台，支持剧本解析、分镜管理等20余种AI能力。',source:'哩布哩布AI'},
@@ -100,8 +181,8 @@ var newsData = [
   {date:'3月17日·周二',title:'科大讯飞正式发布桌面级AI智能助理Loomy',summary:'基于AstronClaw的桌面级智能助理，支持文件整理、数据分析、内容创作等任务。',source:'讯飞开放平台'},
   {date:'3月17日·周二',title:'商汤办公小浣熊「技能模板」功能开启内测',summary:'商汤推出技能模板内测功能，避免重复数据分析工作，支持一键调用。',source:'商汤小浣熊'},
   {date:'3月17日·周二',title:'全球首个企业级Agent平台"悟空"来了',summary:'阿里巴巴推出全球首个企业级AI原生工作平台"悟空"，内置钉钉。',source:'阿里巴巴'},
-  {date:'3月17日·周二',title:'全球首个自进化个人AI ：MuleRun正式推出',summary:'全球首个自进化个人AI产品MuleRun正式发布，支持7x24小时云端运行。',source:'量子位'},
-  {date:'3月16日·周一',title:'清华开源 OpenMAIC，国内首个L4级AI课堂',summary:'清华大学开源国内首个L4级AI课堂平台，通过多智能体协作生成互动式课堂。',source:'机器之心'},
+  {date:'3月17日·周二',title:'全球首个自进化个人AI：MuleRun正式推出',summary:'全球首个自进化个人AI产品MuleRun正式发布，支持7x24小时云端运行。',source:'量子位'},
+  {date:'3月16日·周一',title:'清华开源OpenMAIC，国内首个L4级AI课堂',summary:'清华大学开源国内首个L4级AI课堂平台，通过多智能体协作生成互动式课堂。',source:'机器之心'},
   {date:'3月12日·周四',title:'讯飞AstronClaw全面开放',summary:'科大讯飞AstronClaw全面开放，基于OpenClaw打造云端AI助手，内置120+官方Skills。',source:'讯飞开放平台'},
   {date:'3月12日·周四',title:'爱诗科技完成C轮融资',summary:'AI视频生成企业爱诗科技完成C轮融资，用户规模突破1亿。',source:'爱诗科技AIsphere'},
   {date:'3月12日·周四',title:'光轮智能完成10亿元融资',summary:'光轮智能完成10亿元融资，成为全球首个具身数据领域独角兽。',source:'光轮智能'},
