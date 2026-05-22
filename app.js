@@ -121,38 +121,23 @@ function getNewTools(limit) {
 }
 
 // ===== 渲染热区 =====
-function renderFeatureTools(tab) {
-  const grid = document.getElementById("featureToolsGrid");
-  if (!grid) return;
-  const data = tab === "hot" ? getHotTools(FEATURE_COUNT) : getNewTools(FEATURE_COUNT);
-  let h = '';
-  for (const t of data) {
-    h += '<a href="detail.html?id=' + t.id + '" class="feature-tool-card"><div class="ft-icon">' + (t.icon || "🤖") + '</div><div class="ft-info"><div class="ft-name">' + t.name + '</div><div class="ft-desc">' + (t.desc || "") + '</div></div></a>';
+function renderFeatureTools() {
+  // 热门工具网格
+  const hotGrid = document.getElementById("featureToolsGrid");
+  if (hotGrid) {
+    const data = getHotTools(8);
+    hotGrid.innerHTML = data.map(t =>
+      '<a href="detail.html?id=' + t.id + '" class="feature-tool-card"><div class="ft-icon">' + (t.icon || "🤖") + '</div><div class="ft-info"><div class="ft-name">' + t.name + '</div><div class="ft-desc">' + (t.desc || "") + '</div></div></a>'
+    ).join("");
   }
-  grid.innerHTML = h;
-}
-
-// ===== Banner轮播 =====
-let bannerTimer = null;
-function initBanner() {
-  const slides = document.querySelectorAll(".banner-slide");
-  const dots = document.querySelectorAll(".dot");
-  if (!slides.length) return;
-  let idx = 0;
-  function goTo(i) {
-    slides.forEach(s => s.classList.remove("active"));
-    dots.forEach(d => d.classList.remove("active"));
-    slides[i].classList.add("active");
-    dots[i].classList.add("active");
-    idx = i;
+  // 最新收录网格
+  const newGrid = document.getElementById("newToolsGrid");
+  if (newGrid) {
+    const data = getNewTools(8);
+    newGrid.innerHTML = data.map(t =>
+      '<a href="detail.html?id=' + t.id + '" class="feature-tool-card"><div class="ft-icon">' + (t.icon || "🤖") + '</div><div class="ft-info"><div class="ft-name">' + t.name + '</div><div class="ft-desc">' + (t.desc || "") + '</div></div></a>'
+    ).join("");
   }
-  function next() { goTo((idx + 1) % slides.length); }
-  dots.forEach((d, i) => {
-    d.addEventListener("click", () => goTo(i));
-  });
-  if (bannerTimer) clearInterval(bannerTimer);
-  bannerTimer = setInterval(next, 4000);
-  return { goTo, next };
 }
 
 // ===== 首页分类区块 =====
@@ -304,9 +289,10 @@ function sw(cat) {
     if (_tc) _tc.style.display = "none";
     side();
     home();
-    // 确保热区可见
-    const fz = document.getElementById("featureZone");
-    if (fz) fz.style.display = "";
+    // 确保热门工具和最新收录可见
+    document.getElementById("hotZone") && (document.getElementById("hotZone").style.display = "");
+    document.getElementById("newZone") && (document.getElementById("newZone").style.display = "");
+    document.getElementById("infoCards") && (document.getElementById("infoCards").style.display = "");
   } else {
     if (_hb) _hb.style.display = "none";
     if (_cc) _cc.style.display = "";
@@ -316,9 +302,10 @@ function sw(cat) {
     if (_cs) _cs.textContent = N[cat] || cat;
     if (_ct) _ct.textContent = "(收录 " + cnt[cat] + " 个工具)";
     if (_cg) _cg.style.display = "";
-    // 隐藏热区
-    const fz = document.getElementById("featureZone");
-    if (fz) fz.style.display = "none";
+    // 隐藏热区和信息卡片
+    document.getElementById("hotZone") && (document.getElementById("hotZone").style.display = "none");
+    document.getElementById("newZone") && (document.getElementById("newZone").style.display = "none");
+    document.getElementById("infoCards") && (document.getElementById("infoCards").style.display = "none");
     side();
     grid();
   }
@@ -361,7 +348,9 @@ function doSearch() {
   if (_cs) _cs.textContent = "搜索结果";
   if (_cg) _cg.style.display = "none";
   C = "all";
-  document.getElementById("featureZone").style.display = "none";
+  document.getElementById("hotZone") && (document.getElementById("hotZone").style.display = "none");
+  document.getElementById("newZone") && (document.getElementById("newZone").style.display = "none");
+  document.getElementById("infoCards") && (document.getElementById("infoCards").style.display = "none");
   side();
   grid();
 }
@@ -370,17 +359,7 @@ function doSearch() {
 document.addEventListener("DOMContentLoaded", function() {
   side();
   home();
-  renderFeatureTools("hot");
+  renderFeatureTools();
   renderSearchTags();
   initSearchTabs();
-  initBanner();
-
-  // 热区tab切换
-  document.querySelectorAll(".ftab").forEach(tab => {
-    tab.addEventListener("click", function() {
-      document.querySelectorAll(".ftab").forEach(t => t.classList.remove("active"));
-      this.classList.add("active");
-      renderFeatureTools(this.dataset.tab);
-    });
-  });
 });
