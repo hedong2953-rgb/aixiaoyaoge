@@ -322,60 +322,68 @@ img { max-width:100%; }
 .search-group ul li label:hover { color:var(--primary); background:#f0f1ff; }
 .search-group ul li input:checked + label { background:var(--primary); color:#fff; }
 
-/* ===== 热区：广告横幅 + 热门工具 ===== */
-.feature-layout {
-  display: flex;
-  gap: 20px;
-  margin-top: 24px;
+/* ===== 三张并排彩色信息卡片 ===== */
+.info-cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 20px;
 }
 
-.feature-banner {
-  flex: 0 0 340px;
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  box-shadow: 0 4px 20px rgba(89,97,249,.12);
-}
-
-.banner-carousel {
-  position: relative;
-  width: 100%;
-  height: 180px;
-}
-.banner-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.info-card {
   display: flex;
   align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity .5s ease;
-}
-.banner-slide.active { opacity:1; }
-.banner-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.banner-slide .banner-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 16px 20px;
-  background: linear-gradient(transparent, rgba(0,0,0,.6));
+  gap: 16px;
+  padding: 20px 24px;
+  border-radius: 12px;
   color: #fff;
+  text-decoration: none;
+  transition: all .3s ease;
+  cursor: pointer;
+  min-height: 90px;
 }
-.banner-slide .banner-overlay h3 { font-size:18px; font-weight:700; margin-bottom:4px; }
-.banner-slide .banner-overlay p { font-size:13px; opacity:.85; }
+.info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,.15);
+}
 
-.banner-dots {
-  position: absolute;
-  bottom: 6px;
+.info-card-submit {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+.info-card-brand {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.info-card-news {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.info-card-icon {
+  font-size: 36px;
+  flex-shrink: 0;
+}
+.info-card-text h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+.info-card-text p {
+  font-size: 13px;
+  margin: 0;
+  opacity: .85;
+}
+
+@media (max-width: 768px) {
+  .info-cards-row { grid-template-columns: 1fr; gap: 10px; }
+  .info-card { min-height: 70px; padding: 14px 18px; }
+}
+@media (max-width: 480px) {
+  .info-card-icon { font-size: 28px; }
+  .info-card-text h3 { font-size: 15px; }
+  .info-card-text p { font-size: 12px; }
+}
+
+/* 热门工具区域 */
+#hotZone { margin-top: 8px; }
   right: 14px;
   display: flex;
   gap: 6px;
