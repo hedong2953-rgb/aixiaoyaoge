@@ -362,4 +362,11 @@ document.addEventListener("DOMContentLoaded", function() {
   renderFeatureTools();
   renderSearchTags();
   initSearchTabs();
+  
+  // 读取URL参数 ?cat=xxx，自动跳转到对应分类
+  var urlParams = new URLSearchParams(window.location.search);
+  var catParam = urlParams.get("cat");
+  if (catParam && N[catParam]) {
+    setTimeout(function() { sw(catParam); }, 100);
+  }
 });
